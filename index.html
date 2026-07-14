@@ -38,6 +38,7 @@
       --green-hover: #2ea043;
       --danger: #f85149;
       --purple: #a371f7;
+      --orange: #d29922;
       --shadow: 0 8px 24px rgba(1, 4, 9, .45);
       --radius: 6px;
       --max: 1216px;
@@ -60,6 +61,7 @@
       --green-hover: #1a7f37;
       --danger: #cf222e;
       --purple: #8250df;
+      --orange: #9a6700;
       --shadow: 0 8px 24px rgba(140, 149, 159, .2);
     }
 
@@ -235,6 +237,147 @@
     .timeline-title { font-weight: 600; font-size: 16px; }
     .timeline-meta { color: var(--muted); margin: 3px 0 8px; }
 
+    /* Funding and verification */
+    .funding-box {
+      margin-top: 20px;
+      border: 1px solid color-mix(in srgb, var(--green) 55%, var(--border));
+      border-radius: 10px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--green) 14%, transparent), transparent 38%),
+        var(--canvas-subtle);
+      box-shadow: var(--shadow);
+    }
+    .funding-head {
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .funding-kicker {
+      margin: 0 0 6px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .funding-head h3 { margin: 0; font-size: 22px; }
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid color-mix(in srgb, var(--green) 50%, var(--border));
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: var(--green);
+      background: color-mix(in srgb, var(--green) 10%, transparent);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .funding-body { padding: 20px; }
+    .funding-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .funding-stat {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      padding: 14px;
+    }
+    .funding-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .funding-stat strong { display: block; font-size: 22px; }
+    .progress-shell {
+      width: 100%;
+      height: 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .progress-bar {
+      width: 25%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--green-dark), var(--green));
+    }
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .support-options {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .support-option {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px;
+      background: var(--bg);
+    }
+    .support-option strong { display: block; margin-bottom: 4px; }
+    .support-option span { color: var(--muted); font-size: 13px; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .proof-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 15px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 175px;
+    }
+    .proof-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--canvas-subtle);
+      margin-bottom: 10px;
+    }
+    .proof-card h4 { margin: 0 0 6px; font-size: 16px; }
+    .proof-card p { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+    .proof-card .btn { margin-top: auto; align-self: flex-start; }
+    .proof-note {
+      margin-top: 16px;
+      border-left: 4px solid var(--orange);
+      padding: 10px 12px;
+      background: color-mix(in srgb, var(--orange) 9%, transparent);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .funding-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
     .profile-card { position: sticky; top: 96px; }
     .avatar {
       display: block; width: 100%; aspect-ratio: 1; object-fit: cover;
@@ -295,7 +438,7 @@
       .header-main { min-height: 56px; }
       .repo-actions { width: 100%; margin-left: 0; }
       .repo-actions .btn { flex: 1; }
-      .repo-cards, .form-grid { grid-template-columns: 1fr; }
+      .repo-cards, .form-grid, .proof-grid, .funding-summary, .support-options { grid-template-columns: 1fr; }
       .profile-card { grid-template-columns: 84px 1fr; gap: 14px; }
       .avatar { width: 84px; }
       .profile-name { font-size: 20px; margin-top: 0; }
@@ -303,7 +446,7 @@
       .profile-bio { grid-column: 1 / -1; }
       .markdown-body { padding: 20px; }
       .commit-meta { display: none; }
-      .tabs .tab:nth-child(n+5) { display: none; }
+      .tabs .tab:nth-child(n+6) { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
@@ -327,7 +470,8 @@
       <div class="header-actions">
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">◐</button>
         <a class="btn desktop-only" href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer" aria-label="Download Fahim Sikder's CV">Download CV</a>
+        <a class="btn btn-primary" href="#verification">Support / Verify</a>
+        <a class="btn desktop-only" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer" aria-label="Download Fahim Sikder's CV">Download CV</a>
       </div>
     </div>
   </header>
@@ -343,6 +487,7 @@
         <span class="visibility">Public</span>
 
         <div class="repo-actions">
+          <a class="btn btn-primary" href="#verification">View funding proof</a>
           <a class="btn" href="#contact">Open an inquiry</a>
           <a class="btn" href="mailto:fahim.bd.official.26@gmail.com">Email</a>
         </div>
@@ -353,6 +498,7 @@
         <a class="tab" href="#projects">▣ Repositories <span id="repoCount">6</span></a>
         <a class="tab" href="#experience">◷ Experience</a>
         <a class="tab" href="#education">◇ Education</a>
+        <a class="tab" href="#verification">✓ Verification</a>
         <a class="tab" href="#contact">✉ Contact</a>
       </nav>
     </div>
@@ -371,7 +517,7 @@
       <div class="commit-line">
         <img class="avatar-xs" src="https://github.com/Fahimxbd.png?size=48" alt="">
         <strong>Fahimxbd</strong>
-        <span class="muted">updated portfolio README</span>
+        <span class="muted">updated portfolio and verification documents</span>
         <span class="commit-meta">Latest update · 2026</span>
       </div>
 
@@ -396,7 +542,8 @@
           </div>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">↓ Download CV</a>
+            <a class="btn btn-primary" href="#verification">✓ View verified documents</a>
+            <a class="btn" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">↓ Download CV</a>
             <a class="btn" href="#projects">Explore projects</a>
             <a class="btn" href="#contact">Contact me</a>
           </div>
@@ -456,6 +603,118 @@
             <li>Bangladesh Science Olympiad participant — 2024</li>
           </ul>
 
+          <h2 id="verification">Funding and verification</h2>
+          <div class="funding-box">
+            <div class="funding-head">
+              <div>
+                <p class="funding-kicker">Education and work equipment support</p>
+                <h3>Help me replace my damaged laptop</h3>
+              </div>
+              <span class="verified-pill">✓ Supporting documents available</span>
+            </div>
+
+            <div class="funding-body">
+              <p>
+                My previous laptop's CPU was severely damaged and the device is no longer usable. I need a reliable laptop for Python, web development, WordPress, university coursework and remote work. My current target is an <strong>ASUS VivoBook 15 with an Intel Core i7 configuration</strong>, depending on local availability and final pricing.
+              </p>
+
+              <div class="funding-summary" aria-label="Laptop funding summary">
+                <div class="funding-stat">
+                  <span>Estimated laptop cost</span>
+                  <strong>$500</strong>
+                </div>
+                <div class="funding-stat">
+                  <span>My current savings</span>
+                  <strong>$125</strong>
+                </div>
+                <div class="funding-stat">
+                  <span>Current funding gap</span>
+                  <strong>$375</strong>
+                </div>
+              </div>
+
+              <div class="progress-shell" role="progressbar" aria-label="Laptop funding progress" aria-valuemin="0" aria-valuemax="500" aria-valuenow="125">
+                <div class="progress-bar"></div>
+              </div>
+              <div class="progress-labels">
+                <span>25% currently covered</span>
+                <span>$375 remaining</span>
+              </div>
+
+              <div class="support-options">
+                <div class="support-option">
+                  <strong>Financial support</strong>
+                  <span>Contribute any amount toward the verified laptop purchase.</span>
+                </div>
+                <div class="support-option">
+                  <strong>Donate a laptop</strong>
+                  <span>A reliable used laptop suitable for coding would also help.</span>
+                </div>
+                <div class="support-option">
+                  <strong>Hire me</strong>
+                  <span>Offer paid WordPress, web, SEO, data-entry or basic coding work.</span>
+                </div>
+              </div>
+
+              <h3>Verification documents</h3>
+              <p class="muted">Each document opens in Google Drive. Sensitive information should remain redacted where necessary.</p>
+
+              <div class="proof-grid">
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">🎓</div>
+                  <h4>HSC Certificate</h4>
+                  <p>Academic proof showing completion of Higher Secondary education in 2024 with GPA 5.00/5.00.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1X8zudSsaQ29zME2hiQP5agss0RmV30CT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open certificate ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">✓</div>
+                  <h4>Government Authentication</h4>
+                  <p>Bangladesh government authentication document supporting the academic certificate.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1XC99P3T0Q1N_UbY25fZPRNPehAGnKH-P/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open authentication ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">🏫</div>
+                  <h4>University Offer Letter</h4>
+                  <p>Offer/admission evidence for my planned higher education in Computational Science and Artificial Intelligence.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1sqVJofDJHzONPQX8paaEXwr_KBHY_9HZ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open offer letter ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">💳</div>
+                  <h4>Tuition-Fee Payment Proof</h4>
+                  <p>Payment evidence showing my family's financial commitment toward my university education.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1R0CmWsohMccJbE7fPXkieiMIp51UuBjW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open payment proof ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">📈</div>
+                  <h4>Google AdSense Approval</h4>
+                  <p>Evidence of previous online-work experience and approval to monetise digital content through Google AdSense.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1D-jW1YayJRyxGYnfFO_4YM5AUD8iBhB1/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open AdSense proof ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">💻</div>
+                  <h4>Laptop Damage Evidence</h4>
+                  <p>Photo/video evidence showing the damaged laptop after the CPU was severely burned and became unusable.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1dB7HbPTCqGQT7fET4Msq1tR38ObFvp-5/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open damage evidence ↗</a>
+                </article>
+              </div>
+
+              <div class="proof-note">
+                <strong>Privacy and transparency:</strong> These documents are shared only to verify my identity, education, previous work and laptop situation. Full identification numbers, account details, signatures and other sensitive information should not be publicly visible. I will publish a purchase receipt and funding update after obtaining the laptop.
+              </div>
+
+              <div class="funding-actions">
+                <a class="btn btn-primary" href="https://wa.me/8801614946557?text=Hello%20Fahim%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20support%20or%20work." target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
+                <a class="btn btn-blue" href="mailto:fahim.bd.official.26@gmail.com?subject=Laptop%20support%20or%20paid%20work">Email about support</a>
+                <a class="btn" href="#contact">Offer paid work</a>
+              </div>
+            </div>
+          </div>
+
           <section class="contact-panel" id="contact">
             <div class="contact-panel-head">New inquiry</div>
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgobaaoz" method="POST">
@@ -472,7 +731,7 @@
 
               <div>
                 <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Job, project or collaboration" required maxlength="160">
+                <input id="subject" name="subject" type="text" placeholder="Job, project, support or collaboration" required maxlength="160">
               </div>
 
               <div>
@@ -503,13 +762,16 @@
           <h2 class="profile-name">Fahim Sikder</h2>
           <p class="profile-handle">Fahimxbd</p>
           <p class="profile-bio">AI and software engineering student. Python and Streamlit builder. WordPress and SEO practitioner.</p>
-          <a class="btn btn-primary" style="width:100%" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a class="btn btn-primary" style="width:100%" href="#verification">View funding proof</a>
+          <a class="btn" style="width:100%; margin-top:8px" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">Download CV</a>
 
           <ul class="profile-list">
             <li>📍 Bangladesh → Finland</li>
             <li>🎓 LUT University</li>
             <li>💼 Open to opportunities</li>
+            <li>✓ Verification documents available</li>
             <li>✉ <a href="mailto:fahim.bd.official.26@gmail.com">fahim.bd.official.26@gmail.com</a></li>
+            <li>💬 <a href="https://wa.me/8801614946557" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             <li>🔗 <a href="https://www.linkedin.com/in/callmefahim59" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
             <li>🌐 <a href="https://www.aibyfahim.com">www.aibyfahim.com</a></li>
           </ul>
@@ -518,7 +780,7 @@
         <div class="profile-stats">
           <div class="profile-stat"><strong id="publicRepos">6</strong><span>Repositories</span></div>
           <div class="profile-stat"><strong>5.00</strong><span>HSC GPA</span></div>
-          <div class="profile-stat"><strong>2024</strong><span>ICSO</span></div>
+          <div class="profile-stat"><strong>25%</strong><span>Goal covered</span></div>
         </div>
       </div>
     </aside>
@@ -528,7 +790,9 @@
     <div class="container footer-inner">
       <span>© <span id="year"></span> Fahim Sikder</span>
       <nav class="footer-links" aria-label="Footer links">
+        <a href="#verification">Verification</a>
         <a href="mailto:fahim.bd.official.26@gmail.com">Email</a>
+        <a href="https://wa.me/8801614946557" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <a href="https://www.linkedin.com/in/callmefahim59" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">CV</a>
