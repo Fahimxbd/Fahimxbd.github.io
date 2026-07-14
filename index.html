@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117">
+  <title>Fahim Sikder — AI & Software Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Fahim Sikder — an incoming Computational Science and Artificial Intelligence student at LUT University, Python and Streamlit builder, WordPress and SEO practitioner, and community leader.">
+  <meta name="keywords" content="Fahim Sikder, AI, Software Engineering, Python, Streamlit, WordPress, SEO, LUT University, Finland, Bangladesh">
+  <meta name="author" content="Fahim Sikder">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.aibyfahim.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.aibyfahim.com/">
+  <meta property="og:title" content="Fahim Sikder — AI & Software Engineering Portfolio">
+  <meta property="og:description" content="AI builder, incoming LUT University student, WordPress and SEO practitioner, and community leader.">
+  <meta property="og:image" content="https://github.com/Fahimxbd.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="preconnect" href="https://github.com">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --header: #010409;
+      --canvas-subtle: #161b22;
+      --canvas-inset: #010409;
+      --border: #30363d;
+      --border-muted: #21262d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --blue: #2f81f7;
+      --blue-hover: #58a6ff;
+      --green: #3fb950;
+      --green-dark: #238636;
+      --green-hover: #2ea043;
+      --danger: #f85149;
+      --purple: #a371f7;
+      --orange: #d29922;
+      --shadow: 0 8px 24px rgba(1, 4, 9, .45);
+      --radius: 6px;
+      --max: 1216px;
+    }
+
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #ffffff;
+      --header: #f6f8fa;
+      --canvas-subtle: #f6f8fa;
+      --canvas-inset: #ffffff;
+      --border: #d0d7de;
+      --border-muted: #d8dee4;
+      --text: #1f2328;
+      --muted: #656d76;
+      --blue: #0969da;
+      --blue-hover: #0550ae;
+      --green: #1a7f37;
+      --green-dark: #1f883d;
+      --green-hover: #1a7f37;
+      --danger: #cf222e;
+      --purple: #8250df;
+      --orange: #9a6700;
+      --shadow: 0 8px 24px rgba(140, 149, 159, .2);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--blue-hover); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img { max-width: 100%; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .container { width: min(var(--max), calc(100% - 32px)); margin-inline: auto; }
+    .muted { color: var(--muted); }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: color-mix(in srgb, var(--header) 92%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .header-main {
+      min-height: 64px; display: flex; align-items: center; gap: 16px;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--text); font-weight: 600; white-space: nowrap;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand-mark {
+      width: 32px; height: 32px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--text); color: var(--bg); font-weight: 800;
+    }
+    .search-shell {
+      width: min(350px, 42vw); height: 32px; border: 1px solid var(--border);
+      border-radius: var(--radius); color: var(--muted); display: flex; align-items: center;
+      padding: 0 12px; background: var(--bg);
+    }
+    .search-shell kbd {
+      margin-left: auto; border: 1px solid var(--border); border-radius: 4px;
+      padding: 0 5px; color: var(--muted); background: var(--canvas-subtle);
+    }
+    .header-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .icon-btn, .btn {
+      min-height: 32px; border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--canvas-subtle); color: var(--text); display: inline-flex;
+      align-items: center; justify-content: center; gap: 7px; padding: 5px 12px;
+      font-weight: 600; cursor: pointer;
+    }
+    .icon-btn { width: 34px; padding: 0; }
+    .btn:hover, .icon-btn:hover { background: color-mix(in srgb, var(--canvas-subtle) 82%, var(--text) 6%); text-decoration: none; }
+    .btn-primary { background: var(--green-dark); border-color: rgba(240,246,252,.1); color: #fff; }
+    .btn-primary:hover { background: var(--green-hover); }
+    .btn-blue { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .btn-blue:hover { background: var(--blue-hover); color: #fff; }
+    .mobile-toggle { display: none; }
+
+    .repo-head {
+      background: var(--header); border-bottom: 1px solid var(--border);
+      padding-top: 18px;
+    }
+    .repo-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .repo-path { font-size: 20px; font-weight: 400; }
+    .repo-path strong { font-weight: 600; }
+    .visibility {
+      border: 1px solid var(--border); border-radius: 999px; color: var(--muted);
+      font-size: 12px; font-weight: 600; padding: 1px 7px;
+    }
+    .repo-actions { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+    .tabs { display: flex; gap: 4px; margin-top: 16px; overflow-x: auto; scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      color: var(--text); padding: 9px 12px; border-bottom: 2px solid transparent;
+      white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;
+    }
+    .tab:hover { text-decoration: none; background: var(--canvas-subtle); border-radius: 6px 6px 0 0; }
+    .tab.active { border-bottom-color: #f78166; font-weight: 600; }
+
+    .page-grid {
+      display: grid; grid-template-columns: minmax(0, 1fr) 296px;
+      gap: 24px; padding-block: 24px 60px;
+    }
+    .main-column { min-width: 0; }
+    .side-column { min-width: 0; }
+
+    .branchbar {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .branchbar .spacer { flex: 1; }
+    .commit-line {
+      border: 1px solid var(--border); border-radius: var(--radius) var(--radius) 0 0;
+      background: var(--canvas-subtle); padding: 10px 16px; display: flex;
+      align-items: center; gap: 10px;
+    }
+    .avatar-xs { width: 24px; height: 24px; border-radius: 50%; }
+    .commit-meta { margin-left: auto; color: var(--muted); white-space: nowrap; }
+
+    .readme {
+      border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+      background: var(--bg);
+    }
+    .readme-head {
+      padding: 10px 16px; background: var(--canvas-subtle); border-bottom: 1px solid var(--border);
+      font-weight: 600; display: flex; align-items: center; gap: 8px;
+    }
+    .markdown-body { padding: clamp(22px, 4vw, 42px); font-size: 16px; }
+    .markdown-body h1, .markdown-body h2 {
+      padding-bottom: .3em; border-bottom: 1px solid var(--border-muted);
+      line-height: 1.25;
+    }
+    .markdown-body h1 { font-size: 2em; margin: 0 0 16px; }
+    .markdown-body h2 { font-size: 1.5em; margin-top: 32px; }
+    .markdown-body h3 { font-size: 1.25em; margin-top: 24px; }
+    .markdown-body p, .markdown-body li { color: var(--text); }
+    .markdown-body blockquote {
+      margin: 16px 0; padding: 0 1em; color: var(--muted); border-left: .25em solid var(--border);
+    }
+    .markdown-body code {
+      padding: .2em .4em; border-radius: 4px; background: var(--canvas-subtle);
+      font: 85% ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .hero-line { font-size: clamp(19px, 3vw, 28px); font-weight: 600; margin: 4px 0 12px; }
+    .status-line { display: flex; align-items: center; gap: 8px; color: var(--muted); }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(63,185,80,.13); }
+    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+
+    .badge-row { display: flex; flex-wrap: wrap; gap: 7px; margin-block: 16px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px; border-radius: 999px;
+      padding: 3px 9px; font-size: 12px; font-weight: 600;
+      border: 1px solid color-mix(in srgb, var(--blue) 35%, var(--border));
+      background: color-mix(in srgb, var(--blue) 10%, transparent); color: var(--blue-hover);
+    }
+
+    .repo-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .repo-card {
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 16px;
+      min-height: 145px; display: flex; flex-direction: column; background: var(--bg);
+    }
+    .repo-card:hover { border-color: var(--muted); box-shadow: var(--shadow); }
+    .repo-card-top { display: flex; align-items: flex-start; gap: 8px; }
+    .repo-card-title { font-weight: 600; overflow-wrap: anywhere; }
+    .repo-card .public-pill {
+      margin-left: auto; border: 1px solid var(--border); border-radius: 999px;
+      padding: 0 7px; font-size: 11px; color: var(--muted);
+    }
+    .repo-description { color: var(--muted); font-size: 13px; margin: 10px 0 16px; }
+    .repo-footer { margin-top: auto; display: flex; gap: 14px; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
+    .language { display: inline-flex; align-items: center; gap: 5px; }
+    .language-dot { width: 12px; height: 12px; border-radius: 50%; background: #8b949e; }
+    .skeleton {
+      min-height: 145px; border: 1px solid var(--border); border-radius: var(--radius);
+      background: linear-gradient(90deg, var(--bg), var(--canvas-subtle), var(--bg));
+      background-size: 200% 100%; animation: loading 1.4s infinite;
+    }
+    @keyframes loading { to { background-position: -200% 0; } }
+
+    .timeline { border-left: 2px solid var(--border); margin-left: 8px; padding-left: 22px; }
+    .timeline-item { position: relative; margin: 0 0 24px; }
+    .timeline-item::before {
+      content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--green); left: -30px; top: 5px;
+    }
+    .timeline-title { font-weight: 600; font-size: 16px; }
+    .timeline-meta { color: var(--muted); margin: 3px 0 8px; }
+
+    /* Funding and verification */
+    .funding-box {
+      margin-top: 20px;
+      border: 1px solid color-mix(in srgb, var(--green) 55%, var(--border));
+      border-radius: 10px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--green) 14%, transparent), transparent 38%),
+        var(--canvas-subtle);
+      box-shadow: var(--shadow);
+    }
+    .funding-head {
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .funding-kicker {
+      margin: 0 0 6px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .funding-head h3 { margin: 0; font-size: 22px; }
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid color-mix(in srgb, var(--green) 50%, var(--border));
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: var(--green);
+      background: color-mix(in srgb, var(--green) 10%, transparent);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .funding-body { padding: 20px; }
+    .funding-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .funding-stat {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      padding: 14px;
+    }
+    .funding-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .funding-stat strong { display: block; font-size: 22px; }
+    .progress-shell {
+      width: 100%;
+      height: 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .progress-bar {
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--green-dark), var(--green));
+    }
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .support-options {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .support-option {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px;
+      background: var(--bg);
+    }
+    .support-option strong { display: block; margin-bottom: 4px; }
+    .support-option span { color: var(--muted); font-size: 13px; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .proof-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 15px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 175px;
+    }
+    .proof-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--canvas-subtle);
+      margin-bottom: 10px;
+    }
+    .proof-card h4 { margin: 0 0 6px; font-size: 16px; }
+    .proof-card p { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+    .proof-card .btn { margin-top: auto; align-self: flex-start; }
+    .proof-note {
+      margin-top: 16px;
+      border-left: 4px solid var(--orange);
+      padding: 10px 12px;
+      background: color-mix(in srgb, var(--orange) 9%, transparent);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .funding-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+
+    .campaign-hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--green) 22%, transparent), transparent 30%),
+        radial-gradient(circle at 12% 100%, color-mix(in srgb, var(--blue) 18%, transparent), transparent 34%),
+        linear-gradient(180deg, var(--header), var(--bg));
+    }
+    .campaign-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(color-mix(in srgb, var(--border) 18%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--border) 18%, transparent) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 78%);
+    }
+    .campaign-hero-inner {
+      position: relative;
+      z-index: 1;
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+      align-items: center;
+      gap: 54px;
+      padding-block: 72px;
+    }
+    .campaign-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid color-mix(in srgb, var(--green) 45%, var(--border));
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: var(--green);
+      background: color-mix(in srgb, var(--green) 9%, transparent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .campaign-hero h1 {
+      margin: 18px 0 16px;
+      max-width: 780px;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+    .campaign-hero h1 span { color: var(--green); }
+    .campaign-lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.65;
+    }
+    .campaign-hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .campaign-hero-actions .btn {
+      min-height: 44px;
+      padding: 10px 16px;
+      font-size: 15px;
+    }
+    .campaign-trust {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .campaign-trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .campaign-card {
+      border: 1px solid color-mix(in srgb, var(--green) 50%, var(--border));
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--canvas-subtle) 92%, transparent);
+      box-shadow: 0 24px 70px rgba(1,4,9,.52);
+      padding: 24px;
+      backdrop-filter: blur(14px);
+    }
+    .campaign-card-label {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .campaign-gap {
+      margin: 0;
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      color: var(--green);
+    }
+    .campaign-card-sub {
+      margin: 10px 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .campaign-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .campaign-mini-stat {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px;
+      background: var(--bg);
+    }
+    .campaign-mini-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .campaign-mini-stat strong {
+      display: block;
+      font-size: 18px;
+    }
+    .campaign-card .progress-shell { height: 12px; }
+    .campaign-card-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .campaign-card .btn {
+      width: 100%;
+      min-height: 42px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .campaign-hero-inner {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-block: 52px;
+      }
+      .campaign-card { max-width: 620px; }
+    }
+    @media (max-width: 600px) {
+      .campaign-hero-inner { padding-block: 38px 44px; }
+      .campaign-hero h1 { font-size: 42px; }
+      .campaign-mini-grid { grid-template-columns: 1fr; }
+      .campaign-hero-actions .btn { width: 100%; }
+    }
+
+    .profile-card { position: sticky; top: 96px; }
+    .avatar {
+      display: block; width: 100%; aspect-ratio: 1; object-fit: cover;
+      border-radius: 50%; border: 1px solid var(--border); background: var(--canvas-subtle);
+    }
+    .profile-name { font-size: 24px; line-height: 1.25; margin: 16px 0 0; }
+    .profile-handle { color: var(--muted); font-size: 20px; font-weight: 300; margin: 0 0 16px; }
+    .profile-bio { margin-bottom: 16px; }
+    .profile-list { list-style: none; padding: 0; margin: 16px 0; }
+    .profile-list li { display: flex; gap: 8px; margin: 7px 0; overflow-wrap: anywhere; }
+    .profile-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+      border-top: 1px solid var(--border); padding-top: 16px; margin-top: 16px;
+    }
+    .profile-stat { text-align: center; }
+    .profile-stat strong { display: block; font-size: 18px; }
+    .profile-stat span { color: var(--muted); font-size: 12px; }
+
+    .contact-panel {
+      margin-top: 32px; border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .contact-panel-head {
+      background: var(--canvas-subtle); padding: 12px 16px; border-bottom: 1px solid var(--border);
+      font-weight: 600;
+    }
+    .contact-form { padding: 20px; display: grid; gap: 14px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    input, textarea {
+      width: 100%; color: var(--text); background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 9px 12px; outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 25%, transparent);
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: 12px; }
+    .form-status { display: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; }
+    .form-status.success { display: block; border-color: rgba(63,185,80,.55); background: rgba(63,185,80,.08); color: var(--green); }
+    .form-status.error { display: block; border-color: rgba(248,81,73,.55); background: rgba(248,81,73,.08); color: var(--danger); }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0 42px; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    @media (max-width: 900px) {
+      .page-grid { grid-template-columns: 1fr; }
+      .side-column { grid-row: 1; }
+      .profile-card { position: static; display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: start; }
+      .profile-stats { grid-column: 1 / -1; }
+      .avatar { width: 140px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 24px, var(--max)); }
+      .search-shell, .desktop-only { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .header-main { min-height: 56px; }
+      .repo-actions { width: 100%; margin-left: 0; }
+      .repo-actions .btn { flex: 1; }
+      .repo-cards, .form-grid, .proof-grid, .funding-summary, .support-options { grid-template-columns: 1fr; }
+      .profile-card { grid-template-columns: 84px 1fr; gap: 14px; }
+      .avatar { width: 84px; }
+      .profile-name { font-size: 20px; margin-top: 0; }
+      .profile-handle { font-size: 16px; margin-bottom: 8px; }
+      .profile-bio { grid-column: 1 / -1; }
+      .markdown-body { padding: 20px; }
+      .commit-meta { display: none; }
+      .tabs .tab:nth-child(n+6) { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-main">
+      <a class="brand" href="#overview" aria-label="Fahim Sikder home">
+        <span class="brand-mark">FS</span>
+        <span class="desktop-only">aibyfahim</span>
+      </a>
+
+      <div class="search-shell" aria-hidden="true">
+        Search portfolio
+        <kbd>/</kbd>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">◐</button>
+        <a class="btn desktop-only" href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-primary" href="#verification">Support / Verify</a>
+        <a class="btn desktop-only" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer" aria-label="Download Fahim Sikder's CV">Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="repo-head" aria-label="Portfolio navigation">
+    <div class="container">
+      <div class="repo-title-row">
+        <div class="repo-path">
+          <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Fahimxbd</a>
+          <span class="muted">/</span>
+          <strong><a href="#overview">portfolio</a></strong>
+        </div>
+        <span class="visibility">Public</span>
+
+        <div class="repo-actions">
+          <a class="btn btn-primary" href="#verification">View funding proof</a>
+          <a class="btn" href="#contact">Open an inquiry</a>
+          <a class="btn" href="mailto:fahim.bd.official.26@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <nav class="tabs" aria-label="Portfolio sections">
+        <a class="tab active" href="#overview">⌘ Overview</a>
+        <a class="tab" href="#projects">▣ Repositories <span id="repoCount">6</span></a>
+        <a class="tab" href="#experience">◷ Experience</a>
+        <a class="tab" href="#education">◇ Education</a>
+        <a class="tab" href="#verification">✓ Verification</a>
+        <a class="tab" href="#contact">✉ Contact</a>
+      </nav>
+    </div>
+  </section>
+
+
+  <section class="campaign-hero" aria-labelledby="campaignTitle">
+    <div class="container campaign-hero-inner">
+      <div>
+        <span class="campaign-eyebrow">Verified student support campaign</span>
+        <h1 id="campaignTitle">Help me get back to <span>building, studying and earning.</span></h1>
+        <p class="campaign-lead">
+          My previous laptop's CPU was severely burned and the device is no longer usable. I am preparing to study Computational Science and Artificial Intelligence at LUT University and need a reliable laptop for Python, web development, WordPress, university coursework and remote work. My target device is an ASUS VivoBook 15 with an Intel Core i7 configuration.
+        </p>
+
+        <div class="campaign-hero-actions">
+          <a class="btn btn-primary" href="#verification">View all verification documents</a>
+          <a class="btn btn-blue" href="https://wa.me/8801614946557?text=Hello%20Fahim%2C%20I%20saw%20your%20student%20support%20campaign%20and%20would%20like%20to%20help%20or%20offer%20work." target="_blank" rel="noopener noreferrer">Support or offer work</a>
+          <a class="btn" href="#projects">Review my projects</a>
+        </div>
+
+        <div class="campaign-trust">
+          <span>✓ Academic documents available</span>
+          <span>✓ University offer verified</span>
+          <span>✓ Tuition payment proof available</span>
+          <span>✓ Laptop damage evidence included</span>
+        </div>
+      </div>
+
+      <aside class="campaign-card" aria-label="Funding summary">
+        <p class="campaign-card-label">Current funding gap</p>
+        <p class="campaign-gap">$475–$500</p>
+        <p class="campaign-card-sub">
+          The exact amount depends on the final local price and configuration of the ASUS VivoBook 15 Core i7.
+        </p>
+
+        <div class="campaign-mini-grid">
+          <div class="campaign-mini-stat">
+            <span>Personal savings</span>
+            <strong>$125</strong>
+          </div>
+          <div class="campaign-mini-stat">
+            <span>Estimated total budget</span>
+            <strong>$600–$625</strong>
+          </div>
+        </div>
+
+        <div class="progress-shell" role="progressbar" aria-label="Laptop funding progress" aria-valuemin="0" aria-valuemax="625" aria-valuenow="125">
+          <div class="progress-bar" style="width:20%"></div>
+        </div>
+        <div class="progress-labels">
+          <span>About 20% covered</span>
+          <span>$475–$500 needed</span>
+        </div>
+
+        <p class="campaign-card-note">
+          Support can be financial, a reliable used laptop, or paid WordPress, web development, SEO, data-entry or basic coding work.
+        </p>
+
+        <a class="btn btn-primary" href="#verification">Open proof and support options</a>
+      </aside>
+    </div>
+  </section>
+
+
+  <main class="container page-grid" id="overview">
+    <div class="main-column">
+      <div class="branchbar">
+        <span class="btn">main ▾</span>
+        <span class="muted">1 branch</span>
+        <span class="muted">6 repositories</span>
+        <span class="spacer"></span>
+        <a class="btn btn-blue" href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
+      </div>
+
+      <div class="commit-line">
+        <img class="avatar-xs" src="https://github.com/Fahimxbd.png?size=48" alt="">
+        <strong>Fahimxbd</strong>
+        <span class="muted">updated portfolio and verification documents</span>
+        <span class="commit-meta">Latest update · 2026</span>
+      </div>
+
+      <article class="readme">
+        <div class="readme-head">▤ README.md</div>
+        <div class="markdown-body">
+          <div class="status-line"><span class="status-dot"></span> Open to part-time, internship, freelance and collaboration opportunities</div>
+          <h1>Hi, I'm Fahim Sikder 👋</h1>
+          <p class="hero-line">AI and software engineering student building practical digital solutions.</p>
+          <blockquote>
+            Incoming Computational Science and Artificial Intelligence student at LUT University, Finland. Based in Bangladesh and preparing for opportunities in Finland.
+          </blockquote>
+
+          <div class="badge-row" aria-label="Core skills">
+            <span class="badge">Python</span>
+            <span class="badge">Streamlit</span>
+            <span class="badge">AI applications</span>
+            <span class="badge">WordPress</span>
+            <span class="badge">SEO</span>
+            <span class="badge">Backlink research</span>
+            <span class="badge">Community leadership</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#verification">✓ View verified documents</a>
+            <a class="btn" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">↓ Download CV</a>
+            <a class="btn" href="#projects">Explore projects</a>
+            <a class="btn" href="#contact">Contact me</a>
+          </div>
+
+          <h2 id="about">About me</h2>
+          <p>
+            I am a student and early-career builder focused on artificial intelligence, software engineering and useful web solutions. My practical experience includes Python, Streamlit, WordPress, SEO, content optimisation, backlink research and domain analysis.
+          </p>
+          <p>
+            I also co-founded <strong>Bipode Bondhu Foundation</strong>, a youth-led community support initiative. That experience strengthened my leadership, communication, volunteer coordination and crisis-response skills.
+          </p>
+
+          <h2 id="projects">Pinned repositories</h2>
+          <p class="muted">Public repositories are loaded directly from my GitHub profile.</p>
+          <div class="repo-cards" id="repoGrid" aria-live="polite">
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+          </div>
+
+          <h2>What I can contribute</h2>
+          <ul>
+            <li><strong>AI and Python:</strong> basic automation, prompt-driven applications, Streamlit interfaces and structured problem solving.</li>
+            <li><strong>Web:</strong> WordPress setup, content updates, responsive fixes, landing pages and routine maintenance.</li>
+            <li><strong>SEO:</strong> on-page optimisation, keyword mapping, internal linking, backlink prospecting and content improvement.</li>
+            <li><strong>Teamwork:</strong> communication, tutoring, volunteer coordination and community project support.</li>
+          </ul>
+
+          <h2 id="experience">Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-title">Private Tutor</div>
+              <div class="timeline-meta">Self-employed · April 2025 — Present</div>
+              <p>Teach Mathematics and Science to students in Grades 6–10 using personalised lesson plans and adaptive explanations.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-title">Co-Founder — Bipode Bondhu Foundation</div>
+              <div class="timeline-meta">Dhaka, Bangladesh · June 2020 — Present</div>
+              <p>Help coordinate youth volunteers, community support, emergency response and safety-awareness activities.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-title">Volunteer — WeSafe Movement</div>
+              <div class="timeline-meta">June 2023 — February 2024</div>
+              <p>Supported community outreach and youth-safety awareness programmes.</p>
+            </div>
+          </div>
+
+          <h2 id="education">Education and recognition</h2>
+          <h3>LUT University, Finland</h3>
+          <p>Incoming student in Computational Science and Artificial Intelligence.</p>
+          <h3>Higher Secondary Certificate</h3>
+          <p>Gazipur Metropolitan College · Science · GPA 5.00/5.00 · 2024</p>
+          <h3>Recognition</h3>
+          <ul>
+            <li>International Climate Science Olympiad semifinalist — 2024</li>
+            <li>Bangladesh Science Olympiad participant — 2024</li>
+          </ul>
+
+          <h2 id="verification">Funding and verification</h2>
+          <div class="funding-box">
+            <div class="funding-head">
+              <div>
+                <p class="funding-kicker">Education and work equipment support</p>
+                <h3>Help me replace my damaged laptop</h3>
+              </div>
+              <span class="verified-pill">✓ Supporting documents available</span>
+            </div>
+
+            <div class="funding-body">
+              <p>
+                My previous laptop's CPU was severely damaged and the device is no longer usable. I need a reliable laptop for Python, web development, WordPress, university coursework and remote work. My current target is an <strong>ASUS VivoBook 15 with an Intel Core i7 configuration</strong>, depending on local availability and final pricing.
+              </p>
+
+              <div class="funding-summary" aria-label="Laptop funding summary">
+                <div class="funding-stat">
+                  <span>Estimated total setup budget</span>
+                  <strong>$600–$625</strong>
+                </div>
+                <div class="funding-stat">
+                  <span>My current savings</span>
+                  <strong>$125</strong>
+                </div>
+                <div class="funding-stat">
+                  <span>Current funding gap</span>
+                  <strong>$475–$500</strong>
+                </div>
+              </div>
+
+              <div class="progress-shell" role="progressbar" aria-label="Laptop funding progress" aria-valuemin="0" aria-valuemax="625" aria-valuenow="125">
+                <div class="progress-bar" style="width:20%"></div>
+              </div>
+              <div class="progress-labels">
+                <span>About 20% currently covered</span>
+                <span>$475–$500 remaining</span>
+              </div>
+
+              <div class="support-options">
+                <div class="support-option">
+                  <strong>Financial support</strong>
+                  <span>Contribute any amount toward the verified laptop purchase.</span>
+                </div>
+                <div class="support-option">
+                  <strong>Donate a laptop</strong>
+                  <span>A reliable used laptop suitable for coding would also help.</span>
+                </div>
+                <div class="support-option">
+                  <strong>Hire me</strong>
+                  <span>Offer paid WordPress, web, SEO, data-entry or basic coding work.</span>
+                </div>
+              </div>
+
+              <h3>Verification documents</h3>
+              <p class="muted">Each document opens in Google Drive. Sensitive information should remain redacted where necessary.</p>
+
+              <div class="proof-grid">
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">🎓</div>
+                  <h4>HSC Certificate</h4>
+                  <p>Academic proof showing completion of Higher Secondary education in 2024 with GPA 5.00/5.00.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1X8zudSsaQ29zME2hiQP5agss0RmV30CT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open certificate ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">✓</div>
+                  <h4>Government Authentication</h4>
+                  <p>Bangladesh government authentication document supporting the academic certificate.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1XC99P3T0Q1N_UbY25fZPRNPehAGnKH-P/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open authentication ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">🏫</div>
+                  <h4>University Offer Letter</h4>
+                  <p>Offer/admission evidence for my planned higher education in Computational Science and Artificial Intelligence.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1sqVJofDJHzONPQX8paaEXwr_KBHY_9HZ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open offer letter ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">💳</div>
+                  <h4>Tuition-Fee Payment Proof</h4>
+                  <p>Payment evidence showing my family's financial commitment toward my university education.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1R0CmWsohMccJbE7fPXkieiMIp51UuBjW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open payment proof ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">📈</div>
+                  <h4>Google AdSense Approval</h4>
+                  <p>Evidence of previous online-work experience and approval to monetise digital content through Google AdSense.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1D-jW1YayJRyxGYnfFO_4YM5AUD8iBhB1/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open AdSense proof ↗</a>
+                </article>
+
+                <article class="proof-card">
+                  <div class="proof-icon" aria-hidden="true">💻</div>
+                  <h4>Laptop Damage Evidence</h4>
+                  <p>Photo/video evidence showing the damaged laptop after the CPU was severely burned and became unusable.</p>
+                  <a class="btn" href="https://drive.google.com/file/d/1dB7HbPTCqGQT7fET4Msq1tR38ObFvp-5/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Open damage evidence ↗</a>
+                </article>
+              </div>
+
+              <div class="proof-note">
+                <strong>Privacy and transparency:</strong> These documents are shared only to verify my identity, education, previous work and laptop situation. Full identification numbers, account details, signatures and other sensitive information should not be publicly visible. I will publish a purchase receipt and funding update after obtaining the laptop.
+              </div>
+
+              <div class="funding-actions">
+                <a class="btn btn-primary" href="https://wa.me/8801614946557?text=Hello%20Fahim%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20support%20or%20work." target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
+                <a class="btn btn-blue" href="mailto:fahim.bd.official.26@gmail.com?subject=Laptop%20support%20or%20paid%20work">Email about support</a>
+                <a class="btn" href="#contact">Offer paid work</a>
+              </div>
+            </div>
+          </div>
+
+          <section class="contact-panel" id="contact">
+            <div class="contact-panel-head">New inquiry</div>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgobaaoz" method="POST">
+              <div class="form-grid">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required maxlength="100">
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="150">
+                </div>
+              </div>
+
+              <div>
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Job, project, support or collaboration" required maxlength="160">
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me what you need and include a timeline or budget when relevant." required maxlength="3000"></textarea>
+              </div>
+
+              <input type="hidden" name="_subject" value="New portfolio inquiry">
+              <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="form-note">This form is securely processed through Formspree. You can also email me directly.</div>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+              <div>
+                <button class="btn btn-primary" id="submitBtn" type="submit">Send message</button>
+                <a class="btn" href="mailto:fahim.bd.official.26@gmail.com">Email instead</a>
+              </div>
+            </form>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <aside class="side-column" aria-label="Profile">
+      <div class="profile-card">
+        <img class="avatar" src="https://github.com/Fahimxbd.png?size=460" alt="Fahim Sikder's GitHub profile photo">
+        <div>
+          <h2 class="profile-name">Fahim Sikder</h2>
+          <p class="profile-handle">Fahimxbd</p>
+          <p class="profile-bio">AI and software engineering student. Python and Streamlit builder. WordPress and SEO practitioner.</p>
+          <a class="btn btn-primary" style="width:100%" href="#verification">View funding proof</a>
+          <a class="btn" style="width:100%; margin-top:8px" href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">Download CV</a>
+
+          <ul class="profile-list">
+            <li>📍 Bangladesh → Finland</li>
+            <li>🎓 LUT University</li>
+            <li>💼 Open to opportunities</li>
+            <li>✓ Verification documents available</li>
+            <li>✉ <a href="mailto:fahim.bd.official.26@gmail.com">fahim.bd.official.26@gmail.com</a></li>
+            <li>💬 <a href="https://wa.me/8801614946557" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li>🔗 <a href="https://www.linkedin.com/in/callmefahim59" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
+            <li>🌐 <a href="https://www.aibyfahim.com">www.aibyfahim.com</a></li>
+          </ul>
+        </div>
+
+        <div class="profile-stats">
+          <div class="profile-stat"><strong id="publicRepos">6</strong><span>Repositories</span></div>
+          <div class="profile-stat"><strong>5.00</strong><span>HSC GPA</span></div>
+          <div class="profile-stat"><strong>$475–$500</strong><span>Funding gap</span></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Fahim Sikder</span>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="#verification">Verification</a>
+        <a href="mailto:fahim.bd.official.26@gmail.com">Email</a>
+        <a href="https://wa.me/8801614946557" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/callmefahim59" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://drive.google.com/uc?export=download&id=1vEWQWMyy3DlU-VEqZrRVk9FDz_VLk_W5" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const GITHUB_USER = "Fahimxbd";
+    const FORM_ENDPOINT = "https://formspree.io/f/mgobaaoz";
+
+    const languageColors = {
+      Python: "#3572A5", JavaScript: "#f1e05a", HTML: "#e34c26",
+      CSS: "#563d7c", Java: "#b07219", TypeScript: "#3178c6",
+      "Jupyter Notebook": "#DA5B0B", Shell: "#89e051"
+    };
+
+    function escapeHtml(value = "") {
+      return value.replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      })[char]);
+    }
+
+    async function loadRepositories() {
+      const grid = document.getElementById("repoGrid");
+      try {
+        const response = await fetch(
+          `https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`,
+          { headers: { Accept: "application/vnd.github+json" } }
+        );
+        if (!response.ok) throw new Error("GitHub API request failed");
+
+        const repositories = (await response.json())
+          .filter(repo => !repo.fork)
+          .sort((a, b) => (b.stargazers_count - a.stargazers_count) || new Date(b.updated_at) - new Date(a.updated_at));
+
+        document.getElementById("repoCount").textContent = repositories.length;
+        document.getElementById("publicRepos").textContent = repositories.length;
+
+        const featured = repositories.slice(0, 6);
+        if (!featured.length) throw new Error("No public repositories found");
+
+        grid.innerHTML = featured.map(repo => {
+          const language = escapeHtml(repo.language || "Other");
+          const color = languageColors[repo.language] || "#8b949e";
+          const description = escapeHtml(repo.description || "Public project by Fahim Sikder.");
+          const homepage = repo.homepage && /^https?:\/\//i.test(repo.homepage)
+            ? `<a href="${escapeHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>`
+            : "";
+
+          return `
+            <article class="repo-card">
+              <div class="repo-card-top">
+                <span aria-hidden="true">▣</span>
+                <a class="repo-card-title" href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${escapeHtml(repo.name)}</a>
+                <span class="public-pill">Public</span>
+              </div>
+              <p class="repo-description">${description}</p>
+              <div class="repo-footer">
+                <span class="language"><span class="language-dot" style="background:${color}"></span>${language}</span>
+                <span>★ ${repo.stargazers_count}</span>
+                <span>⑂ ${repo.forks_count}</span>
+                ${homepage}
+              </div>
+            </article>`;
+        }).join("");
+      } catch (error) {
+        grid.innerHTML = `
+          <article class="repo-card">
+            <div class="repo-card-top"><span>▣</span><a class="repo-card-title" href="https://github.com/${GITHUB_USER}" target="_blank" rel="noopener noreferrer">View my GitHub repositories</a></div>
+            <p class="repo-description">The live GitHub API could not be loaded. Open my GitHub profile to browse all public work.</p>
+          </article>`;
+      }
+    }
+
+    const form = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formStatus = document.getElementById("formStatus");
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      formStatus.className = "form-status";
+      formStatus.textContent = "";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) {
+          const payload = await response.json().catch(() => ({}));
+          const message = payload?.errors?.map(error => error.message).join(", ");
+          throw new Error(message || "Form submission failed");
+        }
+
+        form.reset();
+        formStatus.className = "form-status success";
+        formStatus.textContent = "Message sent successfully. I will reply as soon as possible.";
+      } catch (error) {
+        formStatus.className = "form-status error";
+        formStatus.innerHTML = 'Message could not be sent. Please email <a href="mailto:fahim.bd.official.26@gmail.com">fahim.bd.official.26@gmail.com</a>.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send message";
+      }
+    });
+
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
+    themeToggle.addEventListener("click", () => {
+      const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("portfolio-theme", next);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
+        event.preventDefault();
+        document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    loadRepositories();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fahim Sikder",
+    "url": "https://www.aibyfahim.com/",
+    "image": "https://github.com/Fahimxbd.png",
+    "sameAs": [
+      "https://github.com/Fahimxbd",
+      "https://www.linkedin.com/in/callmefahim59"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Gazipur Metropolitan College"
+    },
+    "knowsAbout": ["Artificial Intelligence", "Python", "Streamlit", "WordPress", "SEO"]
+  }
+  </script>
+</body>
+</html>
