@@ -1,104 +1,300 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ff4f68">
-  <title>Fahim Sikder | AI and Software Engineering Portfolio</title>
-  <meta name="description" content="Portfolio of Fahim Sikder, a Computational Science and Artificial Intelligence student at LUT University and a software developer building live web products.">
-  <meta name="keywords" content="Fahim Sikder, LUT University, Computational Science, Artificial Intelligence, Python developer, Next.js developer, software engineering, Exam Center BD, CinemaMaddy">
+  <meta name="theme-color" content="#07110d">
+  <title>Fahim Sikder | Cybersecurity-Focused Software Engineer</title>
+  <meta name="description" content="Fahim Sikder is a cybersecurity-focused software developer building secure full-stack, cloud and AI products with Cloudflare, Supabase, Next.js and Python.">
+  <meta name="keywords" content="Fahim Sikder, cybersecurity developer, application security, secure web developer, Cloudflare security, Supabase RLS, Next.js developer, Python developer, AI engineer">
   <meta name="author" content="Fahim Sikder">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.aibyfahim.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.aibyfahim.com/">
-  <meta property="og:title" content="Fahim Sikder | AI and Software Engineering">
-  <meta property="og:description" content="Academic journey, technical skills, live projects, services and future goals.">
+  <meta property="og:title" content="Fahim Sikder | Cybersecurity-Focused Software Engineer">
+  <meta property="og:description" content="Secure systems. Cloud defense. Full-stack engineering. AI products.">
   <meta property="og:image" content="https://github.com/Fahimxbd.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Fahim Sikder",
+    "url":"https://www.aibyfahim.com/",
+    "image":"https://github.com/Fahimxbd.png",
+    "sameAs":["https://github.com/Fahimxbd"],
+    "jobTitle":"Cybersecurity-Focused Software Developer",
+    "knowsAbout":["Application Security","Cloud Security","Secure Software Development","Artificial Intelligence","Next.js","Supabase","Cloudflare","Python"]
+  }
+  </script>
   <style>
-    :root { --bg:#f7f8fc; --card:#fff; --soft:#fff0f3; --soft-blue:#edf6ff; --text:#151c2d; --muted:#687080; --line:#e5e8ef; --accent:#ff4f68; --accent-dark:#dc304b; --violet:#7747e6; --shadow:0 18px 55px rgba(29,36,58,.09); --radius:26px; --max:1160px; }
-    [data-theme="dark"] { --bg:#0b1220; --card:#141d2d; --soft:#2a1720; --soft-blue:#14243a; --text:#f5f7fb; --muted:#aeb8c8; --line:#29364b; --shadow:0 18px 55px rgba(0,0,0,.28); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:86px; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family:"DM Sans",sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
-    body.lock { overflow:hidden; } a { color:inherit; text-decoration:none; } img { display:block; max-width:100%; } button,input,textarea { font:inherit; }
-    .container { width:min(var(--max),calc(100% - 30px)); margin:auto; } .section { padding:82px 0; }
-    .section-soft { background:linear-gradient(135deg,var(--soft),var(--soft-blue)); border-block:1px solid var(--line); }
-    h1,h2,h3 { font-family:"Manrope",sans-serif; line-height:1.15; } .accent { color:var(--accent); }
-    header { position:sticky; top:0; z-index:80; border-bottom:1px solid var(--line); background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(18px); }
-    .nav { height:74px; display:flex; align-items:center; gap:22px; } .brand { display:flex; align-items:center; gap:11px; font:800 20px "Manrope",sans-serif; }
-    .brand-mark { width:44px; height:44px; display:grid; place-items:center; border-radius:50%; color:#fff; background:linear-gradient(135deg,var(--accent),#ff8495); box-shadow:0 10px 26px rgba(255,79,104,.28); }
-    nav { margin-left:auto; display:flex; gap:3px; } nav a { padding:9px 11px; border-radius:11px; color:var(--muted); font-size:14px; font-weight:700; } nav a:hover { color:var(--accent); background:var(--soft); }
-    .nav-actions { display:flex; gap:8px; } .icon-btn,.menu-btn { width:42px; height:42px; border:1px solid var(--line); border-radius:13px; background:var(--card); color:var(--text); cursor:pointer; } .menu-btn { display:none; font-size:21px; } .mobile-nav { display:none; }
-    .hero { padding:94px 0 74px; overflow:hidden; background:radial-gradient(circle at 8% 0%,rgba(255,79,104,.22),transparent 33%),radial-gradient(circle at 92% 28%,rgba(119,71,230,.14),transparent 28%); }
-    .hero-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:58px; align-items:center; }
-    .pill { display:inline-flex; align-items:center; gap:10px; padding:9px 15px; border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line)); border-radius:999px; background:color-mix(in srgb,var(--card) 84%,transparent); font-weight:700; }
-    .pulse { width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 7px rgba(255,79,104,.13); }
-    h1 { max-width:780px; margin:25px 0 20px; font-size:clamp(44px,7vw,76px); letter-spacing:-.055em; } .lead { max-width:750px; margin:0; color:var(--muted); font-size:clamp(18px,2vw,21px); }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; } .btn { min-height:50px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 20px; border:1px solid transparent; border-radius:16px; font-weight:800; cursor:pointer; transition:.2s ease; } .btn:hover { transform:translateY(-2px); }
-    .btn-primary { color:#fff; background:linear-gradient(135deg,var(--accent),#ff7487); box-shadow:0 14px 30px rgba(255,79,104,.25); } .btn-secondary { background:var(--card); border-color:var(--line); }
-    .hero-meta { display:flex; flex-wrap:wrap; gap:16px; margin-top:25px; color:var(--muted); font-size:14px; } .hero-meta strong { color:var(--text); }
-    .profile-wrap { position:relative; } .profile-card { padding:18px; border:1px solid var(--line); border-radius:38px; background:linear-gradient(145deg,var(--card),color-mix(in srgb,var(--soft-blue) 55%,var(--card))); box-shadow:var(--shadow); transform:rotate(2deg); } .profile-card img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:29px; }
-    .profile-note { position:absolute; left:-34px; bottom:30px; max-width:250px; padding:16px 18px; border:1px solid var(--line); border-radius:18px; background:var(--card); box-shadow:var(--shadow); } .profile-note strong { display:block; font-family:"Manrope",sans-serif; } .profile-note span { color:var(--muted); font-size:13px; }
-    .stats { position:relative; z-index:3; display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin-top:-34px; } .stat { padding:22px; text-align:center; border:1px solid var(--line); border-radius:21px; background:var(--card); box-shadow:var(--shadow); } .stat strong { display:block; color:var(--accent); font:800 24px "Manrope",sans-serif; } .stat span { color:var(--muted); font-size:13px; }
-    .section-head { max-width:780px; margin:0 auto 42px; text-align:center; } .eyebrow { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; } .section-head h2 { margin:10px 0 13px; font-size:clamp(34px,5vw,52px); letter-spacing:-.04em; } .section-head p { margin:0; color:var(--muted); font-size:18px; }
-    .grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; } .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; } .card { padding:29px; border:1px solid var(--line); border-radius:var(--radius); background:var(--card); box-shadow:var(--shadow); } .card h3 { margin:13px 0 9px; font-size:23px; } .card p { margin:0; color:var(--muted); }
-    .icon { width:52px; height:52px; display:grid; place-items:center; border-radius:17px; background:var(--soft); color:var(--accent); font-size:22px; font-weight:800; }
-    .about-grid { display:grid; grid-template-columns:.86fr 1.14fr; gap:24px; } .identity-card { text-align:center; } .identity-card img { width:190px; height:190px; margin:0 auto 22px; border-radius:28px; object-fit:cover; }
-    .identity-list { display:grid; gap:11px; margin-top:22px; text-align:left; } .identity-list div { padding:12px 14px; border:1px solid var(--line); border-radius:13px; background:var(--bg); overflow-wrap:anywhere; } .identity-list b { color:var(--accent); } .about-copy p { color:var(--muted); font-size:18px; } .quote { margin-top:23px; padding:20px; border-left:4px solid var(--accent); border-radius:0 18px 18px 0; background:var(--soft); font-weight:700; }
-    .timeline { position:relative; max-width:900px; margin:auto; } .timeline::before { content:""; position:absolute; left:28px; top:10px; bottom:10px; width:2px; background:linear-gradient(var(--accent),var(--violet)); } .timeline-item { position:relative; margin-bottom:25px; padding-left:78px; } .timeline-dot { position:absolute; left:14px; top:28px; width:29px; height:29px; border:7px solid var(--bg); border-radius:50%; background:var(--accent); box-shadow:0 0 0 2px var(--accent); } .section-soft .timeline-dot { border-color:var(--soft-blue); } .timeline-card { padding:25px; border:1px solid var(--line); border-radius:23px; background:var(--card); box-shadow:var(--shadow); } .timeline-card .date { color:var(--accent); font-weight:800; } .timeline-card h3 { margin:5px 0 8px; } .timeline-card p { margin:0; color:var(--muted); }
-    .tech-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:15px; } .tech { min-height:145px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:20px 12px; border:1px solid var(--line); border-radius:21px; background:var(--card); box-shadow:var(--shadow); text-align:center; transition:.2s ease; } .tech:hover { transform:translateY(-4px); border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); } .tech img { width:48px; height:48px; object-fit:contain; } .tech strong { font-size:14px; } [data-theme="dark"] .dark-logo { filter:invert(1); }
-    .service-card ul { display:grid; gap:8px; margin:16px 0 0; padding:0; list-style:none; color:var(--muted); } .service-card li::before { content:"•"; margin-right:9px; color:var(--accent); font-weight:900; }
-    .projects-showcase { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:24px; }
-    .project-card { overflow:hidden; padding:0; transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease; } .project-card:hover { transform:translateY(-7px); border-color:color-mix(in srgb,var(--accent) 35%,var(--line)); box-shadow:0 24px 70px rgba(29,36,58,.14); }
-    .project-visual { position:relative; height:190px; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; gap:6px; padding:24px; overflow:hidden; color:#fff; text-align:left; }
-    .project-visual::before { content:""; position:absolute; width:190px; height:190px; border-radius:50%; right:-70px; top:-80px; background:rgba(255,255,255,.14); } .project-visual::after { content:""; position:absolute; width:120px; height:120px; border-radius:28px; right:24px; bottom:-64px; transform:rotate(26deg); background:rgba(255,255,255,.09); } .project-visual > * { position:relative; z-index:2; }
-    .project-visual.cinema { background:linear-gradient(140deg,#0f172a,#46236f 55%,#e43f6f); } .project-visual.exam { background:linear-gradient(140deg,#073b4c,#0d7b78 52%,#39b980); } .project-visual.oronno { background:linear-gradient(140deg,#173d2c,#377b45 55%,#88a94d); }
-    .project-logo { font:800 28px "Manrope",sans-serif; letter-spacing:-.04em; } .project-domain { color:rgba(255,255,255,.8); font-size:13px; font-weight:700; }
-    .live-badge { position:absolute; top:18px; left:18px; display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid rgba(255,255,255,.22); border-radius:999px; background:rgba(9,15,26,.30); backdrop-filter:blur(9px); color:#fff; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; } .live-badge i { width:7px; height:7px; border-radius:50%; background:#6df7a7; box-shadow:0 0 0 5px rgba(109,247,167,.14); }
-    .project-body { padding:24px; } .project-body h3 { margin:0 0 8px; } .project-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:17px; } .project-tags span { padding:6px 9px; border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--muted); font-size:11px; font-weight:800; } .project-actions { display:flex; align-items:center; gap:15px; margin-top:18px; } .project-link { display:inline-flex; align-items:center; gap:6px; color:var(--accent); font-weight:800; } .project-link:hover { color:var(--accent-dark); }
-    .secondary-projects { margin-top:22px; } .secondary-projects .project-visual { height:155px; color:var(--accent); background:linear-gradient(135deg,var(--soft),var(--soft-blue)); justify-content:center; align-items:center; text-align:center; } .secondary-projects .project-visual::before,.secondary-projects .project-visual::after { display:none; }
-    .vision { position:relative; overflow:hidden; padding:48px; border-radius:36px; color:#fff; background:linear-gradient(135deg,#172238,#2b174a); } .vision::after { content:""; position:absolute; top:-90px; right:-80px; width:270px; height:270px; border-radius:50%; background:rgba(255,79,104,.22); } .vision h2 { max-width:780px; margin:0 0 16px; font-size:clamp(34px,5vw,52px); } .vision p { max-width:790px; color:#cbd4e3; font-size:18px; } .vision-steps { position:relative; z-index:1; display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:29px; } .vision-step { padding:20px; border:1px solid rgba(255,255,255,.15); border-radius:18px; background:rgba(255,255,255,.07); } .vision-step b { display:block; margin-bottom:6px; color:#ff91a0; }
-    .contact-grid { display:grid; grid-template-columns:.86fr 1.14fr; gap:24px; } .contact-list { display:grid; gap:14px; margin-top:22px; } .contact-item { display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:17px; background:var(--card); overflow-wrap:anywhere; } .contact-item .icon { width:44px; height:44px; flex:0 0 44px; border-radius:14px; font-size:17px; } .contact-item small { display:block; color:var(--muted); } form { display:grid; gap:15px; } .field label { display:block; margin-bottom:7px; font-weight:800; } .field input,.field textarea { width:100%; padding:14px 15px; border:1px solid var(--line); border-radius:15px; outline:none; background:var(--bg); color:var(--text); } .field input:focus,.field textarea:focus { border-color:var(--accent); box-shadow:0 0 0 4px rgba(255,79,104,.1); } .field textarea { min-height:145px; resize:vertical; }
-    footer { padding:42px 0; background:#1c2639; color:#fff; } .footer-grid { display:flex; align-items:center; justify-content:space-between; gap:24px; } .footer-grid p { margin:4px 0 0; color:#aeb8c8; } .socials { display:flex; gap:10px; } .socials a { width:44px; height:44px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.16); border-radius:13px; font-weight:800; }
-    .modal { position:fixed; inset:0; z-index:200; display:none; place-items:center; padding:18px; background:rgba(8,13,24,.72); backdrop-filter:blur(10px); } .modal.show { display:grid; } .modal-card { position:relative; width:min(620px,100%); padding:34px; border:1px solid var(--line); border-radius:30px; background:var(--card); box-shadow:0 35px 100px rgba(0,0,0,.35); } .modal-close { position:absolute; top:17px; right:17px; width:40px; height:40px; border:1px solid var(--line); border-radius:12px; background:var(--bg); color:var(--text); cursor:pointer; } .modal-card .hello { font-size:42px; } .modal-card h2 { margin:7px 0; font-size:34px; } .modal-card p { color:var(--muted); font-size:17px; } .modal-points { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:21px 0; } .modal-points div { padding:13px; border:1px solid var(--line); border-radius:14px; background:var(--bg); font-size:13px; font-weight:700; text-align:center; }
-    @media (max-width:940px) { nav { display:none; } .menu-btn { display:block; } .hero-grid,.about-grid,.contact-grid { grid-template-columns:1fr; } .profile-wrap { width:min(540px,100%); margin:15px auto 0; } .profile-note { left:10px; } .grid-3 { grid-template-columns:repeat(2,1fr); } .projects-showcase { grid-template-columns:1fr; } .tech-grid { grid-template-columns:repeat(4,1fr); } .vision-steps { grid-template-columns:1fr; } .mobile-nav { position:fixed; inset:74px 0 auto; z-index:70; padding:14px 15px; border-bottom:1px solid var(--line); background:var(--card); } .mobile-nav.open { display:grid; } .mobile-nav a { padding:12px; border-bottom:1px solid var(--line); font-weight:800; } }
-    @media (max-width:650px) { .section { padding:62px 0; } .hero { padding:62px 0 58px; } h1 { font-size:47px; } .grid-2,.grid-3 { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); margin-top:-18px; } .tech-grid { grid-template-columns:repeat(2,1fr); } .tech { min-height:130px; } .project-visual { height:170px; } .vision { padding:31px 24px; } .footer-grid { align-items:flex-start; flex-direction:column; } .modal-card { padding:28px 22px; } .modal-points { grid-template-columns:1fr; } .brand { font-size:18px; } .profile-note { position:static; max-width:none; margin-top:13px; } .hero-actions .btn { width:100%; } }
+    :root{
+      --bg:#050907;--panel:#0b120f;--panel2:#0f1814;--line:#1c3128;--text:#e8fff4;--muted:#91a89d;
+      --green:#54f59b;--green2:#1fd879;--cyan:#67e8f9;--amber:#fbbf24;--danger:#fb7185;
+      --shadow:0 22px 70px rgba(0,0,0,.36);--radius:22px;--max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{margin:0;background:
+      radial-gradient(circle at 15% 0%,rgba(31,216,121,.08),transparent 25%),
+      radial-gradient(circle at 90% 15%,rgba(103,232,249,.06),transparent 24%),
+      var(--bg);color:var(--text);font-family:"Space Grotesk",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:
+      linear-gradient(rgba(84,245,155,.025) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(84,245,155,.025) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+    a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.container{width:min(var(--max),calc(100% - 34px));margin:auto}
+    .mono{font-family:"JetBrains Mono",monospace}.accent{color:var(--green)}.cyan{color:var(--cyan)}
+    header{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(84,245,155,.12);background:rgba(5,9,7,.82);backdrop-filter:blur(18px)}
+    .nav{height:72px;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:700}
+    .brand-mark{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(84,245,155,.35);border-radius:11px;background:rgba(84,245,155,.08);color:var(--green);font:700 14px "JetBrains Mono"}
+    nav{margin-left:auto;display:flex;gap:3px}nav a{padding:9px 11px;border-radius:10px;color:var(--muted);font-size:14px;font-weight:600}nav a:hover{color:var(--green);background:rgba(84,245,155,.06)}
+    .nav-cta{padding:9px 14px;border:1px solid rgba(84,245,155,.35);border-radius:10px;color:var(--green);font:600 13px "JetBrains Mono";background:rgba(84,245,155,.06)}
+    .menu{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--green)}
+    .mobile-nav{display:none}.mobile-nav.open{display:grid;padding:10px 17px 15px;border-bottom:1px solid var(--line);background:var(--panel)}
+    .mobile-nav a{padding:12px 4px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.04)}
+    .hero{padding:90px 0 70px}.hero-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:48px;align-items:center}
+    .status{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(84,245,155,.25);border-radius:999px;background:rgba(84,245,155,.06);color:#bfffd9;font:600 12px "JetBrains Mono";letter-spacing:.04em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(84,245,155,.09),0 0 20px rgba(84,245,155,.65)}
+    h1,h2,h3{margin-top:0;line-height:1.08}.hero h1{max-width:760px;margin:24px 0 20px;font-size:clamp(46px,7vw,78px);letter-spacing:-.055em}
+    .hero h1 .line{display:block}.lead{max-width:760px;margin:0;color:#a9bcb3;font-size:clamp(18px,2vw,21px)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}.btn{min-height:49px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:12px;border:1px solid transparent;font-weight:700;transition:.2s ease}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--green);color:#031008;box-shadow:0 12px 34px rgba(84,245,155,.16)}.btn-secondary{border-color:var(--line);background:var(--panel);color:#d6ece1}
+    .proof-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;color:var(--muted);font-size:13px}.proof-row span{display:flex;align-items:center;gap:7px}.proof-row i{color:var(--green);font-style:normal}
+    .terminal{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#08100c,#0d1712);box-shadow:var(--shadow);overflow:hidden}
+    .terminal-top{height:44px;display:flex;align-items:center;gap:7px;padding:0 15px;border-bottom:1px solid var(--line);background:#07100c}.terminal-top i{width:10px;height:10px;border-radius:50%;background:#345045}.terminal-top i:nth-child(1){background:#fb7185}.terminal-top i:nth-child(2){background:#fbbf24}.terminal-top i:nth-child(3){background:#54f59b}.terminal-top span{margin-left:auto;color:#678076;font:500 11px "JetBrains Mono"}
+    .terminal-body{padding:25px;font:500 13px/1.8 "JetBrains Mono";color:#a8cbb9;min-height:380px}.prompt{color:var(--green)}.cmd{color:#f0fff7}.out{color:#7f998d}.ok{color:var(--cyan)}.cursor{display:inline-block;width:8px;height:16px;margin-left:5px;vertical-align:-3px;background:var(--green);animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px}.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(11,18,15,.72)}.stat strong{display:block;color:var(--green);font:700 18px "JetBrains Mono"}.stat span{color:var(--muted);font-size:12px}
+    .section{padding:78px 0}.section-head{max-width:790px;margin-bottom:38px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font:600 12px "JetBrains Mono";letter-spacing:.09em;text-transform:uppercase}.eyebrow:before{content:"//";color:#406f59}
+    .section-head h2{margin:12px 0 12px;font-size:clamp(34px,5vw,52px);letter-spacing:-.045em}.section-head p{margin:0;color:var(--muted);font-size:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .card{position:relative;padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(15,24,20,.94),rgba(8,14,11,.96));box-shadow:0 16px 45px rgba(0,0,0,.18);overflow:hidden}.card:after{content:"";position:absolute;inset:auto -30px -50px auto;width:120px;height:120px;border-radius:50%;background:rgba(84,245,155,.035)}
+    .card h3{margin:12px 0 8px;font-size:22px}.card p{margin:0;color:var(--muted)}
+    .kicker{color:var(--cyan);font:600 11px "JetBrains Mono";letter-spacing:.08em;text-transform:uppercase}.icon{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(84,245,155,.23);border-radius:12px;background:rgba(84,245,155,.06);color:var(--green);font:700 16px "JetBrains Mono"}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}.profile-card img{width:126px;height:126px;border-radius:20px;object-fit:cover;border:1px solid var(--line);filter:saturate(.85)}
+    .profile-card h3{font-size:27px}.handle{color:var(--green);font:500 13px "JetBrains Mono"}.facts{display:grid;gap:9px;margin-top:19px}.facts div{padding:11px 12px;border:1px solid var(--line);border-radius:11px;background:#07100c;color:#9fb5aa;font-size:13px}.facts b{color:#dffff0}
+    .about-copy p{font-size:17px}.manifesto{margin-top:19px;padding:17px;border-left:3px solid var(--green);border-radius:0 12px 12px 0;background:rgba(84,245,155,.045);color:#c9e5d7;font:500 14px/1.7 "JetBrains Mono"}
+    .cap-list{display:grid;gap:9px;margin-top:16px;padding:0;list-style:none}.cap-list li{position:relative;padding-left:18px;color:var(--muted);font-size:14px}.cap-list li:before{content:">";position:absolute;left:0;color:var(--green);font-family:"JetBrains Mono"}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tag{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#07100c;color:#9db6aa;font:600 11px "JetBrains Mono"}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{padding:0}.project-top{position:relative;min-height:178px;padding:23px;display:flex;flex-direction:column;justify-content:flex-end;border-bottom:1px solid var(--line);background:
+      linear-gradient(135deg,rgba(84,245,155,.11),rgba(103,232,249,.04)),
+      #07100c}
+    .project-top:before{content:"";position:absolute;right:22px;top:22px;width:72px;height:72px;border:1px solid rgba(84,245,155,.18);border-radius:18px;transform:rotate(13deg)}.project-top:after{content:"";position:absolute;right:52px;top:52px;width:72px;height:72px;border:1px solid rgba(103,232,249,.10);border-radius:50%}
+    .project.featured .project-top{background:linear-gradient(135deg,rgba(84,245,155,.16),rgba(103,232,249,.08)),#07100c}.live{display:inline-flex;width:max-content;align-items:center;gap:7px;margin-bottom:auto;padding:6px 9px;border:1px solid rgba(84,245,155,.22);border-radius:999px;color:#bfffd8;background:rgba(84,245,155,.05);font:600 10px "JetBrains Mono";text-transform:uppercase;letter-spacing:.08em}.live i{width:6px;height:6px;border-radius:50%;background:var(--green)}
+    .project-name{position:relative;z-index:2;font-size:29px;font-weight:700;letter-spacing:-.035em}.project-domain{position:relative;z-index:2;color:var(--muted);font:500 12px "JetBrains Mono"}.project-body{padding:23px}.project-body h3{margin:0 0 8px;font-size:20px}.project-body p{color:var(--muted);margin:0}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.text-link{color:var(--green);font:600 13px "JetBrains Mono"}.text-link:hover{text-decoration:underline}
+    .security-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}.flow{padding:18px;border:1px solid var(--line);border-radius:15px;background:#08100c}.flow b{display:block;margin-bottom:6px;color:var(--green);font:600 12px "JetBrains Mono"}.flow span{color:var(--muted);font-size:13px}
+    .lab{padding:32px;border:1px solid rgba(84,245,155,.22);border-radius:25px;background:linear-gradient(135deg,rgba(84,245,155,.06),rgba(103,232,249,.025));box-shadow:var(--shadow)}.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.checklist{display:grid;gap:10px}.check{display:flex;gap:10px;align-items:flex-start;padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:#07100c;color:#a5b9af;font-size:13px}.check b{color:var(--green);font-family:"JetBrains Mono"}
+    .education{display:flex;gap:18px;align-items:flex-start}.education .year{min-width:86px;color:var(--green);font:600 12px "JetBrains Mono"}.education + .education{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+    .contact-box{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:34px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#0c1511,#07100c);box-shadow:var(--shadow)}.contact-box h2{margin-bottom:12px;font-size:clamp(34px,5vw,50px)}.contact-box p{color:var(--muted);max-width:650px}
+    form{display:grid;gap:11px}input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;outline:none;background:#050907;color:var(--text)}input:focus,textarea:focus{border-color:rgba(84,245,155,.5);box-shadow:0 0 0 4px rgba(84,245,155,.06)}textarea{min-height:122px;resize:vertical}
+    footer{padding:30px 0 38px;color:#6f887c}.footer{display:flex;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding-top:26px;font:500 12px "JetBrains Mono"}.footer a{color:#a9c5b7}
+    @media(max-width:940px){nav,.nav-cta{display:none}.menu{display:block}.hero-grid,.about-grid,.lab-grid,.contact-box{grid-template-columns:1fr}.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr}.security-flow{grid-template-columns:repeat(2,1fr)}.terminal{margin-top:6px}}
+    @media(max-width:620px){.hero{padding:62px 0 50px}.section{padding:60px 0}.hero h1{font-size:48px}.stats,.grid-2,.grid-3,.grid-4,.security-flow{grid-template-columns:1fr}.hero-actions .btn{width:100%}.terminal-body{padding:19px;font-size:12px;min-height:auto}.contact-box{padding:23px}.footer{flex-direction:column}.education{display:block}.education .year{display:block;margin-bottom:6px}}
   </style>
 </head>
 <body>
-  <div class="modal" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Close welcome message">✕</button><div class="hello">👋</div><span class="eyebrow">Welcome</span><h2 id="welcomeTitle">Hello, I am Fahim.</h2><p>I study science, build software and work toward a career in artificial intelligence.</p><div class="modal-points"><div>LUT University</div><div>AI and Software</div><div>Open to Projects</div></div><button class="btn btn-primary" id="exploreBtn">Explore my portfolio</button></div></div>
-  <header><div class="container nav"><a class="brand" href="#home" aria-label="Fahim Sikder home"><span class="brand-mark">FS</span><span>Fahim Sikder</span></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#vision">Vision</a><a href="#contact">Contact</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn" aria-label="Change theme">◐</button><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></div></div><div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#vision">Vision</a><a href="#contact">Contact</a></div></header>
-  <main>
-    <section class="hero" id="home"><div class="container hero-grid"><div><div class="pill"><span class="pulse"></span>Computational Science and Artificial Intelligence</div><h1>Learning deeply. Building <span class="accent">useful technology.</span></h1><p class="lead">I am Fahim Sikder. I am an admitted LUT University student, a developer and a future AI engineer.</p><div class="hero-actions"><a class="btn btn-primary" href="#projects">View my work →</a><a class="btn btn-secondary" href="#education">Academic journey</a><a class="btn btn-secondary" href="mailto:Fahim.sikder@student.lut.fi?subject=Request%20for%20Fahim%20Sikder%20CV">Request CV</a></div><div class="hero-meta"><span><strong>Major:</strong> Computational Science and AI</span><span><strong>University:</strong> LUT University</span><span><strong>Available:</strong> Remote projects</span></div></div><div class="profile-wrap"><div class="profile-card"><img src="https://github.com/Fahimxbd.png" alt="Fahim Sikder profile photo"></div><div class="profile-note"><strong>Future AI Engineer</strong><span>Focused on strong skills, research and useful products.</span></div></div></div></section>
-    <div class="container stats"><div class="stat"><strong>5.00</strong><span>HSC GPA</span></div><div class="stat"><strong>LUT</strong><span>University path</span></div><div class="stat"><strong>15+</strong><span>Tools and languages</span></div><div class="stat"><strong>Live</strong><span>Production projects</span></div></div>
-    <section class="section" id="about"><div class="container"><div class="section-head"><span class="eyebrow">About me</span><h2>Student, developer and future engineer.</h2><p>I connect science, code and practical problem solving.</p></div><div class="about-grid"><article class="card identity-card"><img src="https://github.com/Fahimxbd.png" alt="Portrait of Fahim Sikder"><h3>Fahim Sikder</h3><p>AI Student and Software Developer</p><div class="identity-list"><div><b>Major:</b> Computational Science and Artificial Intelligence</div><div><b>University:</b> LUT University, Finland</div><div><b>Email:</b> Fahim.sikder@student.lut.fi</div><div><b>GitHub:</b> @Fahimxbd</div></div></article><article class="card about-copy"><span class="eyebrow">My story</span><h3>Science led me to software.</h3><p>I completed HSC in Science with GPA 5.00. Mathematics, physics and ICT shaped my interest in computing.</p><p>I learned programming by building websites, AI tools and digital products that solve real problems.</p><p>My next goal is to study Computational Science and AI at LUT University and grow into a skilled engineer and researcher.</p><div class="quote">I want to understand systems, not only use tools.</div></article></div></div></section>
-    <section class="section section-soft" id="education"><div class="container"><div class="section-head"><span class="eyebrow">Academic life</span><h2>My education and learning path.</h2><p>A strong science base with a clear focus on AI.</p></div><div class="timeline"><div class="timeline-item"><span class="timeline-dot"></span><article class="timeline-card"><span class="date">University path</span><h3>LUT University, Finland</h3><p>Computational Science and Artificial Intelligence. My focus will include mathematics, programming, data and intelligent systems.</p></article></div><div class="timeline-item"><span class="timeline-dot"></span><article class="timeline-card"><span class="date">2024</span><h3>Higher Secondary Certificate</h3><p>Science, Gazipur Metropolitan College. GPA 5.00 out of 5.00. Main subjects included Higher Mathematics, Physics, Chemistry and ICT.</p></article></div><div class="timeline-item"><span class="timeline-dot"></span><article class="timeline-card"><span class="date">Ongoing</span><h3>Independent technical learning</h3><p>Programming, web development, databases, machine learning and software product development.</p></article></div></div></div></section>
-    <section class="section" id="skills"><div class="container"><div class="section-head"><span class="eyebrow">Technical skills</span><h2>Languages and tools I use.</h2><p>A growing stack for software, web and AI projects.</p></div><div class="tech-grid"><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python logo"><strong>Python</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C logo"><strong>C</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C plus plus logo"><strong>C++</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript logo"><strong>JavaScript</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5 logo"><strong>HTML5</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3 logo"><strong>CSS3</strong></div><div class="tech"><img class="dark-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js logo"><strong>Next.js</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React logo"><strong>React</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS logo"><strong>Tailwind CSS</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo"><strong>SQL and PostgreSQL</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git logo"><strong>Git</strong></div><div class="tech"><img class="dark-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub logo"><strong>GitHub</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Supabase logo"><strong>Supabase</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="Firebase logo"><strong>Firebase</strong></div><div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare logo"><strong>Cloudflare</strong></div></div></div></section>
-    <section class="section section-soft" id="services"><div class="container"><div class="section-head"><span class="eyebrow">What I can do</span><h2>Useful digital solutions.</h2><p>Clear design, clean code and practical results.</p></div><div class="grid-2"><article class="card service-card"><div class="icon">⌨</div><h3>Portfolio websites</h3><p>Professional personal and academic websites.</p><ul><li>Responsive design</li><li>Custom sections</li><li>Fast deployment</li></ul></article><article class="card service-card"><div class="icon">↗</div><h3>Business websites</h3><p>Simple websites that help small businesses grow.</p><ul><li>Service pages</li><li>Product catalogues</li><li>SEO structure</li></ul></article><article class="card service-card"><div class="icon">AI</div><h3>AI tools</h3><p>Small AI applications and useful integrations.</p><ul><li>AI APIs</li><li>Streamlit apps</li><li>Data tools</li></ul></article><article class="card service-card"><div class="icon">N</div><h3>Full stack web apps</h3><p>Modern apps with Next.js and Supabase.</p><ul><li>Authentication</li><li>Admin panels</li><li>Database setup</li></ul></article></div></div></section>
-    <section class="section" id="projects"><div class="container"><div class="section-head"><span class="eyebrow">Selected work</span><h2>Live products I have built.</h2><p>Real projects designed, developed and shipped for people to use.</p></div><div class="projects-showcase">
-      <article class="card project-card"><div class="project-visual cinema"><span class="live-badge"><i></i> Live project</span><span class="project-logo">CinemaMaddy</span><span class="project-domain">cinemamaddy.site</span></div><div class="project-body"><h3>Cinematic movie platform</h3><p>A responsive entertainment experience built around visual movie discovery, rich title presentation and a polished cinematic interface.</p><div class="project-tags"><span>Responsive UI</span><span>JavaScript</span><span>Web Product</span></div><div class="project-actions"><a class="project-link" href="https://cinemamaddy.site" target="_blank" rel="noopener">Open live site →</a></div></div></article>
-      <article class="card project-card"><div class="project-visual exam"><span class="live-badge"><i></i> Live project</span><span class="project-logo">Exam Center BD</span><span class="project-domain">examcenterbd.com</span></div><div class="project-body"><h3>Online exam & learning platform</h3><p>A Bangla-first education platform with SSC/HSC practice, model tests, courses, leaderboards and admin-managed learning content.</p><div class="project-tags"><span>Supabase</span><span>Cloudflare</span><span>Education Tech</span></div><div class="project-actions"><a class="project-link" href="https://examcenterbd.com" target="_blank" rel="noopener">Open live site →</a></div></div></article>
-      <article class="card project-card"><div class="project-visual oronno"><span class="live-badge"><i></i> Live project</span><span class="project-logo">Oronno Nogor</span><span class="project-domain">oronnonogor.com</span></div><div class="project-body"><h3>Production client website</h3><p>A production-ready web experience focused on fast loading, responsive browsing and a clean interface across mobile and desktop.</p><div class="project-tags"><span>Performance</span><span>Responsive</span><span>Production</span></div><div class="project-actions"><a class="project-link" href="https://oronnonogor.com/" target="_blank" rel="noopener">Open live site →</a></div></div></article>
-      </div><div class="grid-2 secondary-projects"><article class="card project-card"><div class="project-visual"><span class="project-logo">Neferiq</span></div><div class="project-body"><h3>Letter based social platform</h3><p>A platform concept for thoughtful international connections.</p><a class="project-link" href="https://neferiq.com" target="_blank" rel="noopener">Visit project →</a></div></article><article class="card project-card"><div class="project-visual"><span class="project-logo">IYTO</span></div><div class="project-body"><h3>Youth technology platform</h3><p>A competition platform with accounts, categories and rounds.</p><a class="project-link" href="https://iyto.online" target="_blank" rel="noopener">Visit project →</a></div></article><article class="card project-card"><div class="project-visual"><span class="project-logo">Business Web</span></div><div class="project-body"><h3>Websites for clients</h3><p>Responsive websites for personal brands and small businesses.</p><a class="project-link" href="#contact">Start a project →</a></div></article></div></div></section>
-    <section class="section" id="vision"><div class="container vision"><span class="eyebrow">Future vision</span><h2>I want to become an AI engineer and researcher.</h2><p>My plan is to master the foundations, build serious projects, gain research experience and continue toward graduate study.</p><div class="vision-steps"><div class="vision-step"><b>01 University</b>Build strong skills in mathematics, AI and software engineering.</div><div class="vision-step"><b>02 Research</b>Work on useful projects, internships and research papers.</div><div class="vision-step"><b>03 Graduate study</b>Pursue a strong master's degree and later a PhD.</div></div></div></section>
-    <section class="section section-soft" id="contact"><div class="container"><div class="section-head"><span class="eyebrow">Contact</span><h2>Let us build something useful.</h2><p>Contact me for projects, internships or collaboration.</p></div><div class="contact-grid"><article class="card"><h3>Contact Fahim</h3><p>I am open to remote work and serious opportunities.</p><div class="contact-list"><a class="contact-item" href="mailto:Fahim.sikder@student.lut.fi"><span class="icon">✉</span><span><small>University email</small><strong>Fahim.sikder@student.lut.fi</strong></span></a><a class="contact-item" href="https://github.com/Fahimxbd" target="_blank" rel="noopener"><span class="icon">GH</span><span><small>GitHub</small><strong>github.com/Fahimxbd</strong></span></a><a class="contact-item" href="https://www.aibyfahim.com" target="_blank" rel="noopener"><span class="icon">↗</span><span><small>Portfolio</small><strong>www.aibyfahim.com</strong></span></a></div></article><article class="card"><form id="contactForm"><div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Your full name"></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div><div class="field"><label for="subject">Subject</label><input id="subject" name="subject" required placeholder="Project or collaboration"></div><div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Write a short message"></textarea></div><button class="btn btn-primary" type="submit">Send message →</button></form></article></div></div></section>
-  </main>
-  <footer><div class="container footer-grid"><div><strong>Fahim Sikder</strong><p>AI student, developer and future engineer.</p></div><div class="socials"><a href="mailto:Fahim.sikder@student.lut.fi" aria-label="Email Fahim">✉</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener" aria-label="GitHub">GH</a></div></div></footer>
-  <script>
-    const root=document.documentElement,themeBtn=document.getElementById("themeBtn"),menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav"),modal=document.getElementById("welcomeModal"),modalClose=document.getElementById("modalClose"),exploreBtn=document.getElementById("exploreBtn");
-    const savedTheme=localStorage.getItem("fahimTheme"); if(savedTheme) root.dataset.theme=savedTheme;
-    themeBtn.addEventListener("click",()=>{const next=root.dataset.theme==="dark"?"light":"dark";root.dataset.theme=next;localStorage.setItem("fahimTheme",next);});
-    menuBtn.addEventListener("click",()=>mobileNav.classList.toggle("open")); mobileNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>mobileNav.classList.remove("open")));
-    const closeModal=()=>{modal.classList.remove("show");document.body.classList.remove("lock");sessionStorage.setItem("fahimWelcomeSeen","yes");};
-    if(!sessionStorage.getItem("fahimWelcomeSeen")){setTimeout(()=>{modal.classList.add("show");document.body.classList.add("lock");},450);}
-    modalClose.addEventListener("click",closeModal); exploreBtn.addEventListener("click",closeModal); modal.addEventListener("click",event=>{if(event.target===modal)closeModal();});
-    document.getElementById("contactForm").addEventListener("submit",event=>{event.preventDefault();const data=new FormData(event.currentTarget);const subject=encodeURIComponent(data.get("subject"));const body=encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`);window.location.href=`mailto:Fahim.sikder@student.lut.fi?subject=${subject}&body=${body}`;});
-  </script>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top"><span class="brand-mark">FS</span><span>Fahim Sikder</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#security">Security</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="mailto:Fahim.sikder@student.lut.fi?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#security">Security</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#contact">Contact</a></div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="status"><span class="dot"></span> Open to cybersecurity & software opportunities</span>
+          <h1><span class="line">I build systems.</span><span class="line">Then I ask <span class="accent">how they break.</span></span></h1>
+          <p class="lead">I’m Fahim Sikder — a cybersecurity-focused software developer working across secure web applications, cloud edge protection, authentication, databases and AI products.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View security-minded work →</a>
+            <a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-secondary" href="#contact">Hire / Collaborate</a>
+          </div>
+          <div class="proof-row mono">
+            <span><i>✓</i> Secure-by-design mindset</span>
+            <span><i>✓</i> Production deployment experience</span>
+            <span><i>✓</i> AI + Web + Cloud</span>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Security profile terminal">
+          <div class="terminal-top"><i></i><i></i><i></i><span>fahim@security:~</span></div>
+          <div class="terminal-body">
+            <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+            <div class="out">Fahim Sikder — security-focused developer</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">cat focus.txt</span></div>
+            <div class="ok">application_security</div>
+            <div class="ok">secure_authentication</div>
+            <div class="ok">cloud_edge_security</div>
+            <div class="ok">api_and_database_hardening</div>
+            <div class="ok">ai_product_engineering</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">security-principles --list</span></div>
+            <div class="out">least privilege · validate input · protect secrets</div>
+            <div class="out">reduce attack surface · log important events</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">status</span></div>
+            <div><span class="ok">[READY]</span> building, learning, hardening<span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>5+</strong><span>Production projects shipped</span></div>
+        <div class="stat"><strong>RLS</strong><span>Row-level access control</span></div>
+        <div class="stat"><strong>EDGE</strong><span>Cloudflare deployment & protection</span></div>
+        <div class="stat"><strong>OWASP</strong><span>Security learning focus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">identity</span><h2>Developer mindset. Defender instincts.</h2><p>I do not treat security as a final checklist. I think about trust boundaries, secrets, permissions, abuse paths and failure modes while building the product.</p></div>
+      <div class="about-grid">
+        <article class="card profile-card">
+          <img src="https://github.com/Fahimxbd.png" alt="Fahim Sikder">
+          <h3>Fahim Sikder</h3>
+          <div class="handle">@Fahimxbd</div>
+          <div class="facts">
+            <div><b>Role:</b> Cybersecurity-Focused Software Developer</div>
+            <div><b>Study:</b> Computational Science & AI — LUT University path</div>
+            <div><b>Stack:</b> Python · JavaScript · Next.js · Supabase · Cloudflare</div>
+            <div><b>Availability:</b> Remote / internship / junior technical roles</div>
+          </div>
+        </article>
+        <article class="card about-copy">
+          <span class="kicker">SECURITY-FIRST ENGINEERING</span>
+          <h3>I want to understand the whole system — not just the UI.</h3>
+          <p>My work spans frontend, backend, authentication, databases, Cloudflare, API integrations and AI. That full-stack view is what pulled me toward cybersecurity: every layer creates both capability and attack surface.</p>
+          <p>I am sharpening practical application-security skills around OWASP risks, access control, bot and abuse prevention, server-side secret handling, secure webhooks, HTTP behavior, logging and traffic analysis.</p>
+          <div class="manifesto">BUILD → MODEL THE RISK → REDUCE PRIVILEGE → VALIDATE → MONITOR → HARDEN</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="security">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">capabilities</span><h2>Where software engineering meets security.</h2><p>These are the areas I actively build with and continue to deepen through hands-on projects.</p></div>
+      <div class="grid-4">
+        <article class="card"><div class="icon">01</div><h3>Application Security</h3><p>Designing web apps with safer defaults and smaller attack surfaces.</p><ul class="cap-list"><li>OWASP Top 10 awareness</li><li>Input validation & output safety</li><li>Security headers & browser controls</li><li>Abuse / bot mitigation</li></ul></article>
+        <article class="card"><div class="icon">02</div><h3>Identity & Access</h3><p>Authentication is only useful when authorization is enforced everywhere.</p><ul class="cap-list"><li>Supabase Auth</li><li>Row Level Security</li><li>Role-based admin flows</li><li>Session & permission thinking</li></ul></article>
+        <article class="card"><div class="icon">03</div><h3>Cloud & Edge</h3><p>Shipping applications through Cloudflare with performance and protection in mind.</p><ul class="cap-list"><li>Cloudflare Pages / Workers</li><li>Environment secret separation</li><li>Rate-limit / bot-defense concepts</li><li>Production configuration</li></ul></article>
+        <article class="card"><div class="icon">04</div><h3>Detection Mindset</h3><p>Instrumenting systems so suspicious behavior is visible instead of invisible.</p><ul class="cap-list"><li>Traffic analytics</li><li>Event deduplication</li><li>Request / error inspection</li><li>Operational hardening</li></ul></article>
+      </div>
+      <div class="security-flow">
+        <div class="flow"><b>01 / IDENTIFY</b><span>Map users, assets, trust boundaries and exposed surfaces.</span></div>
+        <div class="flow"><b>02 / PROTECT</b><span>Apply least privilege, validation, secrets hygiene and access rules.</span></div>
+        <div class="flow"><b>03 / OBSERVE</b><span>Use logs and analytics to understand real production behavior.</span></div>
+        <div class="flow"><b>04 / HARDEN</b><span>Fix weak paths, reduce duplication and improve resilience.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">selected systems</span><h2>Production work with real technical depth.</h2><p>Not tutorial clones. These projects involve authentication, databases, deployment, analytics, admin systems, APIs and production debugging.</p></div>
+      <div class="project-grid">
+        <article class="card project featured">
+          <div class="project-top"><span class="live"><i></i> newest project</span><div class="project-name">HeyProma</div><div class="project-domain">heyproma.com</div></div>
+          <div class="project-body"><span class="kicker">AI · SECURITY · FULL STACK</span><h3>AI companion platform with production security layers</h3><p>Built around Next.js, Cloudflare and Supabase with authenticated chat flows, server-side integrations, analytics, bot-traffic controls and secure payment/webhook architecture.</p><div class="skills"><span class="tag">Next.js</span><span class="tag">Cloudflare</span><span class="tag">Supabase</span><span class="tag">Auth</span><span class="tag">Bot Defense</span><span class="tag">Webhooks</span></div><div class="project-actions"><a class="text-link" href="https://heyproma.com/" target="_blank" rel="noopener">OPEN LIVE SYSTEM →</a></div></div>
+        </article>
+        <article class="card project">
+          <div class="project-top"><span class="live"><i></i> live</span><div class="project-name">Exam Center BD</div><div class="project-domain">examcenterbd.com</div></div>
+          <div class="project-body"><span class="kicker">EDTECH · AUTH · DATABASE</span><h3>Exam and learning platform</h3><p>A role-aware education product with authentication, structured question data, admin workflows, user progress and Supabase-backed application logic.</p><div class="skills"><span class="tag">Supabase</span><span class="tag">RLS</span><span class="tag">Cloudflare</span><span class="tag">Admin</span></div><div class="project-actions"><a class="text-link" href="https://examcenterbd.com/" target="_blank" rel="noopener">OPEN LIVE SYSTEM →</a></div></div>
+        </article>
+        <article class="card project">
+          <div class="project-top"><span class="live"><i></i> product</span><div class="project-name">Taskora</div><div class="project-domain">micro-jobs + social + wallet</div></div>
+          <div class="project-body"><span class="kicker">ACCESS CONTROL · DATA INTEGRITY</span><h3>Micro-job and social platform architecture</h3><p>A complex React/TypeScript product with authentication, admin controls, proof submissions, wallet ledger, withdrawals, social features, referrals, notifications and Supabase security policies.</p><div class="skills"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">RLS</span><span class="tag">RBAC</span><span class="tag">Realtime</span></div></div>
+        </article>
+        <article class="card project">
+          <div class="project-top"><span class="live"><i></i> live</span><div class="project-name">Neferiq</div><div class="project-domain">neferiq.com</div></div>
+          <div class="project-body"><span class="kicker">SOCIAL · MODERATION · AUTH</span><h3>Letter-first social platform</h3><p>A social product with profiles, authentication, moderation, messaging-oriented features and Cloudflare/Supabase infrastructure.</p><div class="skills"><span class="tag">Supabase Auth</span><span class="tag">PostgreSQL</span><span class="tag">Cloudflare</span><span class="tag">Moderation</span></div><div class="project-actions"><a class="text-link" href="https://neferiq.com/" target="_blank" rel="noopener">OPEN LIVE SYSTEM →</a></div></div>
+        </article>
+        <article class="card project">
+          <div class="project-top"><span class="live"><i></i> live</span><div class="project-name">CinemaMaddy</div><div class="project-domain">cinemamaddy.site</div></div>
+          <div class="project-body"><span class="kicker">WEB PRODUCT</span><h3>Responsive cinematic discovery experience</h3><p>A production web interface focused on polished content presentation, responsive behavior and fast browsing across devices.</p><div class="skills"><span class="tag">JavaScript</span><span class="tag">Responsive UI</span><span class="tag">Production</span></div><div class="project-actions"><a class="text-link" href="https://cinemamaddy.site/" target="_blank" rel="noopener">OPEN LIVE SYSTEM →</a></div></div>
+        </article>
+        <article class="card project">
+          <div class="project-top"><span class="live"><i></i> client</span><div class="project-name">Oronno Nogor</div><div class="project-domain">oronnonogor.com</div></div>
+          <div class="project-body"><span class="kicker">CLIENT DELIVERY</span><h3>Production-ready business website</h3><p>A responsive client delivery with practical information architecture, cross-device usability and production deployment.</p><div class="skills"><span class="tag">Responsive</span><span class="tag">Performance</span><span class="tag">Deployment</span></div><div class="project-actions"><a class="text-link" href="https://oronnonogor.com/" target="_blank" rel="noopener">OPEN LIVE SYSTEM →</a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lab">
+    <div class="container">
+      <div class="lab">
+        <div class="lab-grid">
+          <div><span class="eyebrow">security lab</span><h2>What I’m sharpening now.</h2><p style="color:var(--muted)">I care more about demonstrable skill than claiming titles too early. My current path is to deepen core security fundamentals and turn them into documented hands-on work.</p><div class="skills"><span class="tag">OWASP Top 10</span><span class="tag">HTTP</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">Web Security</span><span class="tag">Logging</span><span class="tag">Threat Modeling</span></div></div>
+          <div class="checklist">
+            <div class="check"><b>[01]</b><span>Practice web-app attack/defense concepts in legal lab environments.</span></div>
+            <div class="check"><b>[02]</b><span>Document security decisions and lessons from production projects.</span></div>
+            <div class="check"><b>[03]</b><span>Strengthen Linux, networking, HTTP and authentication fundamentals.</span></div>
+            <div class="check"><b>[04]</b><span>Build a public security-lab portfolio with reproducible write-ups.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">background</span><h2>Technical foundation.</h2></div>
+      <div class="grid-2">
+        <article class="card"><div class="education"><span class="year">UNIVERSITY</span><div><h3>LUT University, Finland</h3><p>Computational Science and Artificial Intelligence path, with focus on mathematics, programming, data and intelligent systems.</p></div></div><div class="education"><span class="year">HSC 2024</span><div><h3>Science — GPA 5.00 / 5.00</h3><p>Higher Mathematics, Physics, Chemistry and ICT formed the base for my engineering direction.</p></div></div></article>
+        <article class="card"><span class="kicker">CORE STACK</span><h3>Tools I build with</h3><div class="skills"><span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">Cloudflare</span><span class="tag">Git/GitHub</span><span class="tag">REST APIs</span><span class="tag">AI APIs</span></div><p style="margin-top:18px">I’m strongest when I can connect product requirements to architecture, implementation, deployment and security decisions.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <span class="eyebrow">contact</span>
+          <h2>Need someone who can <span class="accent">build and think defensively?</span></h2>
+          <p>I’m open to cybersecurity internships, junior technical roles, remote software work and serious product collaborations.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:Fahim.sikder@student.lut.fi?subject=Opportunity%20for%20Fahim%20Sikder">Email me →</a>
+            <a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">Review GitHub</a>
+          </div>
+        </div>
+        <form id="contactForm">
+          <input id="name" name="name" required placeholder="Your name">
+          <input id="email" name="email" type="email" required placeholder="Your email">
+          <input id="subject" name="subject" required placeholder="Role / project">
+          <textarea id="message" name="message" required placeholder="Tell me what you need..."></textarea>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container footer"><span>© 2026 Fahim Sikder // secure systems, useful products.</span><span><a href="mailto:Fahim.sikder@student.lut.fi">EMAIL</a> · <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GITHUB</a></span></div></footer>
+
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileNav=document.getElementById('mobileNav');
+  menuBtn.addEventListener('click',()=>mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+  document.getElementById('contactForm').addEventListener('submit',event=>{
+    event.preventDefault();
+    const data=new FormData(event.currentTarget);
+    const subject=encodeURIComponent(data.get('subject'));
+    const body=encodeURIComponent('Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\n\n'+data.get('message'));
+    window.location.href='mailto:Fahim.sikder@student.lut.fi?subject='+subject+'&body='+body;
+  });
+</script>
 </body>
 </html>
