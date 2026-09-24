@@ -1,6 +1,8 @@
-# AibyFahim Portfolio
+# Fahim Sikder — AI Engineer Portfolio
 
 Cyber / terminal-inspired personal portfolio for **Fahim Sikder**.
+
+**Live:** https://fahimsikderai.com/
 
 ## Primary positioning
 - AI Engineer
