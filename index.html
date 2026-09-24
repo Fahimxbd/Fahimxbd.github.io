@@ -94,12 +94,13 @@
     .lab{padding:28px;border:1px solid rgba(82,255,154,.2);border-radius:20px;background:linear-gradient(135deg,rgba(82,255,154,.055),rgba(103,232,249,.02));box-shadow:var(--shadow)}.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.lab h2{margin:9px 0 11px}.lab p{color:var(--muted)}
     .checklist{display:grid;gap:9px}.check{display:flex;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#9eb3a8;font-size:12px}.check b{color:var(--green);font-family:"JetBrains Mono"}
     .background-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.education{display:flex;gap:16px}.education+.education{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}.education .year{min-width:90px;color:var(--green);font:600 10px "JetBrains Mono"}.education h3{margin:0 0 6px;font-size:18px}.education p{margin:0;color:var(--muted);font-size:13px}
+    .policy-box{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#07110c,#050c08)}.policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.policy-item{padding:16px;border:1px solid var(--line);border-radius:12px;background:#050d09}.policy-item b{display:block;margin-bottom:6px;color:var(--green);font:600 11px "JetBrains Mono";text-transform:uppercase;letter-spacing:.07em}.policy-item p{margin:0;color:var(--muted);font-size:13px}.policy-note{margin-top:14px;color:#9fb7aa;font-size:13px}.policy-note strong{color:#e8fff2}
     .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#09140f,#050d09);box-shadow:var(--shadow)}.contact h2{margin:9px 0 12px;font-size:clamp(34px,5vw,48px)}.contact p{color:var(--muted)}
     form{display:grid;gap:10px}input,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;outline:none;background:#030806;color:var(--text);font:500 12px "JetBrains Mono"}input:focus,textarea:focus{border-color:var(--line2);box-shadow:0 0 0 4px rgba(82,255,154,.05)}textarea{min-height:115px;resize:vertical}
     footer{padding:26px 0 34px;color:#5f7b6c}.footer{display:flex;justify-content:space-between;gap:16px;padding-top:24px;border-top:1px solid var(--line);font:500 10px "JetBrains Mono"}.footer a{color:#99b7a7}
     @media(max-width:940px){
       nav,.nav-cta{display:none}.menu{display:block}.hero-grid,.identity-grid,.lab-grid,.contact,.background-grid{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}
-      .project-row{grid-template-columns:1fr auto}.project-desc,.project-stack{grid-column:1/-1}.experience-item{grid-template-columns:120px 1fr}.terminal{margin-top:6px}
+      .project-row{grid-template-columns:1fr auto}.project-desc,.project-stack{grid-column:1/-1}.experience-item{grid-template-columns:120px 1fr}.policy-grid{grid-template-columns:1fr}.terminal{margin-top:6px}
     }
     @media(max-width:620px){
       .hero{padding:58px 0 48px}.section{padding:56px 0}.hero h1{font-size:46px}.hero-metrics,.grid-4{grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}
@@ -115,11 +116,11 @@
       <span class="brand-logo"><span>F/AI</span></span>
       <span class="brand-text"><strong>Fahim Sikder</strong><small>AI Engineer // Secure Builder</small></span>
     </a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#policy">Policy</a><a href="#contact">Contact</a></nav>
     <a class="nav-cta" href="mailto:Fahim.sikder@student.lut.fi?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
     <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
   </div>
-  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#contact">Contact</a></div>
+  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#policy">Policy</a><a href="#contact">Contact</a></div>
 </header>
 
 <main id="top">
@@ -172,7 +173,7 @@
             <div><b>Role</b><span>AI Engineer</span></div>
             <div><b>Experience</b><span>5+ years WordPress · speed optimization · SEO</span></div><div><b>AI work</b><span>1 year AI automation · AI chatbot development</span></div><div><b>Secondary focus</b><span>Security-minded software engineering</span></div>
             <div><b>Stack</b><span>Python · JavaScript · Next.js · Supabase · Cloudflare</span></div>
-            <div><b>Study</b><span>Computational Science & AI — LUT University path</span></div>
+            <div><b>Study</b><span>AI Engineering — LUT University, Finland</span></div>
             <div><b>Availability</b><span>Remote · Internship · Junior technical roles</span></div>
           </div>
         </article>
@@ -285,10 +286,25 @@
       <div class="section-head"><span class="eyebrow">background</span><h2>Technical foundation.</h2></div>
       <div class="background-grid">
         <article class="card">
-          <div class="education"><span class="year">UNIVERSITY</span><div><h3>LUT University, Finland</h3><p>Computational Science and Artificial Intelligence path, with focus on mathematics, programming, data and intelligent systems.</p></div></div>
+          <div class="education"><span class="year">UNIVERSITY</span><div><h3>AI Engineering — LUT University, Finland</h3><p>Studying Artificial Intelligence Engineering with a focus on mathematics, programming, intelligent systems, data and software engineering.</p></div></div>
           <div class="education"><span class="year">HSC 2024</span><div><h3>Science — GPA 5.00 / 5.00</h3><p>Higher Mathematics, Physics, Chemistry and ICT formed the base for my engineering direction.</p></div></div>
         </article>
         <article class="card"><span class="eyebrow">engineering profile</span><h3 style="margin:10px 0 8px">AI + software + security awareness</h3><p class="muted" style="margin:0">My strongest work happens when I can connect product requirements to architecture, implementation, deployment, production behavior and security decisions instead of treating them as separate problems.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="policy">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">project policy</span><h2>Projects I choose to build.</h2><p>I work on useful, lawful and responsible digital products. I do not take projects that conflict with my professional or ethical standards.</p></div>
+      <div class="policy-box">
+        <div class="policy-grid">
+          <div class="policy-item"><b>Not accepted</b><p>Gambling and betting websites, online casino platforms or related promotional systems.</p></div>
+          <div class="policy-item"><b>Not accepted</b><p>Adult, pornographic or sexually explicit websites and content platforms.</p></div>
+          <div class="policy-item"><b>Not accepted</b><p>Scam, fraud, phishing, deceptive financial schemes or intentionally harmful products.</p></div>
+          <div class="policy-item"><b>Preferred work</b><p>AI tools, education, business websites, SaaS, automation, e-commerce, productivity and legitimate software products.</p></div>
+        </div>
+        <p class="policy-note"><strong>Professional standard:</strong> I prefer projects that create real value for users and can be built, promoted and maintained responsibly.</p>
       </div>
     </div>
   </section>
