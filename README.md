@@ -1,24 +1,19 @@
-# AibyFahim — Cybersecurity-Focused Portfolio
+# AibyFahim Portfolio
 
-Single-page portfolio for Fahim Sikder, deployed through GitHub Pages at **www.aibyfahim.com**.
+Cyber / terminal-inspired personal portfolio for **Fahim Sikder**.
 
-## Positioning
-- Cybersecurity-focused software developer
-- Secure full-stack application engineering
-- Cloudflare / Supabase security-minded architecture
-- AI product engineering
-- Open to cybersecurity internships, junior technical roles and remote software work
+## Primary positioning
+- AI Engineer
+- Full-stack systems builder
+- Security-minded developer
+- Cloud / production engineering
 
-## Featured work
-- HeyProma — newest featured project
-- Exam Center BD
-- Taskora
-- Neferiq
-- CinemaMaddy
-- Oronno Nogor
+## Current design
+- No personal photo
+- Compact project list instead of oversized project cards
+- Hacker/developer visual language without making false security credentials
+- Mobile-first responsive layout
+- Featured projects: HeyProma, Exam Center BD, Taskora, Neferiq, CinemaMaddy, Oronno Nogor
 
-## Tech
-The site is intentionally dependency-light: one `index.html` file with responsive CSS and minimal JavaScript.
-
-## Editing
-Update `index.html` and push to the default `main` branch. GitHub Pages serves the custom domain configured in `CNAME`.
+## Deployment
+GitHub Pages serves the custom domain from the `main` branch using `CNAME`.
