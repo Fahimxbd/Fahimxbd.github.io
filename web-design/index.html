@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="E-commerce from ৳3,999 · Landing pages from ৳1,500 · Portfolio websites from ৳2,000.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -71,8 +71,11 @@
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(15,23,42,.06)}
     .nav{height:72px;display:flex;align-items:center;gap:20px}
     .brand{display:flex;align-items:center;gap:11px;font-weight:800}
-    .brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#4f46e5,#7c3aed 58%,#0ea5e9);display:grid;place-items:center;color:#fff;box-shadow:0 12px 28px rgba(91,77,247,.26);font-size:17px}
-    .brand-copy{display:grid;line-height:1.02}.brand-copy strong{font-size:16px}.brand-copy small{margin-top:6px;color:#8b93a7;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    .brand-mark{position:relative;width:46px;height:46px;border-radius:13px;background:#07111f;border:1px solid rgba(16,185,129,.42);display:grid;place-items:center;color:#5ee9b5;box-shadow:0 12px 28px rgba(15,23,42,.13),inset 0 0 18px rgba(16,185,129,.08);font:700 15px "JetBrains Mono",monospace;letter-spacing:-.08em}
+    .brand-mark:before,.brand-mark:after{content:"";position:absolute;width:7px;height:7px;border-color:#22c55e;opacity:.75}
+    .brand-mark:before{left:5px;top:5px;border-left:1px solid;border-top:1px solid}
+    .brand-mark:after{right:5px;bottom:5px;border-right:1px solid;border-bottom:1px solid}
+    .brand-copy{display:grid;line-height:1.02}.brand-copy strong{font:700 16px "JetBrains Mono",monospace;letter-spacing:-.03em;color:#111827}.brand-copy strong:after{content:"_";color:#16a34a;animation:brandBlink 1s steps(1) infinite}.brand-copy small{margin-top:6px;color:#7c8799;font-size:9px;letter-spacing:.09em;text-transform:uppercase}.brand-extra{display:flex;align-items:center;gap:8px;margin-top:5px;color:#7b8799;font:600 8px "JetBrains Mono",monospace;letter-spacing:.07em;text-transform:uppercase}.brand-online{display:inline-flex;align-items:center;gap:5px;color:#15803d}.brand-online:before{content:"";width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.1)}@keyframes brandBlink{50%{opacity:0}}
     nav{margin-left:auto;display:flex;align-items:center;gap:3px}
     nav a{padding:9px 10px;border-radius:9px;color:#4b5563;font-size:13px;font-weight:700}
     nav a:hover{color:var(--primary);background:var(--soft)}
@@ -97,6 +100,10 @@
     .avatars{display:flex}.avatar{width:29px;height:29px;margin-left:-7px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#dbeafe,#ede9fe);font-size:10px;font-weight:800;color:#4f46e5}.avatar:first-child{margin-left:0}
     .stars{color:#f59e0b;letter-spacing:1px}
     .hero-card{position:relative;min-height:500px}
+    .dev-console{position:absolute;left:-8px;bottom:22px;z-index:7;width:min(315px,74%);border:1px solid rgba(34,197,94,.25);border-radius:15px;background:rgba(7,17,31,.96);box-shadow:0 20px 45px rgba(15,23,42,.22);overflow:hidden;color:#dbeafe;font:500 10px/1.65 "JetBrains Mono",monospace}
+    .dev-console-top{display:flex;align-items:center;gap:6px;padding:9px 11px;border-bottom:1px solid rgba(148,163,184,.12);background:#0b1524}.dev-console-top i{width:7px;height:7px;border-radius:50%;background:#fb7185}.dev-console-top i:nth-child(2){background:#fbbf24}.dev-console-top i:nth-child(3){background:#22c55e}.dev-console-top b{margin-left:auto;color:#5ee9b5;font-size:8px;letter-spacing:.08em}
+    .dev-console-body{padding:12px 14px}.dev-line{display:flex;gap:9px}.dev-line span:first-child{color:#4ade80}.dev-ok{color:#86efac}.dev-dim{color:#7f8da3}.dev-cursor{display:inline-block;width:6px;height:11px;margin-left:3px;background:#22c55e;vertical-align:-2px;animation:brandBlink 1s steps(1) infinite}
+    .signal-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.signal-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border:1px solid rgba(94,234,212,.15);border-radius:999px;background:rgba(15,23,42,.35);color:#9fb1c6;font-size:8px}.signal-chip b{color:#5ee9b5;font-weight:700}
     .glow{position:absolute;width:360px;height:360px;border-radius:50%;filter:blur(12px);background:radial-gradient(circle,rgba(124,58,237,.2),rgba(14,165,233,.05) 54%,transparent 70%);right:5%;top:10%}
     .browser{position:absolute;right:0;top:44px;width:92%;border:1px solid #d9dce8;border-radius:20px;background:#fff;box-shadow:0 35px 90px rgba(36,28,99,.2);overflow:hidden;transform:rotate(-1.5deg)}
     .browser-top{height:42px;display:flex;align-items:center;gap:6px;padding:0 13px;background:#f4f6fb;border-bottom:1px solid #e6e8ef}
@@ -143,15 +150,15 @@
     footer{padding:28px 0;background:#fff;border-top:1px solid #e7e9f1}.footer{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.footer-brand p{margin:7px 0 0;color:#7b8596;font-size:11px}.footer-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;color:#667085;font-size:11px;font-weight:700}
     .brand-icon{width:18px;height:18px;display:block;flex:0 0 18px}.mini-btn .brand-icon{width:16px;height:16px;flex-basis:16px}.project-preview{display:none!important}.project-body{height:100%;display:flex;flex-direction:column}.project-actions{margin-top:auto;padding-top:16px}.floating-wa{position:fixed;right:18px;bottom:18px;z-index:45;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#16a34a;color:#fff;font-size:22px;box-shadow:0 14px 34px rgba(22,163,74,.35)}
     @media(max-width:1000px){nav,.nav-cta{display:none}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero-card{min-height:470px}.services{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(3,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(5,1fr)}.about-grid{grid-template-columns:1fr}.cta{grid-template-columns:1fr}}
-    @media(max-width:700px){.container{width:min(100% - 22px,var(--max))}.hero{padding-top:42px}.hero h1{font-size:45px}.lead{font-size:16px}.hero-card{min-height:390px}.browser{width:96%;top:48px}.site-preview{min-height:280px;padding:15px}.preview-copy b{font-size:20px}.preview-art{height:140px}.phone{width:103px;height:215px;right:-1px}.exp-badge{width:91px;height:91px;font-size:11px}.premium-badge{font-size:10px;padding:10px 12px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.metric:nth-child(2):after,.metric:nth-child(4):after{display:none}.services,.projects,.pricing,.about-points{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.plan.popular{transform:none}.section{padding:56px 0}.section-head{text-align:left}.cta{padding:23px}.footer{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.hero-actions .btn{width:100%}}
+    @media(max-width:700px){.container{width:min(100% - 22px,var(--max))}.hero{padding-top:42px}.hero h1{font-size:45px}.lead{font-size:16px}.hero-card{min-height:390px}.browser{width:96%;top:48px}.site-preview{min-height:280px;padding:15px}.preview-copy b{font-size:20px}.preview-art{height:140px}.phone{width:103px;height:215px;right:-1px}.exp-badge{width:91px;height:91px;font-size:11px}.premium-badge{font-size:10px;padding:10px 12px}.dev-console{left:2px;bottom:8px;width:76%;font-size:8.5px}.dev-console-body{padding:9px 10px}.signal-row{gap:5px}.signal-chip{font-size:7px;padding:3px 5px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.metric:nth-child(2):after,.metric:nth-child(4):after{display:none}.services,.projects,.pricing,.about-points{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.plan.popular{transform:none}.section{padding:56px 0}.section-head{text-align:left}.cta{padding:23px}.footer{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.hero-actions .btn{width:100%}}
   </style>
 </head>
 <body id="top">
 <header>
   <div class="container nav">
     <a class="brand" href="#top" aria-label="Fahim Sikder home">
-      <span class="brand-mark">FS</span>
-      <span class="brand-copy"><strong>Fahim Sikder</strong><small>Web Developer · AI Engineer</small></span>
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-copy"><strong>Fahim Sikder</strong><small>Web Developer · AI Engineer</small><span class="brand-extra"><span class="brand-online">online</span><span>build · automate · scale</span></span></span>
     </a>
     <nav aria-label="Main navigation">
       <a href="#pricing">Pricing</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -186,6 +193,15 @@
 
         <div class="hero-card" aria-hidden="true">
           <div class="glow"></div>
+          <div class="dev-console">
+            <div class="dev-console-top"><i></i><i></i><i></i><b>LIVE BUILD</b></div>
+            <div class="dev-console-body">
+              <div class="dev-line"><span>&gt;</span><span id="codeTicker">npm run build</span><span class="dev-cursor"></span></div>
+              <div class="dev-line dev-dim"><span>✓</span><span>Responsive UI ready</span></div>
+              <div class="dev-line dev-dim"><span>✓</span><span>SEO & performance optimized</span></div>
+              <div class="signal-row"><span class="signal-chip">SITE <b>ONLINE</b></span><span class="signal-chip">SPEED <b>FAST</b></span><span class="signal-chip">MOBILE <b>READY</b></span></div>
+            </div>
+          </div>
           <div class="exp-badge">5+ YEARS<br>EXPERIENCE</div>
           <div class="premium-badge">PREMIUM SERVICE<small>Modern · Fast · Responsive</small></div>
           <div class="browser">
@@ -318,6 +334,12 @@
   const mobileNav=document.getElementById('mobileNav');
   menuBtn.addEventListener('click',()=>mobileNav.classList.toggle('open'));
   mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+  const ticker=document.getElementById('codeTicker');
+  if(ticker){
+    const commands=['npm run build','optimizing website...','checking mobile layout...','deploying to cloud...','site ready ✓'];
+    let i=0;
+    setInterval(()=>{i=(i+1)%commands.length;ticker.textContent=commands[i]},1800);
+  }
 </script>
 </body>
 </html>
