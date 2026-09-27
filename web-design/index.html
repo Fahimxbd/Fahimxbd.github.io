@@ -124,6 +124,53 @@
     .exp-badge,.premium-badge{position:absolute;z-index:5;border-radius:18px;box-shadow:0 16px 35px rgba(15,23,42,.16);font-weight:900}
     .exp-badge{left:-8px;top:8px;width:124px;height:124px;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#fde68a,#f59e0b);border:4px solid #fff7d5;transform:rotate(-7deg);font-size:15px;line-height:1.2}
     .premium-badge{right:0;top:0;padding:14px 18px;color:#fff;background:linear-gradient(135deg,#7c3aed,#4f46e5);transform:rotate(4deg);font-size:13px}.premium-badge small{display:block;margin-top:3px;font-size:9px;font-weight:700;color:#ddd6fe}
+    
+    .featured-wrap{margin-top:26px;overflow:hidden}
+    .featured-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}
+    .featured-head strong{display:flex;align-items:center;gap:8px;font-size:14px}
+    .featured-head strong:before{content:"◇";display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#efedff;color:#5b4df7;font-size:16px}
+    .featured-head span{color:#6d5dfc;font-size:11px;font-weight:800}
+    .featured-viewport{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+    .featured-track{display:flex;width:max-content;gap:12px;animation:slideServices 28s linear infinite;padding:3px 0 9px}
+    .featured-viewport:hover .featured-track{animation-play-state:paused}
+    @keyframes slideServices{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
+    .feature-banner{position:relative;width:248px;height:152px;flex:0 0 auto;border-radius:18px;overflow:hidden;border:1px solid rgba(15,23,42,.07);box-shadow:0 14px 30px rgba(37,34,90,.10);padding:18px}
+    .feature-banner h3{position:relative;z-index:2;margin:0;font-size:18px;line-height:1.05;letter-spacing:-.025em}
+    .feature-banner p{position:relative;z-index:2;margin:7px 0 0;font-size:10px;line-height:1.35;max-width:115px}
+    .feature-banner .mini-arrow{position:absolute;z-index:3;left:18px;bottom:16px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;background:#5b4df7;font-weight:900}
+    .feature-banner .device{position:absolute;right:13px;bottom:-7px;width:88px;height:126px;border:6px solid #172033;border-radius:17px;background:#fff;transform:rotate(-4deg);box-shadow:0 15px 25px rgba(15,23,42,.18);overflow:hidden}
+    .feature-banner .device:before{content:"";display:block;width:34px;height:4px;border-radius:999px;background:#172033;margin:5px auto 7px}
+    .feature-banner .device-screen{margin:0 7px;height:95px;border-radius:9px;background:linear-gradient(150deg,#fff,#f1f5f9);padding:7px}
+    .feature-banner .device-screen b{display:block;height:7px;border-radius:6px;background:currentColor;opacity:.75;margin-bottom:6px}
+    .feature-banner .device-screen i{display:block;height:26px;border-radius:7px;background:rgba(255,255,255,.72);border:1px solid rgba(15,23,42,.06);margin-bottom:6px}
+    .feature-banner .device-screen em{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+    .feature-banner .device-screen em:before,.feature-banner .device-screen em:after{content:"";height:19px;border-radius:5px;background:rgba(255,255,255,.8);border:1px solid rgba(15,23,42,.05)}
+    .banner-ecom{background:linear-gradient(135deg,#fff0ed,#ffe1d8 52%,#ffd0c2);color:#7c2d12}
+    .banner-electronics{background:linear-gradient(135deg,#ecfeff,#cffafe 50%,#a5f3fc);color:#155e75}
+    .banner-grocery{background:linear-gradient(135deg,#f0fdf4,#dcfce7 52%,#bbf7d0);color:#166534}
+    .banner-loan{background:linear-gradient(135deg,#eff6ff,#dbeafe 54%,#bfdbfe);color:#1d4ed8}
+    .banner-casino{background:linear-gradient(135deg,#1a1030,#3b176f 55%,#7e22ce);color:#fff}
+    .banner-casino .device{border-color:#2e1065;background:#111827}
+    .banner-casino .device-screen{background:linear-gradient(150deg,#22103c,#4c1d95)}
+    .banner-casino .device-screen i,.banner-casino .device-screen em:before,.banner-casino .device-screen em:after{background:rgba(244,114,182,.22);border-color:rgba(255,255,255,.10)}
+    .banner-loan .device-screen{background:linear-gradient(150deg,#eff6ff,#bfdbfe)}
+    .hero-sales{display:grid;gap:12px;margin-top:16px}
+    .hero-sales .btn{width:100%}
+    .quick-packages{padding:16px;border:1px solid #e5e7ef;border-radius:18px;background:rgba(255,255,255,.92);box-shadow:0 15px 38px rgba(45,38,110,.08)}
+    .quick-packages-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+    .quick-packages-head b{font-size:14px}.quick-packages-head span{padding:5px 8px;border-radius:999px;background:#f2efff;color:#6d5dfc;font-size:9px;font-weight:800}
+    .quick-package-list{display:grid;gap:8px}
+    .quick-package{display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center;padding:11px;border-radius:13px;border:1px solid #e8e9f1;transition:.18s}
+    .quick-package:hover{transform:translateX(3px);box-shadow:0 9px 22px rgba(15,23,42,.06)}
+    .quick-package .qp-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:18px;background:#fff}
+    .quick-package strong{display:block;font-size:12px}.quick-package small{display:block;margin-top:2px;color:#7b8596;font-size:9px}
+    .quick-package .qp-price{font-size:18px;font-weight:900;color:#5b4df7;white-space:nowrap}
+    .quick-package.ecom{background:#fff5f7;border-color:#ffd9e3}.quick-package.ecom .qp-icon{color:#e11d48}
+    .quick-package.loan{background:#eff7ff;border-color:#d6e9ff}.quick-package.loan .qp-icon{color:#2563eb}
+    .quick-package.casino{background:#f7f2ff;border-color:#eadcff}.quick-package.casino .qp-icon{color:#7c3aed}
+    .hero-trustline{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:-2px;color:#15803d;font-size:10px;font-weight:700}
+    .hero-trustline span{color:#94a3b8}
+
     .metrics-wrap{margin-top:34px}
     .metrics{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid #e2e5ef;border-radius:18px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
     .metric{padding:19px 16px;text-align:center;position:relative}.metric:not(:last-child):after{content:"";position:absolute;right:0;top:22%;height:56%;width:1px;background:#eceef4}
@@ -150,7 +197,7 @@
     footer{padding:28px 0;background:#fff;border-top:1px solid #e7e9f1}.footer{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.footer-brand p{margin:7px 0 0;color:#7b8596;font-size:11px}.footer-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;color:#667085;font-size:11px;font-weight:700}
     .brand-icon{width:18px;height:18px;display:block;flex:0 0 18px}.mini-btn .brand-icon{width:16px;height:16px;flex-basis:16px}.project-preview{display:none!important}.project-body{height:100%;display:flex;flex-direction:column}.project-actions{margin-top:auto;padding-top:16px}.floating-wa{position:fixed;right:18px;bottom:18px;z-index:45;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#16a34a;color:#fff;font-size:22px;box-shadow:0 14px 34px rgba(22,163,74,.35)}
     @media(max-width:1000px){nav,.nav-cta{display:none}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero-card{min-height:470px}.services{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(3,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(5,1fr)}.about-grid{grid-template-columns:1fr}.cta{grid-template-columns:1fr}}
-    @media(max-width:700px){.container{width:min(100% - 22px,var(--max))}.hero{padding-top:42px}.hero h1{font-size:45px}.lead{font-size:16px}.hero-card{min-height:390px}.browser{width:96%;top:48px}.site-preview{min-height:280px;padding:15px}.preview-copy b{font-size:20px}.preview-art{height:140px}.phone{width:103px;height:215px;right:-1px}.exp-badge{width:91px;height:91px;font-size:11px}.premium-badge{font-size:10px;padding:10px 12px}.dev-console{left:2px;bottom:8px;width:76%;font-size:8.5px}.dev-console-body{padding:9px 10px}.signal-row{gap:5px}.signal-chip{font-size:7px;padding:3px 5px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.metric:nth-child(2):after,.metric:nth-child(4):after{display:none}.services,.projects,.pricing,.about-points{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.plan.popular{transform:none}.section{padding:56px 0}.section-head{text-align:left}.cta{padding:23px}.footer{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.hero-actions .btn{width:100%}}
+    @media(max-width:700px){.container{width:min(100% - 22px,var(--max))}.hero{padding-top:42px}.hero h1{font-size:45px}.lead{font-size:16px}.hero-card{min-height:390px}.browser{width:96%;top:48px}.site-preview{min-height:280px;padding:15px}.preview-copy b{font-size:20px}.preview-art{height:140px}.phone{width:103px;height:215px;right:-1px}.exp-badge{width:91px;height:91px;font-size:11px}.premium-badge{font-size:10px;padding:10px 12px}.dev-console{left:2px;bottom:8px;width:76%;font-size:8.5px}.dev-console-body{padding:9px 10px}.signal-row{gap:5px}.signal-chip{font-size:7px;padding:3px 5px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.metric:nth-child(2):after,.metric:nth-child(4):after{display:none}.services,.projects,.pricing,.about-points{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.plan.popular{transform:none}.section{padding:56px 0}.section-head{text-align:left}.cta{padding:23px}.footer{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.hero-actions .btn{width:100%}.feature-banner{width:220px;height:145px}.featured-wrap{margin-top:22px}.quick-package{grid-template-columns:36px 1fr auto;padding:10px}.quick-package .qp-price{font-size:16px}}
   </style>
 </head>
 <body id="top">
@@ -161,7 +208,7 @@
       <span class="brand-copy"><strong>Fahim Sikder</strong><small>Web Developer · AI Engineer</small><span class="brand-extra"><span class="brand-online">online</span><span>build · automate · scale</span></span></span>
     </a>
     <nav aria-label="Main navigation">
-      <a href="#pricing">Pricing</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a href="#pricing">Packages</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
       <a class="mini-btn messenger" href="https://m.me/fahimfinlandf" target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/messenger/FFFFFF" alt="" aria-hidden="true"> Messenger</a>
@@ -180,11 +227,48 @@
           <span class="pill"><span class="dot"></span> Premium website service · বাংলাদেশ ও worldwide</span>
           <h1>Your business deserves a <span class="accent">website that sells.</span></h1>
           <p class="lead">ই-কমার্স, ল্যান্ডিং পেজ, পোর্টফোলিও, বিজনেস ওয়েবসাইট ও কাস্টম ওয়েব অ্যাপ — আধুনিক UI/UX, মোবাইল রেস্পন্সিভ ডিজাইন, দ্রুত লোডিং এবং conversion-focused development সহ।</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#pricing">View Packages →</a>
-            <a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20a%20website.%20Please%20share%20details." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp</a>
-            <a class="btn messenger" href="https://m.me/fahimfinlandf" target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/messenger/FFFFFF" alt="" aria-hidden="true"> Messenger</a>
+          <div class="featured-wrap" aria-label="Featured website types">
+            <div class="featured-head"><strong>Featured Website Types</strong><span>Auto sliding →</span></div>
+            <div class="featured-viewport">
+              <div class="featured-track">
+
+              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+
+              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              </div>
+            </div>
           </div>
+
+          <div class="hero-sales">
+            <a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp-এ ওয়েবসাইট নিয়ে কথা বলুন</a>
+
+            <div class="quick-packages" id="pricing">
+              <div class="quick-packages-head"><b>Popular Packages</b><span>Transparent Pricing</span></div>
+              <div class="quick-package-list">
+                <a class="quick-package ecom" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20the%20E-commerce%20Website%20package%20for%20BDT%203999." target="_blank" rel="noopener">
+                  <span class="qp-icon">🛒</span><span><strong>E-commerce Website</strong><small>Online store · responsive design</small></span><span class="qp-price">৳3,999</span>
+                </a>
+                <a class="quick-package loan" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20the%20Loan%20Website%20or%20Loan%20App%20package%20for%20BDT%2010000." target="_blank" rel="noopener">
+                  <span class="qp-icon">📊</span><span><strong>Loan Website / Loan App</strong><small>Modern UI · application flow</small></span><span class="qp-price">৳10,000</span>
+                </a>
+                <a class="quick-package casino" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20the%20Casino%20Website%20package%20for%20BDT%206000." target="_blank" rel="noopener">
+                  <span class="qp-icon">🎰</span><span><strong>Casino Website</strong><small>Premium gaming-style website</small></span><span class="qp-price">৳6,000</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="btn messenger" href="https://m.me/fahimfinlandf" target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/messenger/FFFFFF" alt="" aria-hidden="true"> Messenger-এ মেসেজ করুন</a>
+            <div class="hero-trustline">⚡ Fast response <span>•</span> Free consultation <span>•</span> Clear pricing</div>
+          </div>
+
           <div class="proof">
             <div class="avatars"><span class="avatar">UI</span><span class="avatar">WEB</span><span class="avatar">AI</span><span class="avatar">SEO</span></div>
             <span><b>5+ years</b> web experience</span><span class="stars">★★★★★</span><span>Premium service · clear communication</span>
@@ -231,16 +315,7 @@
     </div>
   </section>
 
-<section class="section white" id="pricing">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">Pricing</span><h2>Simple starting prices.</h2><p>Final price project scope, pages, integrations এবং custom features অনুযায়ী নির্ধারিত হবে।</p></div>
-      <div class="pricing">
-        <article class="plan"><small>For campaigns & ads</small><h3>Landing Page</h3><div class="plan-price">৳1,500 <span>starting</span></div><ul><li>Single-page premium design</li><li>Mobile responsive layout</li><li>WhatsApp / Messenger CTA</li><li>Basic SEO structure</li><li>Fast-loading setup</li></ul><a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20a%20landing%20page." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp-এ অর্ডার করুন</a></article>
-        <article class="plan popular"><span class="popular-tag">Best for selling</span><small>For online stores</small><h3>E-commerce Website</h3><div class="plan-price">৳3,999 <span>starting</span></div><ul><li>Modern storefront UI</li><li>Products & categories</li><li>Cart / order flow</li><li>Mobile responsive</li><li>Admin-ready architecture</li></ul><a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20an%20e-commerce%20website." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp-এ অর্ডার করুন</a></article>
-        <article class="plan"><small>For students & professionals</small><h3>Portfolio Website</h3><div class="plan-price">৳2,000 <span>starting</span></div><ul><li>Professional personal brand</li><li>Projects & skills section</li><li>Contact and social links</li><li>Mobile responsive</li><li>Basic SEO structure</li></ul><a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20a%20portfolio%20website." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp-এ অর্ডার করুন</a></article>
-      </div>
-    </div>
-  </section>
+
 
 
   <section class="section white" id="services">
@@ -251,8 +326,8 @@
         <article class="service"><div class="service-icon">🚀</div><h3>Landing Page</h3><p>Facebook ads, service campaigns ও product launches-এর জন্য conversion-focused page.</p><div class="price">Starting from <strong>৳1,500</strong></div></article>
         <article class="service"><div class="service-icon">◫</div><h3>Portfolio Website</h3><p>Students, freelancers, developers ও professionals-এর জন্য premium personal portfolio.</p><div class="price">Starting from <strong>৳2,000</strong></div></article>
         <article class="service"><div class="service-icon">🏢</div><h3>Business Website</h3><p>Company profile, services, lead generation, contact flows ও trustworthy brand presence.</p><div class="price">Custom quote</div></article>
-        <article class="service"><div class="service-icon">🎮</div><h3>Gaming / Casino UI</h3><p>Modern gaming-style frontends and compliant platform UI tailored to project requirements.</p><div class="price">Custom quote</div></article>
-        <article class="service"><div class="service-icon">💳</div><h3>Finance / Loan Website</h3><p>Professional financial service presentation, lead forms, calculators and admin-ready flows.</p><div class="price">Custom quote</div></article>
+        <article class="service"><div class="service-icon">🎮</div><h3>Casino Website</h3><p>Modern gaming-style frontend, responsive UI and project-specific website structure.</p><div class="price">Starting from <strong>৳6,000</strong></div></article>
+        <article class="service"><div class="service-icon">💳</div><h3>Loan Website / Loan App</h3><p>Professional loan service presentation, application flow and admin-ready finance UI.</p><div class="price">Starting from <strong>৳10,000</strong></div></article>
         <article class="service"><div class="service-icon">⚙</div><h3>Custom Web App</h3><p>Dashboards, authentication, Supabase, APIs, admin panels and workflow automation.</p><div class="price">Based on scope</div></article>
         <article class="service"><div class="service-icon">✦</div><h3>AI & Automation</h3><p>AI chat experiences, workflow automation and practical integrations for modern products.</p><div class="price">Based on scope</div></article>
       </div>
