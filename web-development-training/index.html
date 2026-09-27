@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7fbff" />
+  <title>ChatGPT Web Development Training | Fahim Sikder</title>
+  <meta name="description" content="Mobile, Student, Laptop ও ChatGPT ব্যবহার করে practical Web Development, AI workflow ও Freelancing skills শিখুন। Training fee ৳2,000." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://fahimsikderai.com/web-development-training/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fahimsikderai.com/web-development-training/" />
+  <meta property="og:title" content="ChatGPT Web Development Training" />
+  <meta property="og:description" content="AI-এর সাহায্যে Web Development Skill তৈরি করে Freelancing Career শুরু করুন। Training fee মাত্র ৳2,000." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#08265c;
+      --blue:#0b7cff;
+      --blue2:#0059d6;
+      --cyan:#dff8ff;
+      --teal:#13b99d;
+      --green:#10b981;
+      --green2:#079d6f;
+      --ink:#142a4a;
+      --muted:#5d6c82;
+      --line:#dbe8f4;
+      --soft:#f7fbff;
+      --card:#ffffff;
+      --shadow:0 12px 35px rgba(35,80,130,.10);
+      --radius:18px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:"Hind Siliguri",system-ui,-apple-system,sans-serif;
+      background:
+        radial-gradient(circle at 90% 0%,rgba(46,213,255,.17),transparent 23rem),
+        linear-gradient(#fff,#f9fcff);
+    }
+    a{text-decoration:none;color:inherit}
+    button,a{touch-action:manipulation}
+    .wrap{width:min(var(--max),calc(100% - 34px));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      border-bottom:1px solid rgba(219,232,244,.72);
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(16px);
+    }
+    .nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:Inter,sans-serif;font-weight:800;color:var(--navy);line-height:1.05}
+    .brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#0e8f84);box-shadow:0 9px 22px rgba(16,185,129,.25)}
+    .brand-mark svg{width:24px;height:24px}
+    .brand small{display:block;font-family:"Hind Siliguri";font-size:11px;font-weight:600;color:#46627f;margin-top:3px}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:600;color:#43566e}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;font-weight:700;cursor:pointer;transition:.2s ease}
+    .nav-cta{padding:11px 18px;background:linear-gradient(135deg,#078cba,#0964d8);color:#fff;box-shadow:0 8px 20px rgba(9,100,216,.22)}
+    .nav-cta:hover,.btn:hover{transform:translateY(-1px)}
+    .hero{padding:48px 0 34px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+    .eyebrow{font-weight:800;color:#0c78d7;letter-spacing:.2px;margin:0 0 10px;font-size:15px}
+    h1{font-family:Inter,"Hind Siliguri",sans-serif;font-size:clamp(33px,4.2vw,58px);line-height:1.03;letter-spacing:-1.8px;color:#09245b;margin:0 0 18px}
+    h1 .accent{display:block;color:#087cff}
+    .lead{font-size:18px;line-height:1.65;color:#52657e;margin:0 0 22px;max-width:720px}
+    .price-row{display:flex;align-items:stretch;gap:14px;flex-wrap:wrap;margin:22px 0 18px}
+    .price-box{min-width:175px;border-radius:15px;padding:14px 18px;color:#fff;background:linear-gradient(145deg,#15b39a,#0b9586);box-shadow:0 12px 28px rgba(9,149,134,.2)}
+    .price-box span{display:block;font-size:13px;opacity:.9}.price-box strong{display:block;font-family:Inter,sans-serif;font-size:31px;line-height:1.1;margin-top:2px}
+    .hero-points{display:grid;gap:8px;font-size:15px;color:#40546d;align-content:center}
+    .hero-points div{display:flex;gap:8px;align-items:center}.check{width:19px;height:19px;border:2px solid #19ad9c;color:#0a9f8e;border-radius:50%;display:inline-grid;place-items:center;font-size:11px;font-weight:800;flex:0 0 auto}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 20px;color:#fff;min-height:50px;font-size:16px;box-shadow:0 10px 24px rgba(20,77,150,.16)}
+    .btn-wa{background:linear-gradient(135deg,#18bf76,#06a45f)}
+    .btn-fb{background:linear-gradient(135deg,#1787ff,#0860e7)}
+    .btn svg{width:21px;height:21px;fill:currentColor}
+    .contact-note{margin-top:9px;color:#233e64;font-weight:700;font-size:14px}
+    .contact-note span{color:#6a7c91;font-weight:500;margin-left:10px}
+    .hero-visual{position:relative;min-height:420px}
+    .glow{position:absolute;inset:4% 3% 3% 8%;background:radial-gradient(circle at 50% 44%,rgba(59,184,255,.28),rgba(68,229,221,.1) 40%,transparent 72%);filter:blur(5px)}
+    .laptop{position:absolute;left:1%;top:33px;width:80%;height:315px;background:#121b28;border:7px solid #1f2b39;border-radius:18px 18px 12px 12px;box-shadow:0 28px 46px rgba(18,49,83,.25);transform:rotate(-2deg)}
+    .screen{height:100%;border-radius:9px;background:#fff;overflow:hidden}
+    .mock-nav{height:34px;border-bottom:1px solid #e9eff7;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font:700 7px Inter;color:#1a4173}
+    .mock-nav .mini-btn{background:#0c79ff;color:#fff;border-radius:5px;padding:5px 8px}
+    .mock-hero{display:grid;grid-template-columns:1fr .9fr;gap:11px;padding:23px 22px 15px}
+    .mock-title{font:800 18px/1.05 Inter;color:#173767;margin-bottom:6px}.mock-title b{color:#11a6a5}
+    .mock-copy{font:500 7px/1.5 Inter;color:#7589a1}
+    .mock-action{display:inline-block;margin-top:10px;font:700 6px Inter;background:#087cff;color:#fff;padding:6px 9px;border-radius:4px}
+    .mock-art{height:92px;border-radius:9px;background:linear-gradient(145deg,#eaf3ff,#c4dfff);position:relative;overflow:hidden}
+    .mock-art:before,.mock-art:after{content:"";position:absolute;border-radius:9px;background:#6e85ff;box-shadow:0 10px 25px rgba(59,88,220,.2)}
+    .mock-art:before{width:50px;height:54px;left:25px;top:19px;transform:rotate(-8deg)}
+    .mock-art:after{width:70px;height:42px;right:20px;top:28px;background:#83d9ff;transform:rotate(7deg)}
+    .mock-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:0 22px}
+    .mock-cards div{height:36px;border:1px solid #dfe8f4;border-radius:7px;background:#fff}
+    .laptop-base{position:absolute;left:-2%;top:352px;width:87%;height:20px;border-radius:2px 2px 35px 35px;background:linear-gradient(#b9c3cd,#7d8b98);transform:rotate(-2deg);box-shadow:0 13px 15px rgba(14,35,64,.14)}
+    .phone{position:absolute;right:3%;top:148px;width:125px;height:250px;border:7px solid #0d1724;border-radius:24px;background:#081728;box-shadow:0 22px 35px rgba(4,30,56,.3);transform:rotate(2deg);padding:17px 8px}
+    .phone:before{content:"";position:absolute;top:5px;left:42px;width:31px;height:4px;border-radius:99px;background:#28394c}
+    .phone-label{font:700 8px Inter;color:#4ce1d7;margin-top:8px}.phone-title{font:800 17px/1.05 Inter;color:white;margin:8px 0}.phone-copy{font:500 6px/1.55 Inter;color:#a8c2d8}.phone-button{margin-top:14px;background:#10bba7;color:#fff;border-radius:6px;padding:7px;text-align:center;font:700 7px Inter}
+    .phone-list{display:grid;gap:8px;margin-top:15px}.phone-list div{font:600 6px Inter;color:#d8edff}.phone-list div:before{content:"✓";color:#43e2cb;margin-right:5px}
+    .side-note{position:absolute;right:0;top:25px;width:150px;text-align:center;font-size:13px;color:#3d5874;font-weight:700;transform:rotate(-4deg)}
+    .side-note:after{content:"↙";display:block;font-size:34px;color:#0f78bd;line-height:1}
+    section{padding:32px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px}
+    h2{font-family:Inter,"Hind Siliguri";font-size:clamp(27px,3.2vw,40px);letter-spacing:-1.1px;color:#0a2b62;margin:0}
+    .sub{margin:5px 0 0;color:#6c7b8f;font-size:15px}
+    .pill{background:#eff9f8;color:#366d6b;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid #d9eeee}
+    .skills{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .skill-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px;min-height:115px;box-shadow:0 8px 22px rgba(32,77,121,.04)}
+    .icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;margin-bottom:9px;font:800 16px Inter}
+    .skill-card:nth-child(6n+1) .icon{background:#e6fff8;color:#0ba784}.skill-card:nth-child(6n+2) .icon{background:#edf1ff;color:#536cff}.skill-card:nth-child(6n+3) .icon{background:#e7fbff;color:#0aa8c5}.skill-card:nth-child(6n+4) .icon{background:#f3edff;color:#6849d8}.skill-card:nth-child(6n+5) .icon{background:#fff1ee;color:#fa5e47}.skill-card:nth-child(6n+6) .icon{background:#fff6df;color:#d98d00}
+    .skill-card strong{display:block;font:700 13px/1.25 Inter,"Hind Siliguri";color:#163763;margin-bottom:7px}.skill-card p{font-size:12px;line-height:1.35;margin:0;color:#68798d}
+    .audience{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .aud-card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(34,75,119,.04)}
+    .avatar{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#dbfff7,#f0fbff);font-size:35px}
+    .aud-card h3{margin:0 0 5px;font-size:16px;color:#153763}.aud-card p{margin:0;color:#6d7d91;font-size:12px;line-height:1.35}
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .benefit{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:12px}
+    .benefit .icon{flex:0 0 auto}.benefit strong{font:700 13px Inter,"Hind Siliguri";display:block;color:#123761}.benefit p{font-size:12px;color:#6e7e91;margin:5px 0 0;line-height:1.4}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{border:1px solid var(--line);border-radius:15px;background:#fff;overflow:hidden;box-shadow:var(--shadow)}
+    .project-shot{height:190px;background:#eef5fb;padding:12px}
+    .browser{height:100%;background:#fff;border-radius:8px;box-shadow:0 7px 20px rgba(29,61,103,.12);overflow:hidden}
+    .browserbar{height:20px;background:#f2f5f8;display:flex;align-items:center;gap:4px;padding:0 7px}.browserbar i{width:5px;height:5px;border-radius:50%;background:#b8c6d6}
+    .business .sitehero{height:118px;background:linear-gradient(120deg,#e9f6ff 52%,#c2e4ff);padding:20px 16px}.business .sitehero b{font:800 17px/1.1 Inter;color:#0d526b}.business .sitehero small{display:block;font:500 7px Inter;color:#607b88;margin-top:7px}
+    .portfolio .sitehero{height:118px;background:linear-gradient(120deg,#0a1a30,#1a2f49);padding:20px 16px}.portfolio .sitehero b{font:800 17px/1.1 Inter;color:#fff}.portfolio .sitehero b em{color:#43d3ff;font-style:normal}.portfolio .sitehero small{display:block;font:500 7px Inter;color:#b7c9dc;margin-top:7px}
+    .commerce .sitehero{height:118px;background:linear-gradient(120deg,#fff8ee,#f4ece0);padding:20px 16px}.commerce .sitehero b{font:800 17px/1.1 Inter;color:#46321e}.commerce .sitehero small{display:block;font:500 7px Inter;color:#8b765e;margin-top:7px}
+    .mini-products{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:7px}.mini-products div{height:27px;border-radius:4px;background:#eef2f5}
+    .project-body{padding:13px 14px}.project-body strong{font-size:15px;color:#14375f}.project-body p{font-size:12px;margin:3px 0 0;color:#6c7c8e}
+    .big-cta{margin:28px 0 0;background:linear-gradient(100deg,#e8faff,#ecf6ff);border:1px solid #d7ebf7;border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center}
+    .big-cta h3{font:800 27px Inter,"Hind Siliguri";color:#0c2f66;margin:0}.big-cta p{margin:4px 0 0;color:#60738a;font-size:13px}
+    .big-price{background:#fff7c8;color:#f1291d;border-radius:12px;padding:12px 18px;text-align:center}.big-price small{display:block;font-weight:700}.big-price strong{font:800 27px Inter;display:block}
+    .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+    details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px rgba(37,80,124,.04)}
+    summary{cursor:pointer;font-weight:700;color:#163965;list-style:none;display:flex;justify-content:space-between;gap:15px}summary::-webkit-details-marker{display:none}summary:after{content:"+";font:800 20px Inter;color:#0a6de1}details[open] summary:after{content:"−"}details p{font-size:13px;line-height:1.6;color:#66788e;margin:10px 0 0}
+    .final{padding:34px 0 0}
+    .final-box{border-radius:28px 28px 0 0;background:linear-gradient(135deg,#dcfbff,#e5efff);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;position:relative;overflow:hidden}
+    .final-box:before{content:"";position:absolute;width:260px;height:150px;border-radius:50%;background:rgba(0,202,225,.18);left:-80px;bottom:-80px}
+    .final h2{position:relative}.final p{position:relative;margin:6px 0 0;color:#557089}
+    .disclaimer{font-size:11px;color:#6c8194;text-align:center;padding:13px 0 20px;background:#f5fbff;border-top:1px solid #dfedf6}
+    .floating-mobile{display:none}
+    @media(max-width:980px){
+      .nav-links{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:34px}.hero-visual{min-height:390px;max-width:700px;width:100%;margin:0 auto}
+      .skills{grid-template-columns:repeat(3,1fr)}.audience,.benefits{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}.project-shot{height:230px}.big-cta{grid-template-columns:1fr auto}.big-cta .cta-row{grid-column:1/-1}
+    }
+    @media(max-width:640px){
+      .wrap{width:min(100% - 24px,var(--max))}.nav-inner{min-height:60px}.brand{font-size:14px}.brand small{font-size:9px}.brand-mark{width:34px;height:34px}.nav-cta{padding:9px 12px;font-size:12px}
+      .hero{padding:28px 0 18px}.eyebrow{font-size:13px}h1{font-size:35px;letter-spacing:-1px}.lead{font-size:15px;line-height:1.55}
+      .price-row{display:grid;grid-template-columns:1fr}.price-box{width:100%}.cta-row{display:grid;grid-template-columns:1fr}.btn{width:100%}.contact-note{font-size:13px;line-height:1.5}.contact-note span{display:block;margin-left:0}
+      .hero-visual{min-height:330px}.laptop{width:83%;height:245px;top:25px}.laptop-base{top:267px;width:88%}.phone{width:97px;height:198px;right:0;top:112px;border-width:5px;padding:12px 6px}.phone-title{font-size:12px}.phone-copy,.phone-list div{font-size:5px}.phone-list{gap:6px}.side-note{font-size:10px;width:105px;top:2px}
+      .mock-hero{padding:15px 13px 10px}.mock-title{font-size:12px}.mock-art{height:66px}.mock-cards{padding:0 13px;gap:4px}.mock-cards div{height:26px}
+      section{padding:25px 0}.section-head{align-items:start}.section-head .pill{display:none}h2{font-size:28px}.skills{grid-template-columns:repeat(2,1fr);gap:9px}.skill-card{min-height:125px;padding:13px 11px}.skill-card strong{font-size:12px}.skill-card p{font-size:11px}
+      .audience,.benefits{grid-template-columns:1fr}.aud-card{padding:12px}.projects{gap:12px}.project-shot{height:190px}.big-cta{grid-template-columns:1fr;text-align:center}.big-price{width:max-content;margin:auto}.faq-grid{grid-template-columns:1fr}
+      .final-box{grid-template-columns:1fr;text-align:center;padding:25px 18px 82px}.final .cta-row{width:100%}
+      .floating-mobile{position:fixed;z-index:100;display:grid;grid-template-columns:1fr 1fr;gap:8px;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border:1px solid #dce9f5;border-radius:16px;padding:8px;box-shadow:0 12px 35px rgba(17,53,93,.2)}
+      .floating-mobile .btn{min-height:45px;padding:10px 8px;font-size:13px}.disclaimer{padding-bottom:85px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="ChatGPT Web Development Training">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2a3.4 3.4 0 0 1 3.32 2.65 3.4 3.4 0 0 1 4.15 4.14A3.4 3.4 0 0 1 18 15.34a3.4 3.4 0 0 1-5.2 3.13 3.4 3.4 0 0 1-5.2-3.13 3.4 3.4 0 0 1-1.47-5.35 3.4 3.4 0 0 1 4.15-4.14A3.4 3.4 0 0 1 12 3.2Z" stroke="white" stroke-width="1.8"/><path d="M9.2 8.1 12 6.5l2.8 1.6v3.2L12 12.9l-2.8-1.6V8.1Zm0 3.2v3.2l2.8 1.6 2.8-1.6v-3.2" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+        <span>ChatGPT<small>Web Development Training</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#home">হোম</a>
+        <a href="#course">কোর্স সম্পর্কে</a>
+        <a href="#learn">যা শিখবেন</a>
+        <a href="#projects">প্রজেক্ট</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="#join">এখনই ভর্তি হন →</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">📱 Mobile · 🎓 Student · 💻 Laptop · AI-assisted learning</p>
+          <h1>ChatGPT-এর সাহায্যে Web Development শিখে <span class="accent">Freelancing শুরু করুন</span></h1>
+          <p class="lead">আপনি Student বা Beginner হলেও শুরু করতে পারবেন। Coding expert হওয়া বাধ্যতামূলক নয়। এই Practical Training-এ ChatGPT + AI tools + Web Development + Freelancing একসাথে ব্যবহার করে real-world project তৈরি ও client-ready workflow শেখানো হবে।</p>
+
+          <div class="price-row">
+            <div class="price-box"><span>Training Fee</span><strong>৳2,000</strong></div>
+            <div class="hero-points">
+              <div><span class="check">✓</span> Practical ও hands-on training</div>
+              <div><span class="check">✓</span> Project-based শেখানো হবে</div>
+              <div><span class="check">✓</span> Student ও Beginner-friendly</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-wa" href="https://wa.me/8801614946557?text=I%20WANT%20TO%20LEARN" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.8L.2 24l6.6-1.7c1.7.9 3.5 1.4 5.4 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.2-3.6-8.4Zm-8.3 18.2h-.1c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1-6.9 16.8Zm5.4-7.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-2-.7-3.5-2.5-4-3.4-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L9 6.9c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.5 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4l-1.2-.7Z"/></svg>
+              WhatsApp-এ মেসেজ করুন
+            </a>
+            <a class="btn btn-fb facebook-link" href="https://www.facebook.com/share/1BTbqxFMSf/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.2 2 1.5 6.3 1.5 11.7c0 3.1 1.6 5.9 4.1 7.7V23l3.7-2c.9.3 1.8.4 2.7.4 5.8 0 10.5-4.3 10.5-9.7S17.8 2 12 2Zm1 13-2.7-2.9-5.2 2.9 5.7-6 2.8 2.9 5.1-2.9-5.7 6Z"/></svg>
+              Facebook-এ মেসেজ করুন
+            </a>
+          </div>
+          <div class="contact-note">WhatsApp: 01614946557 <span>Message লিখুন: “I WANT TO LEARN”</span></div>
+        </div>
+
+        <div class="hero-visual" aria-label="Web development training visual">
+          <div class="glow"></div>
+          <div class="side-note">একটি দক্ষ ভবিষ্যতের জন্য আজই শিখুন Web Development</div>
+          <div class="laptop">
+            <div class="screen">
+              <div class="mock-nav"><span>DevLearn</span><span>Home &nbsp; Services &nbsp; Portfolio &nbsp; Pricing</span><span class="mini-btn">Get Started</span></div>
+              <div class="mock-hero">
+                <div><div class="mock-title">Build Amazing Websites with <b>ChatGPT</b></div><div class="mock-copy">From idea to live website — faster, smarter, easier.</div><span class="mock-action">Get Started</span></div>
+                <div class="mock-art"></div>
+              </div>
+              <div class="mock-cards"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+          <div class="phone">
+            <div class="phone-label">Learn</div>
+            <div class="phone-title">Web Development with ChatGPT</div>
+            <div class="phone-copy">Build real projects. Get clients. Start freelancing.</div>
+            <div class="phone-button">Start Learning</div>
+            <div class="phone-list"><div>HTML, CSS, JavaScript</div><div>Build with ChatGPT</div><div>Deploy to Cloudflare</div><div>Real Client Projects</div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="learn">
+      <div class="wrap">
+        <div class="section-head">
+          <div><h2>এই কোর্সে যা শিখবেন</h2><p class="sub">শুধু code নয়—idea থেকে client delivery পর্যন্ত একটি পূর্ণ practical workflow</p></div>
+          <div class="pill">প্র্যাকটিক্যাল · প্রজেক্টভিত্তিক · বাস্তব অভিজ্ঞতা</div>
+        </div>
+        <div class="skills">
+          <article class="skill-card"><div class="icon">AI</div><strong>ChatGPT দিয়ে Website Development</strong><p>AI assistance ব্যবহার করে দ্রুত professional website তৈরি।</p></article>
+          <article class="skill-card"><div class="icon">↯</div><strong>Prompt Engineering</strong><p>সঠিক prompt দিয়ে ভালো coding output ও iteration।</p></article>
+          <article class="skill-card"><div class="icon">▣</div><strong>Mobile & Laptop Workflow</strong><p>শুরু করার জন্য practical device-based workflow।</p></article>
+          <article class="skill-card"><div class="icon">&lt;/&gt;</div><strong>AI Coding & Debugging</strong><p>Error বুঝে fix করা ও code improve করার process।</p></article>
+          <article class="skill-card"><div class="icon">LP</div><strong>Landing & Business Website</strong><p>Conversion-focused landing page এবং business website।</p></article>
+          <article class="skill-card"><div class="icon">GH</div><strong>GitHub Workflow</strong><p>Project versioning, repository ও deployment-ready workflow।</p></article>
+          <article class="skill-card"><div class="icon">CF</div><strong>Cloudflare Deployment</strong><p>Cloudflare-এ website free deployment করার process।</p></article>
+          <article class="skill-card"><div class="icon">↗</div><strong>Custom Domain Setup</strong><p>Domain connect ও basic production configuration।</p></article>
+          <article class="skill-card"><div class="icon">DB</div><strong>Supabase Basics</strong><p>Database, auth এবং backend service-এর basic ধারণা।</p></article>
+          <article class="skill-card"><div class="icon">PF</div><strong>Professional Portfolio</strong><p>নিজের skill ও projects client-এর সামনে সুন্দরভাবে উপস্থাপন।</p></article>
+          <article class="skill-card"><div class="icon">◎</div><strong>Client Hunting</strong><p>Client খোঁজা ও prospecting-এর practical approach।</p></article>
+          <article class="skill-card"><div class="icon">💬</div><strong>Client Communication</strong><p>Requirement বুঝে professionalভাবে কথা বলার পদ্ধতি।</p></article>
+          <article class="skill-card"><div class="icon">₹</div><strong>Pricing & Negotiation</strong><p>Project scope অনুযায়ী price set ও negotiation basics।</p></article>
+          <article class="skill-card"><div class="icon">✓</div><strong>Deal Closing</strong><p>Client hesitation handle করে clear agreement-এ যাওয়া।</p></article>
+          <article class="skill-card"><div class="icon">PD</div><strong>Project Delivery</strong><p>Testing, handover ও professional final delivery workflow।</p></article>
+          <article class="skill-card"><div class="icon">RA</div><strong>Requirement Analysis</strong><p>Client কী চায় তা structuredভাবে বের করে implementation plan তৈরি।</p></article>
+          <article class="skill-card"><div class="icon">UI</div><strong>Responsive UI Basics</strong><p>Mobile, tablet ও desktop-এ সুন্দরভাবে কাজ করা layout।</p></article>
+          <article class="skill-card"><div class="icon">QA</div><strong>Testing & Fixing</strong><p>Delivery-এর আগে common issue খুঁজে ঠিক করার checklist।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="course">
+      <div class="wrap">
+        <div class="section-head"><div><h2>এই কোর্স কার জন্য?</h2><p class="sub">যারা শূন্য থেকে practical skill তৈরি করে freelancing-এর দিকে এগোতে চান</p></div></div>
+        <div class="audience">
+          <article class="aud-card"><div class="avatar">🎓</div><div><h3>স্টুডেন্টদের জন্য</h3><p>পড়াশোনার পাশাপাশি বাস্তব digital skill গড়ে তুলতে চান।</p></div></article>
+          <article class="aud-card"><div class="avatar">💻</div><div><h3>নতুনদের জন্য</h3><p>আগে কখনো website না বানালেও structuredভাবে শুরু করতে চান।</p></div></article>
+          <article class="aud-card"><div class="avatar">🧑‍💼</div><div><h3>Freelancing শুরু করতে চান</h3><p>Client work-এর জন্য প্রয়োজনীয় workflow ও communication শিখতে চান।</p></div></article>
+          <article class="aud-card"><div class="avatar">📱</div><div><h3>Mobile দিয়ে শুরু</h3><p>Laptop না থাকলেও basic learning ও workflow শুরু করতে চান।</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div><h2>আপনি যা পাবেন</h2><p class="sub">শুধু video বা theory নয়—practical direction ও বাস্তব project mindset</p></div></div>
+        <div class="benefits">
+          <article class="benefit"><div class="icon">⚙</div><div><strong>Practical Guidance</strong><p>হাতে-কলমে workflow এবং কোথায় কী করতে হবে তার direction।</p></div></article>
+          <article class="benefit"><div class="icon">📁</div><div><strong>Real Project Workflow</strong><p>শুরু থেকে শেষ পর্যন্ত একটি project কীভাবে এগোয় তার ধারণা।</p></div></article>
+          <article class="benefit"><div class="icon">👥</div><div><strong>Client Hunting Strategy</strong><p>কোথায় client পাওয়া যায় এবং outreach কীভাবে করতে হয়।</p></div></article>
+          <article class="benefit"><div class="icon">◎</div><div><strong>Long-term Direction</strong><p>Training শেষে next step কী হবে তার একটি পরিষ্কার roadmap।</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><h2>আমি যা বানাতে দেখাব</h2><p class="sub">একই skill ব্যবহার করে বিভিন্ন ধরনের client project তৈরি করা যায়</p></div></div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-shot"><div class="browser business"><div class="browserbar"><i></i><i></i><i></i></div><div class="sitehero"><b>Grow Your Business<br>with Digital Solutions</b><small>Modern business website with a clear call to action</small></div><div class="mini-products"><div></div><div></div><div></div><div></div></div></div></div>
+            <div class="project-body"><strong>Business Website</strong><p>সার্ভিসভিত্তিক কোম্পানি বা ব্যবসার জন্য professional website</p></div>
+          </article>
+          <article class="project">
+            <div class="project-shot"><div class="browser portfolio"><div class="browserbar"><i></i><i></i><i></i></div><div class="sitehero"><b>Hi, I'm a<br><em>Web Developer</em></b><small>Skills, projects, services and contact — all in one place.</small></div><div class="mini-products"><div></div><div></div><div></div><div></div></div></div></div>
+            <div class="project-body"><strong>Portfolio Website</strong><p>নিজের skill, service ও project showcase করার website</p></div>
+          </article>
+          <article class="project">
+            <div class="project-shot"><div class="browser commerce"><div class="browserbar"><i></i><i></i><i></i></div><div class="sitehero"><b>New Collection<br>For A Better You</b><small>Clean storefront layout for product-driven businesses.</small></div><div class="mini-products"><div></div><div></div><div></div><div></div></div></div></div>
+            <div class="project-body"><strong>E-commerce Website</strong><p>অনলাইনে product display ও order-focused shop interface</p></div>
+          </article>
+        </div>
+
+        <div class="big-cta" id="join">
+          <div><h3>আজই শুরু করুন</h3><p>আপনার দক্ষতার নতুন যাত্রা শুরু হোক একটি বাস্তব, ব্যবহারযোগ্য skill দিয়ে।</p></div>
+          <div class="big-price"><small>মাত্র</small><strong>৳2,000</strong></div>
+          <div class="cta-row">
+            <a class="btn btn-wa" href="https://wa.me/8801614946557?text=I%20WANT%20TO%20LEARN" target="_blank" rel="noopener">WhatsApp-এ Message করুন</a>
+            <a class="btn btn-fb facebook-link" href="https://www.facebook.com/share/1BTbqxFMSf/" target="_blank" rel="noopener">Facebook-এ Message করুন</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head"><div><h2>সাধারণ জিজ্ঞাসা (FAQ)</h2><p class="sub">আপনার গুরুত্বপূর্ণ কিছু প্রশ্নের উত্তর</p></div></div>
+        <div class="faq-grid">
+          <details><summary>Mobile দিয়ে কি শেখা যাবে?</summary><p>হ্যাঁ। Basic learning, prompting, editing এবং কিছু development workflow mobile থেকে শুরু করা যায়। তবে advanced project, debugging ও faster workflow-এর জন্য laptop বেশি সুবিধাজনক।</p></details>
+          <details><summary>Laptop থাকা কি জরুরি?</summary><p>শুরু করার জন্য বাধ্যতামূলক নয়। কিন্তু professional client project ও advanced কাজ নিয়মিত করতে laptop strongly recommended।</p></details>
+          <details><summary>Coding জানা লাগবে?</summary><p>আগে থেকে expert coding জানা লাগবে না। HTML/CSS/JavaScript-এর প্রয়োজনীয় basics বুঝিয়ে AI-assisted workflow ব্যবহার করা হবে।</p></details>
+          <details><summary>Training শেষে income guaranteed?</summary><p>না। কোনো নির্দিষ্ট income guarantee নেই। আয় নির্ভর করবে আপনার skill, effort, consistency, market demand এবং client পাওয়ার ওপর।</p></details>
+          <details><summary>৳20,000–৳1,00,000+ আয় সম্ভব?</summary><p>এটি একটি লক্ষ্য, নিশ্চয়তা নয়। পর্যাপ্ত skill, portfolio, client acquisition এবং consistent delivery তৈরি করতে পারলে freelancing income বাড়ানো সম্ভব; ফল ব্যক্তি ও পরিস্থিতিভেদে ভিন্ন হবে।</p></details>
+          <details><summary>কীভাবে ভর্তি হব?</summary><p>WhatsApp বা Facebook-এ “I WANT TO LEARN” লিখে message করুন। Training details এবং পরবর্তী step জানিয়ে দেওয়া হবে।</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap final-box">
+        <div><h2>🚀 শুরু করুন আজই</h2><p>ChatGPT ও AI tools-এর সাথে Web Development শিখে client-ready practical skill তৈরি করুন।</p></div>
+        <div class="cta-row">
+          <a class="btn btn-wa" href="https://wa.me/8801614946557?text=I%20WANT%20TO%20LEARN" target="_blank" rel="noopener">WhatsApp-এ Join করুন</a>
+          <a class="btn btn-fb facebook-link" href="https://www.facebook.com/share/1BTbqxFMSf/" target="_blank" rel="noopener">Facebook-এ Message করুন</a>
+        </div>
+      </div>
+      <div class="disclaimer">এটি একটি স্বাধীন training program; OpenAI বা ChatGPT-এর official course নয়। কোনো নির্দিষ্ট income guarantee দেওয়া হয় না।</div>
+    </section>
+  </main>
+
+  <div class="floating-mobile" aria-label="Quick contact">
+    <a class="btn btn-wa" href="https://wa.me/8801614946557?text=I%20WANT%20TO%20LEARN" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-fb facebook-link" href="https://www.facebook.com/share/1BTbqxFMSf/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.facebook-link').forEach(function(link){
+      link.addEventListener('click', function(){
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText('I WANT TO LEARN').catch(function(){});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
