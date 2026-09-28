@@ -154,6 +154,57 @@
     .banner-casino .device-screen{background:linear-gradient(150deg,#22103c,#4c1d95)}
     .banner-casino .device-screen i,.banner-casino .device-screen em:before,.banner-casino .device-screen em:after{background:rgba(244,114,182,.22);border-color:rgba(255,255,255,.10)}
     .banner-loan .device-screen{background:linear-gradient(150deg,#eff6ff,#bfdbfe)}
+
+    /* Realistic mini UI previews inside the sliding phone mockups */
+    .feature-banner .device-screen[class*="ui-"]{margin:0 7px;height:95px;border-radius:9px;padding:6px;display:block;position:relative;overflow:hidden;color:#111827;background:#fff}
+    .feature-banner .ui-status{display:flex;justify-content:flex-end;gap:2px;height:5px;margin-bottom:3px}
+    .feature-banner .ui-status span{width:3px;height:3px;border-radius:50%;background:#cbd5e1}
+    .feature-banner .ui-brand{display:block;font:800 5px/1 Inter,sans-serif;letter-spacing:.08em;margin-bottom:4px;color:#334155}
+    .feature-banner .ui-visual{display:block;height:31px;border-radius:6px;margin-bottom:5px;position:relative;overflow:hidden}
+    .feature-banner .ui-visual:before,.feature-banner .ui-visual:after{content:"";position:absolute;border-radius:5px}
+    .feature-banner .ui-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+    .feature-banner .ui-grid>span{display:block;height:17px;border-radius:5px;background:#f8fafc;border:1px solid rgba(15,23,42,.07);position:relative}
+    .feature-banner .ui-grid>span:after{content:"";position:absolute;left:3px;right:3px;bottom:3px;height:2px;border-radius:3px;background:#cbd5e1}
+    .feature-banner .ui-cta{display:block;width:36px;height:7px;border-radius:999px;margin:5px auto 0}
+    .feature-banner .ui-fashion .ui-visual{background:linear-gradient(135deg,#fecdd3,#fff1f2 55%,#fb7185)}
+    .feature-banner .ui-fashion .ui-visual:before{width:18px;height:25px;background:#fff;left:8px;bottom:-4px;transform:rotate(-7deg);box-shadow:24px 2px 0 rgba(255,255,255,.82)}
+    .feature-banner .ui-fashion .ui-cta{background:#e11d48}
+    .feature-banner .ui-electronics .ui-visual{background:linear-gradient(135deg,#cffafe,#ecfeff 48%,#22d3ee)}
+    .feature-banner .ui-electronics .ui-visual:before{width:29px;height:18px;background:#0f172a;right:6px;top:6px;border-radius:3px}
+    .feature-banner .ui-electronics .ui-visual:after{width:17px;height:4px;background:#64748b;right:12px;bottom:4px}
+    .feature-banner .ui-electronics .ui-cta{background:#0891b2}
+    .feature-banner .ui-grocery .ui-visual{background:linear-gradient(135deg,#dcfce7,#f0fdf4 52%,#86efac)}
+    .feature-banner .ui-grocery .ui-visual:before{width:25px;height:18px;background:#22c55e;left:7px;top:7px;border-radius:50% 50% 42% 42%}
+    .feature-banner .ui-grocery .ui-visual:after{width:12px;height:20px;background:#f59e0b;right:8px;top:6px;transform:rotate(18deg)}
+    .feature-banner .ui-grocery .ui-cta{background:#16a34a}
+    .feature-banner .ui-loan{background:linear-gradient(180deg,#eff6ff,#fff)}
+    .feature-banner .ui-loan .ui-visual{background:linear-gradient(135deg,#2563eb,#60a5fa)}
+    .feature-banner .ui-loan .ui-visual:before{left:7px;right:7px;top:7px;height:5px;background:rgba(255,255,255,.9);box-shadow:0 10px 0 rgba(255,255,255,.55)}
+    .feature-banner .ui-loan .ui-visual:after{width:15px;height:15px;right:7px;bottom:5px;background:#dbeafe;border-radius:50%}
+    .feature-banner .ui-loan .ui-grid>span{background:#f8fbff;border-color:#bfdbfe}
+    .feature-banner .ui-loan .ui-cta{background:#2563eb}
+    .feature-banner .ui-casino{background:linear-gradient(180deg,#1b1231,#2e1065);color:#fff}
+    .feature-banner .ui-casino .ui-status span{background:#a78bfa}
+    .feature-banner .ui-casino .ui-brand{color:#f5d0fe}
+    .feature-banner .ui-casino .ui-visual{background:linear-gradient(135deg,#7e22ce,#db2777 60%,#f59e0b)}
+    .feature-banner .ui-casino .ui-visual:before{content:"777";display:grid;place-items:center;inset:6px;background:#fff;color:#be123c;font:900 9px/1 Inter,sans-serif;letter-spacing:2px}
+    .feature-banner .ui-casino .ui-visual:after{display:none}
+    .feature-banner .ui-casino .ui-grid>span{background:#3b176f;border-color:rgba(255,255,255,.1)}
+    .feature-banner .ui-casino .ui-grid>span:after{background:#f0abfc}
+    .feature-banner .ui-casino .ui-cta{background:#f59e0b}
+
+    /* Strong, readable contact strips for mobile and desktop */
+    .hero-sales .hero-contact{min-height:66px;border:0;border-radius:17px;padding:11px 15px;display:grid;grid-template-columns:42px 1fr 22px;align-items:center;gap:12px;text-align:left;color:#fff!important;box-shadow:0 14px 30px rgba(15,23,42,.12)}
+    .hero-sales .hero-contact:hover{transform:translateY(-2px)}
+    .hero-sales .hero-whatsapp{background:linear-gradient(135deg,#16a34a,#22c55e)}
+    .hero-sales .hero-messenger{background:linear-gradient(135deg,#1877f2,#168aff)}
+    .hero-sales .contact-icon{width:42px;height:42px;border-radius:13px;background:rgba(255,255,255,.16);display:grid;place-items:center}
+    .hero-sales .contact-icon svg{width:24px;height:24px;display:block;fill:#fff}
+    .hero-sales .contact-copy{display:flex;flex-direction:column;min-width:0}
+    .hero-sales .contact-copy strong{font-size:15px;line-height:1.15;color:#fff!important}
+    .hero-sales .contact-copy small{margin-top:3px;font-size:10px;font-weight:600;opacity:.92;color:#fff!important}
+    .hero-sales .contact-arrow{font-size:20px;font-weight:900;color:#fff!important;text-align:right}
+
     .hero-sales{display:grid;gap:12px;margin-top:16px}
     .hero-sales .btn{width:100%}
     .quick-packages{padding:16px;border:1px solid #e5e7ef;border-radius:18px;background:rgba(255,255,255,.92);box-shadow:0 15px 38px rgba(45,38,110,.08)}
@@ -232,23 +283,87 @@
             <div class="featured-viewport">
               <div class="featured-track">
 
-              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-fashion" aria-label="FASHION UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">FASHION</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-electronics" aria-label="TECH UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">TECH</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-grocery" aria-label="GROCERY UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">GROCERY</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-loan" aria-label="LOAN UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">LOAN</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-casino" aria-label="CASINO UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">CASINO</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
 
-              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
-              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen"><b></b><i></i><em></em></span></span></article>
+              <article class="feature-banner banner-ecom"><h3>E-commerce<br>Fashion Store</h3><p>Modern shop, cart & checkout experience</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-fashion" aria-label="FASHION UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">FASHION</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-electronics"><h3>E-commerce<br>Electronics</h3><p>Product catalog, offers & fast ordering</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-electronics" aria-label="TECH UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">TECH</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-grocery"><h3>E-commerce<br>Grocery Store</h3><p>Simple products, categories & delivery flow</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-grocery" aria-label="GROCERY UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">GROCERY</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-loan"><h3>Loan App /<br>Loan Website</h3><p>Easy application & high-conversion layout</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-loan" aria-label="LOAN UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">LOAN</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
+              <article class="feature-banner banner-casino"><h3>Casino<br>Website</h3><p>Premium gaming-style interface</p><span class="mini-arrow">→</span><span class="device"><span class="device-screen ui-casino" aria-label="CASINO UI preview">
+  <span class="ui-status"><span></span><span></span><span></span></span>
+  <span class="ui-brand">CASINO</span>
+  <span class="ui-visual"></span>
+  <span class="ui-grid"><span></span><span></span><span></span><span></span></span>
+  <span class="ui-cta"></span>
+</span></span></article>
               </div>
             </div>
           </div>
 
           <div class="hero-sales">
-            <a class="btn whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true"> WhatsApp-এ ওয়েবসাইট নিয়ে কথা বলুন</a>
+            <a class="btn whatsapp hero-contact hero-whatsapp" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener" aria-label="Chat with Fahim on WhatsApp">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.14 6.37 2.14 11.75c0 1.92.57 3.8 1.64 5.39L2 22l5.02-1.63a9.99 9.99 0 0 0 5.02 1.36h.01c5.45 0 9.9-4.37 9.9-9.75C21.95 6.6 17.5 2 12.04 2Zm5.79 13.73c-.25.7-1.47 1.34-2.03 1.42-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.03-1.29-5-4.28-5.15-4.48-.15-.2-1.23-1.61-1.23-3.07s.77-2.18 1.04-2.48c.27-.29.59-.36.79-.36h.57c.18.01.43-.07.67.5.25.59.84 2.04.91 2.19.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.18.3.79 1.28 1.69 2.07 1.16 1.02 2.14 1.34 2.44 1.49.3.15.48.13.66-.08.18-.2.76-.87.96-1.17.2-.3.4-.25.67-.15.28.1 1.76.82 2.06.97.3.15.5.22.57.34.08.13.08.73-.17 1.43Z"/></svg></span>
+              <span class="contact-copy"><strong>WhatsApp</strong><small>01614946557 · Tap to chat</small></span>
+              <span class="contact-arrow" aria-hidden="true">→</span>
+            </a>
 
             <div class="quick-packages" id="pricing">
               <div class="quick-packages-head"><b>Popular Packages</b><span>Transparent Pricing</span></div>
@@ -265,7 +380,11 @@
               </div>
             </div>
 
-            <a class="btn messenger" href="https://m.me/fahimfinlandf" target="_blank" rel="noopener"><img class="brand-icon" src="https://cdn.simpleicons.org/messenger/FFFFFF" alt="" aria-hidden="true"> Messenger-এ মেসেজ করুন</a>
+            <a class="btn messenger hero-contact hero-messenger" href="https://m.me/fahimfinlandf" target="_blank" rel="noopener" aria-label="Message Fahim on Messenger">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.15 2 11.27c0 2.92 1.46 5.52 3.74 7.22V22l3.42-1.88c.9.25 1.85.39 2.84.39 5.52 0 10-4.15 10-9.24C22 6.15 17.52 2 12 2Zm1 12.48-2.55-2.72-4.98 2.72 5.48-5.82 2.61 2.72 4.92-2.72L13 14.48Z"/></svg></span>
+              <span class="contact-copy"><strong>Messenger</strong><small>m.me/fahimfinlandf · Tap to message</small></span>
+              <span class="contact-arrow" aria-hidden="true">→</span>
+            </a>
             <div class="hero-trustline">⚡ Fast response <span>•</span> Free consultation <span>•</span> Clear pricing</div>
           </div>
 
