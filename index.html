@@ -121,7 +121,7 @@
       background:var(--surface);color:var(--text);display:grid;place-items:center;
     }
     .menu-btn{display:none}
-    .wa-btn,.primary-btn,.outline-btn{
+    .wa-icon{width:17px;height:17px;display:block;flex:0 0 auto}\n    .wa-btn,.primary-btn,.outline-btn{
       min-height:42px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;
       gap:8px;padding:0 17px;font-weight:800;font-size:12px;transition:.18s;
     }
@@ -241,25 +241,35 @@
     .timeline-item strong{display:block;font-size:11px}
     .timeline-item span{display:block;color:var(--muted);font-size:9px;margin-top:2px}
 
-    /* Projects */
-    .project-card{
-      flex:0 0 326px;scroll-snap-align:start;border:1px solid var(--line);border-radius:15px;background:var(--surface);
+    /* Projects — compact list, no remote screenshots */
+    .project-list{
+      border:1px solid var(--line);border-radius:16px;background:var(--surface);
       box-shadow:var(--shadow-sm);overflow:hidden;
     }
-    .project-thumb{height:155px;position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf3ff,#f7fbff);border-bottom:1px solid var(--line)}
-    body.dark .project-thumb{background:#17283f}
-    .project-fallback{position:absolute;inset:0;display:grid;place-items:center;color:var(--blue);font:800 20px Manrope,sans-serif}
-    .project-thumb img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
-    .project-body{padding:13px}
-    .project-body h3{font:800 14px Manrope,sans-serif;margin:0 0 6px}
-    .project-body p{font-size:10px;color:var(--muted);line-height:1.45;margin:0 0 11px}
-    .project-actions{display:flex;gap:7px}
-    .adult-project .project-thumb{background:linear-gradient(135deg,#181b22,#262b35)}
-    .adult-project .project-fallback{color:#fff;display:flex;flex-direction:column;gap:8px}
-    .adult-project .project-fallback small{font:700 10px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ffb4b4}
-    .age-warning{display:inline-flex;align-items:center;gap:6px;width:max-content;max-width:100%;padding:5px 8px;border-radius:999px;background:#fff0f0;color:#b42318;border:1px solid #ffd1d1;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
-    body.dark .age-warning{background:#3c2023;color:#ffb4b4;border-color:#5b2c32}
-
+    .project-row{
+      display:grid;grid-template-columns:minmax(165px,.9fr) minmax(260px,1.65fr) minmax(180px,1fr) auto;
+      gap:16px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line);
+      transition:.18s;background:var(--surface);
+    }
+    .project-row:last-child{border-bottom:0}
+    .project-row:hover{background:var(--surface2)}
+    .project-title strong{display:block;font:800 14px Manrope,sans-serif}
+    .project-title small{display:block;color:var(--muted);font-size:9px;margin-top:3px}
+    .project-desc{font-size:10px;color:var(--muted);line-height:1.5}
+    .project-stack{display:flex;gap:6px;flex-wrap:wrap}
+    .project-stack span{padding:5px 8px;border-radius:999px;background:var(--surface2);color:var(--muted);font-size:8px;font-weight:700}
+    .project-buttons{display:flex;gap:7px;justify-content:flex-end;flex-wrap:wrap}
+    .project-link{
+      min-height:34px;display:inline-flex;align-items:center;justify-content:center;padding:0 12px;border-radius:9px;
+      font-size:9px;font-weight:800;border:1px solid var(--line);background:var(--surface);white-space:nowrap;
+    }
+    .project-link.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+    .project-link:hover{transform:translateY(-1px)}
+    .age-warning{
+      display:inline-flex;align-items:center;gap:5px;margin-top:5px;padding:4px 7px;border-radius:999px;
+      background:#fff0f0;border:1px solid #ffd0d0;color:#b42318;font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
+    }
+    body.dark .age-warning{background:#3b2023;border-color:#5b2c32;color:#ffb5b5}
     /* Experience */
     .experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
     .experience-card{
@@ -352,14 +362,14 @@
       .process-card .step{font-size:8px}.process-card h3{font-size:8px;margin-bottom:0}.process-card p{display:none}
       .review-card{flex-basis:calc(100vw - 39px)}
       .cta{display:block;padding:19px}.cta .wa-btn{width:100%;margin-top:14px}
-      .footer{display:block}.footer-links{margin-top:13px}
+      .footer{display:block}.footer-left{align-items:flex-start}.footer-links{margin-top:12px;gap:10px;line-height:1.5}
       .floating-wa{right:13px;bottom:13px;width:49px;height:49px}
     }
     @media(max-width:420px){
       .container{width:calc(100% - 20px)}
       .brand-name{font-size:15px}
       .service-card{flex-basis:calc(100vw - 28px)}
-      .project-card,.review-card{flex-basis:calc(100vw - 28px)}
+      .review-card{flex-basis:calc(100vw - 28px)}
       .profile-list{grid-template-columns:1fr}
       .timeline-item{grid-template-columns:72px 1fr}
     }
@@ -389,7 +399,7 @@
 
     <div class="nav-actions">
       <button class="round-icon" id="themeToggle" aria-label="Toggle dark mode">◐</button>
-      <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener">Hire Me on WhatsApp</a>
+      <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
       <button class="round-icon menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </div>
@@ -401,7 +411,7 @@
     <a href="#experience">Experience</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
-    <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener">Hire Me on WhatsApp</a>
+    <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
   </nav>
 </header>
 
@@ -418,7 +428,7 @@
             <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">WordPress</span><span class="chip">Laravel</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span><span class="chip">Python</span><span class="chip">AI</span><span class="chip">SEO</span>
           </div>
           <div class="intro-actions">
-            <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener">Hire Me on WhatsApp</a>
+            <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
             <a class="outline-btn" href="#work">View My Work</a>
           </div>
         </div>
@@ -619,64 +629,70 @@
       <div class="section-head">
         <div class="section-title-row">
           <div><span class="eyebrow">Featured work</span><h2>Recent Projects</h2></div>
-          <p class="section-sub">Selected products and client systems I have built and shipped.</p>
-        </div>
-        <div class="carousel-actions">
-          <button class="round-btn" data-prev="projectsViewport" aria-label="Previous projects">‹</button>
-          <button class="round-btn" data-next="projectsViewport" aria-label="Next projects">›</button>
+          <p class="section-sub">Selected products and client systems I have built and shipped — listed cleanly without external screenshot services.</p>
         </div>
       </div>
 
-      <div class="viewport auto-carousel" id="projectsViewport" data-interval="4200">
-        <div class="track">
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">Exam Center BD</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://examcenterbd.com/" alt="Exam Center BD preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>Exam Center BD</h3><div class="stack-row"><span class="chip">Supabase</span><span class="chip">RLS</span><span class="chip">Cloudflare</span></div><p>Online exam platform with authentication, question systems, admin workflows and student performance features.</p><div class="project-actions"><a class="primary-btn" href="https://examcenterbd.com/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+      <div class="project-list">
+        <article class="project-row">
+          <div class="project-title"><strong>Exam Center BD</strong><small>examcenterbd.com</small></div>
+          <div class="project-desc">Online exam platform with authentication, question systems, admin workflows and student performance features.</div>
+          <div class="project-stack"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://examcenterbd.com/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">HeyProma</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://heyproma.com/" alt="HeyProma preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>HeyProma</h3><div class="stack-row"><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">AI</span></div><p>AI companion platform with authentication, analytics, bot controls and server-side integrations.</p><div class="project-actions"><a class="primary-btn" href="https://heyproma.com/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>HeyProma</strong><small>heyproma.com</small></div>
+          <div class="project-desc">AI companion platform with authentication, analytics, bot controls and server-side integrations.</div>
+          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>AI</span><span>Auth</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://heyproma.com/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">NEFERIQ</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://neferiq.com/" alt="Neferiq preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>NEFERIQ</h3><div class="stack-row"><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span></div><p>Letter-first social platform with profiles, authentication, moderation and production infrastructure.</p><div class="project-actions"><a class="primary-btn" href="https://neferiq.com/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>NEFERIQ</strong><small>neferiq.com</small></div>
+          <div class="project-desc">Letter-first social platform with profiles, authentication, moderation and production infrastructure.</div>
+          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://neferiq.com/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">CinemaMaddy</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://cinemamaddy.site/" alt="CinemaMaddy preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>CinemaMaddy</h3><div class="stack-row"><span class="chip">JavaScript</span><span class="chip">Responsive</span><span class="chip">Production</span></div><p>Responsive movie discovery experience focused on polished presentation and mobile usability.</p><div class="project-actions"><a class="primary-btn" href="https://cinemamaddy.site/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>CinemaMaddy</strong><small>cinemamaddy.site</small></div>
+          <div class="project-desc">Responsive movie discovery experience focused on polished presentation and mobile usability.</div>
+          <div class="project-stack"><span>JavaScript</span><span>Responsive</span><span>Production</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://cinemamaddy.site/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">Oronno Nogor</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://oronnonogor.com/" alt="Oronno Nogor preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>Oronno Nogor</h3><div class="stack-row"><span class="chip">Responsive</span><span class="chip">Performance</span><span class="chip">Deployment</span></div><p>Production client website with responsive browsing and reliable deployment.</p><div class="project-actions"><a class="primary-btn" href="https://oronnonogor.com/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>Oronno Nogor</strong><small>oronnonogor.com</small></div>
+          <div class="project-desc">Production client website with responsive browsing, clear information architecture and reliable deployment.</div>
+          <div class="project-stack"><span>Responsive</span><span>Performance</span><span>Deployment</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://oronnonogor.com/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">Nobin Mart</div><img loading="lazy" src="https://image.thum.io/get/width/700/crop/420/noanimate/https://nobin-mart.fahimsikder59595.workers.dev/" alt="Nobin Mart preview" onerror="this.style.display='none'"></div>
-            <div class="project-body"><h3>Nobin Mart</h3><div class="stack-row"><span class="chip">E-commerce</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span></div><p>Modern e-commerce website with responsive product browsing and account-ready structure.</p><div class="project-actions"><a class="primary-btn" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener">Live Demo</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>Nobin Mart</strong><small>Cloudflare Workers deployment</small></div>
+          <div class="project-desc">Modern e-commerce website with responsive product browsing and account-ready structure.</div>
+          <div class="project-stack"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span></div>
+          <div class="project-buttons"><a class="project-link primary" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener">View Live ↗</a></div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-thumb"><div class="project-fallback">Taskora</div></div>
-            <div class="project-body"><h3>Taskora</h3><div class="stack-row"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Supabase</span></div><p>Micro-job and social system with wallet ledger, proofs, referrals and moderation workflows.</p><div class="project-actions"><a class="outline-btn" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a></div></div>
-          </article>
+        <article class="project-row">
+          <div class="project-title"><strong>Taskora</strong><small>Micro-jobs · social · wallet</small></div>
+          <div class="project-desc">Micro-job and social system with wallet ledger, proofs, referrals and moderation workflows.</div>
+          <div class="project-stack"><span>React</span><span>TypeScript</span><span>Supabase</span><span>RLS</span></div>
+          <div class="project-buttons"><a class="project-link" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </article>
 
-          <article class="project-card adult-project">
-            <div class="project-thumb">
-              <div class="project-fallback"><span>18+ Client Project</span><small>Age-restricted website</small></div>
-            </div>
-            <div class="project-body">
-              <div class="age-warning">⚠ 18+ adult-industry client project</div>
-              <h3>Shelust.com</h3>
-              <div class="stack-row"><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span><span class="chip">Admin CMS</span></div>
-              <p>Client project for an age-restricted adult-content website, including responsive UI, video embedding workflows, admin tools, SEO pages and production deployment.</p>
-              <div class="project-actions"><a class="outline-btn" href="https://shelust.com/" target="_blank" rel="noopener noreferrer">Visit 18+ Site</a></div>
-            </div>
-          </article>
-        </div>
+        <article class="project-row">
+          <div class="project-title">
+            <strong>Shelust.com</strong>
+            <small>Age-restricted client project</small>
+            <span class="age-warning">⚠ 18+ adult-industry client project</span>
+          </div>
+          <div class="project-desc">Client project for an age-restricted adult-content website with responsive UI, video embedding workflows, admin tools, SEO pages and production deployment.</div>
+          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>Admin CMS</span></div>
+          <div class="project-buttons"><a class="project-link" href="https://shelust.com/" target="_blank" rel="noopener noreferrer">Visit 18+ Site ↗</a></div>
+        </article>
       </div>
     </div>
   </section>
@@ -766,7 +782,7 @@
     <div class="container">
       <div class="cta">
         <div><h3>Ready to Start Your Project?</h3><p>Tell me what you want to build and I’ll reply with the next steps.</p></div>
-        <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener">Hire Me on WhatsApp →</a>
+        <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp →</span></a>
       </div>
     </div>
   </section>
@@ -786,7 +802,7 @@
   </div>
 </footer>
 
-<a class="floating-wa" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Fahim on WhatsApp">◉</a>
+<a class="floating-wa" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Fahim on WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg></a>
 
 <script>
 (function(){
