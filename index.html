@@ -254,6 +254,11 @@
     .project-body h3{font:800 14px Manrope,sans-serif;margin:0 0 6px}
     .project-body p{font-size:10px;color:var(--muted);line-height:1.45;margin:0 0 11px}
     .project-actions{display:flex;gap:7px}
+    .adult-project .project-thumb{background:linear-gradient(135deg,#181b22,#262b35)}
+    .adult-project .project-fallback{color:#fff;display:flex;flex-direction:column;gap:8px}
+    .adult-project .project-fallback small{font:700 10px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ffb4b4}
+    .age-warning{display:inline-flex;align-items:center;gap:6px;width:max-content;max-width:100%;padding:5px 8px;border-radius:999px;background:#fff0f0;color:#b42318;border:1px solid #ffd1d1;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+    body.dark .age-warning{background:#3c2023;color:#ffb4b4;border-color:#5b2c32}
 
     /* Experience */
     .experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -657,6 +662,19 @@
           <article class="project-card">
             <div class="project-thumb"><div class="project-fallback">Taskora</div></div>
             <div class="project-body"><h3>Taskora</h3><div class="stack-row"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Supabase</span></div><p>Micro-job and social system with wallet ledger, proofs, referrals and moderation workflows.</p><div class="project-actions"><a class="outline-btn" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a></div></div>
+          </article>
+
+          <article class="project-card adult-project">
+            <div class="project-thumb">
+              <div class="project-fallback"><span>18+ Client Project</span><small>Age-restricted website</small></div>
+            </div>
+            <div class="project-body">
+              <div class="age-warning">⚠ 18+ adult-industry client project</div>
+              <h3>Shelust.com</h3>
+              <div class="stack-row"><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span><span class="chip">Admin CMS</span></div>
+              <p>Client project for an age-restricted adult-content website, including responsive UI, video embedding workflows, admin tools, SEO pages and production deployment.</p>
+              <div class="project-actions"><a class="outline-btn" href="https://shelust.com/" target="_blank" rel="noopener noreferrer">Visit 18+ Site</a></div>
+            </div>
           </article>
         </div>
       </div>
