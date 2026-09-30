@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
-  <title>Fahim Sikder | AI Engineer & Full-Stack Web Developer</title>
-  <meta name="description" content="Portfolio of Fahim Sikder — AI Engineer and full-stack web developer offering Next.js, WordPress, Laravel, portfolio websites, landing pages, website fixes, AI chatbots, SEO and STEM tutoring.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#040806">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <title>Fahim Sikder | AI Engineer, Web Developer & AI Automation</title>
+  <meta name="description" content="Fahim Sikder is an AI Engineering student at LUT University with 5+ years in WordPress, web development, SEO and speed optimization, 200+ completed orders, plus AI automation and chatbot development.">
   <meta name="author" content="Fahim Sikder">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://fahimsikderai.com/">
+  <link rel="alternate" hreflang="en" href="https://fahimsikderai.com/">
+  <link rel="alternate" hreflang="x-default" href="https://fahimsikderai.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fahim Sikder Portfolio">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://fahimsikderai.com/">
-  <meta property="og:title" content="Fahim Sikder | AI Engineer & Full-Stack Web Developer">
-  <meta property="og:description" content="Modern websites, AI solutions, WordPress, SEO and technical services with clear pricing.">
+  <meta property="og:title" content="Fahim Sikder | AI Engineer & Web Developer">
+  <meta property="og:description" content="AI Engineer, web developer and automation builder with 5+ years of web experience and 200+ completed client orders.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fahim Sikder | AI Engineer & Full-Stack Web Developer">
-  <meta name="twitter:description" content="Next.js, WordPress, Laravel, AI chatbots, SEO and production web systems.">
+  <meta name="twitter:title" content="Fahim Sikder | AI Engineer & Web Developer">
+  <meta name="twitter:description" content="AI engineering, web development, WordPress, SEO, speed optimization, AI automation and chatbots.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -30,420 +35,263 @@
         "@id":"https://fahimsikderai.com/#person",
         "name":"Fahim Sikder",
         "url":"https://fahimsikderai.com/",
+        "email":"mailto:fahim.sikder.web@gmail.com",
         "sameAs":["https://github.com/Fahimxbd"],
-        "jobTitle":"AI Engineer & Full-Stack Web Developer",
-        "knowsAbout":["Artificial Intelligence","Next.js","WordPress","Laravel","Supabase","Cloudflare","SEO","AI Chatbots","Python","JavaScript","TypeScript"]
+        "jobTitle":"AI Engineer",
+        "description":"AI Engineering student at LUT University with 5+ years of WordPress, web development, SEO and website speed optimization experience, 200+ completed web development orders, and 1 year of AI automation and chatbot work.",
+        "knowsAbout":["Artificial Intelligence","AI Automation","AI Chatbots","Web Development","App Development","WordPress","Website Speed Optimization","Technical SEO","Software Engineering","Application Security","Cloudflare","Supabase","Next.js","Python"]
       },
       {
         "@type":"WebSite",
         "@id":"https://fahimsikderai.com/#website",
         "url":"https://fahimsikderai.com/",
         "name":"Fahim Sikder Portfolio",
+        "description":"Portfolio of Fahim Sikder — AI Engineer, web developer and AI automation builder.",
+        "inLanguage":"en",
         "publisher":{"@id":"https://fahimsikderai.com/#person"}
       }
     ]
   }
   </script>
-
   <style>
     :root{
-      --bg:#f6faff;
-      --surface:#ffffff;
-      --surface2:#f1f6fd;
-      --text:#091a38;
-      --muted:#607087;
-      --line:#dce7f4;
-      --line-strong:#c9d9ea;
-      --blue:#116cff;
-      --blue2:#2b98ff;
-      --green:#12b981;
-      --purple:#7657ff;
-      --pink:#ee3aa4;
-      --orange:#ff684b;
-      --yellow:#ffbd18;
-      --navy:#081a38;
-      --shadow:0 15px 42px rgba(33,76,128,.09);
-      --shadow-sm:0 8px 24px rgba(33,76,128,.07);
-      --max:1420px;
-    }
-    body.dark{
-      --bg:#0c1420;
-      --surface:#121d2c;
-      --surface2:#172438;
-      --text:#f0f6ff;
-      --muted:#a2b0c4;
-      --line:#28394f;
-      --line-strong:#334a66;
-      --navy:#f0f6ff;
-      --shadow:0 16px 44px rgba(0,0,0,.24);
-      --shadow-sm:0 8px 24px rgba(0,0,0,.18);
+      --bg:#040806;--panel:#08110d;--panel2:#0b1711;--line:#173426;--line2:#23503a;
+      --text:#eafff2;--muted:#87a394;--green:#52ff9a;--green2:#1ed978;--cyan:#67e8f9;
+      --danger:#ff6b81;--amber:#ffc857;--shadow:0 24px 70px rgba(0,0,0,.42);--max:1180px
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:78px}
     body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 72% -10%,rgba(17,108,255,.10),transparent 28%),
-        linear-gradient(180deg,#fff 0,var(--bg) 22%,var(--bg) 100%);
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
+      margin:0;color:var(--text);background:
+      radial-gradient(circle at 18% -10%,rgba(82,255,154,.09),transparent 30%),
+      radial-gradient(circle at 92% 10%,rgba(103,232,249,.05),transparent 23%),
+      var(--bg);font-family:"Space Grotesk",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased
     }
-    body.dark{background:linear-gradient(180deg,#101b2a,var(--bg))}
-    img{display:block;max-width:100%}
-    a{text-decoration:none;color:inherit}
-    button{font:inherit;cursor:pointer}
-    h1,h2,h3,p{margin-top:0}
-    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-    .section{padding:34px 0}
-    .section.compact{padding-top:24px}
-    .topbar{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,.94);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(16px);
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;
+      background-image:linear-gradient(rgba(82,255,154,.028) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(82,255,154,.028) 1px,transparent 1px);
+      background-size:32px 32px;mask-image:linear-gradient(to bottom,#000,transparent 82%)
     }
-    body.dark .topbar{background:rgba(12,20,32,.94)}
-    .nav{min-height:68px;display:flex;align-items:center;gap:20px}
-    .brand{display:flex;align-items:center;gap:11px;font:800 18px Manrope,sans-serif;letter-spacing:-.03em;white-space:nowrap}
-    .brand img{width:38px;height:38px;border-radius:11px;box-shadow:0 8px 18px rgba(17,108,255,.18)}
-    .brand-name b{color:var(--blue)}
-    .desktop-nav{margin-left:auto;display:flex;align-items:center;gap:24px}
-    .desktop-nav a{font-size:13px;font-weight:700;padding:24px 0 20px;position:relative}
-    .desktop-nav a:hover,.desktop-nav a.active{color:var(--blue)}
-    .desktop-nav a.active:after{
-      content:"";position:absolute;left:0;right:0;bottom:13px;height:2px;border-radius:999px;background:var(--blue)
+    a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 34px));margin:auto}
+    .mono{font-family:"JetBrains Mono",monospace}.accent{color:var(--green)}.muted{color:var(--muted)}
+    header{position:sticky;top:0;z-index:90;border-bottom:1px solid rgba(82,255,154,.12);background:rgba(4,8,6,.84);backdrop-filter:blur(18px)}
+    .nav{height:70px;display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand-logo{position:relative;width:44px;height:44px;border:1px solid var(--line2);border-radius:10px;background:#06100b;box-shadow:inset 0 0 24px rgba(82,255,154,.04),0 0 24px rgba(82,255,154,.05);overflow:hidden}
+    .brand-logo:before,.brand-logo:after{content:"";position:absolute;background:var(--green);opacity:.8}
+    .brand-logo:before{width:14px;height:1px;left:7px;top:7px;box-shadow:16px 29px 0 var(--green)}
+    .brand-logo:after{width:1px;height:14px;left:7px;top:7px;box-shadow:29px 16px 0 var(--green)}
+    .brand-logo span{position:absolute;inset:0;display:grid;place-items:center;color:var(--green);font:700 13px "JetBrains Mono";letter-spacing:-.03em}
+    .brand-text{display:flex;flex-direction:column;line-height:1.05}.brand-text strong{font-size:17px}.brand-text small{margin-top:5px;color:#628071;font:600 10px "JetBrains Mono";letter-spacing:.09em;text-transform:uppercase}
+    nav{margin-left:auto;display:flex;gap:2px}nav a{padding:9px 10px;border-radius:9px;color:var(--muted);font-size:13px;font-weight:600}nav a:hover{color:var(--green);background:rgba(82,255,154,.05)}
+    .nav-cta{padding:8px 12px;border:1px solid var(--line2);border-radius:9px;color:var(--green);background:rgba(82,255,154,.05);font:600 11px "JetBrains Mono"}
+    .menu{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--green);font-size:20px}
+    .mobile-nav{display:none}.mobile-nav.open{display:grid;padding:10px 17px 16px;background:var(--panel);border-bottom:1px solid var(--line)}.mobile-nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted)}
+    .hero{padding:84px 0 58px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:45px;align-items:center}
+    .status{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(82,255,154,.23);border-radius:999px;background:rgba(82,255,154,.05);color:#bdffd7;font:600 11px "JetBrains Mono";letter-spacing:.05em;text-transform:uppercase}
+    .status i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(82,255,154,.08),0 0 17px rgba(82,255,154,.55)}
+    h1,h2,h3{line-height:1.08}.hero h1{max-width:760px;margin:23px 0 19px;font-size:clamp(47px,7vw,78px);letter-spacing:-.055em}
+    .hero h1 span{display:block}.lead{max-width:740px;margin:0;color:#a6bbb0;font-size:clamp(18px,2vw,21px)}
+    .role-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}.role-strip span{padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#06100b;color:#91ae9e;font:600 11px "JetBrains Mono"}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}.btn{min-height:47px;display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;border-radius:11px;border:1px solid transparent;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--green);color:#031008;box-shadow:0 12px 30px rgba(82,255,154,.15)}.btn-secondary{border-color:var(--line);background:var(--panel);color:#d9eee2}
+    .terminal{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#06100b,#0a1510);box-shadow:var(--shadow)}
+    .terminal-top{height:42px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line);background:#050c08}.terminal-top i{width:9px;height:9px;border-radius:50%;background:#345346}.terminal-top i:nth-child(1){background:var(--danger)}.terminal-top i:nth-child(2){background:var(--amber)}.terminal-top i:nth-child(3){background:var(--green)}.terminal-top span{margin-left:auto;color:#587365;font:500 10px "JetBrains Mono"}
+    .terminal-body{min-height:365px;padding:24px;color:#9db7a9;font:500 12px/1.85 "JetBrains Mono"}.prompt{color:var(--green)}.cmd{color:#effff6}.ok{color:var(--cyan)}.dim{color:#607b6d}.cursor{display:inline-block;width:7px;height:15px;margin-left:5px;background:var(--green);vertical-align:-3px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+    .hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px}.metric{padding:15px;border:1px solid var(--line);border-radius:13px;background:rgba(8,17,13,.74)}.metric b{display:block;color:var(--green);font:700 15px "JetBrains Mono"}.metric span{color:var(--muted);font-size:11px}
+    .section{padding:72px 0}.section-head{max-width:820px;margin-bottom:34px}.eyebrow{color:var(--green);font:600 11px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase}.eyebrow:before{content:"// ";color:#35664d}.section-head h2{margin:10px 0 12px;font-size:clamp(34px,5vw,50px);letter-spacing:-.045em}.section-head p{margin:0;color:var(--muted);font-size:17px}
+    .identity-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(10,22,16,.94),rgba(6,13,9,.97));box-shadow:0 16px 40px rgba(0,0,0,.2)}
+    .identity-panel{position:relative;overflow:hidden}.identity-panel:before{content:"AI";position:absolute;right:18px;top:4px;color:rgba(82,255,154,.035);font:700 110px "JetBrains Mono"}
+    .identity-panel h3{position:relative;margin:7px 0 4px;font-size:31px}.handle{position:relative;color:var(--green);font:600 12px "JetBrains Mono"}
+    .identity-list{position:relative;display:grid;gap:9px;margin-top:20px}.identity-list div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#96aa9f;font-size:13px}.identity-list b{color:#dffff0}
+    .about-copy h3{margin:9px 0 10px;font-size:25px}.about-copy p{margin:0 0 13px;color:var(--muted);font-size:16px}.manifesto{margin-top:18px;padding:15px 16px;border-left:3px solid var(--green);border-radius:0 10px 10px 0;background:rgba(82,255,154,.04);color:#c7ded2;font:500 13px/1.7 "JetBrains Mono"}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cap{padding:21px;border:1px solid var(--line);border-radius:15px;background:#07100c}.cap b{display:block;margin-bottom:8px;color:var(--green);font:600 11px "JetBrains Mono"}.cap h3{margin:0 0 8px;font-size:19px}.cap p{margin:0;color:var(--muted);font-size:13px}
+    .skill-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#050d09;color:#92ab9e;font:600 10px "JetBrains Mono"}
+    .experience-list{display:grid;gap:12px}.experience-item{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#07110c,#050c08);position:relative;overflow:hidden}.experience-item:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--green),transparent)}.experience-time{color:var(--green);font:700 11px "JetBrains Mono";letter-spacing:.06em;text-transform:uppercase}.experience-body h3{margin:0 0 7px;font-size:21px}.experience-body p{margin:0;color:var(--muted);font-size:14px}.experience-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.experience-tags span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:#82a18f;background:#050d09;font:600 9px "JetBrains Mono"}
+    .project-list{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#06100b}
+    .project-row{display:grid;grid-template-columns:1.05fr 1.7fr 1.2fr auto;gap:16px;align-items:center;padding:18px 19px;border-bottom:1px solid var(--line);transition:.2s}
+    .project-row:last-child{border-bottom:0}.project-row:hover{background:rgba(82,255,154,.035)}
+    .project-main strong{display:block;font-size:17px}.project-main small{color:#5f7d6d;font:500 10px "JetBrains Mono"}
+    .project-desc{color:#91a79b;font-size:13px}.project-stack{display:flex;flex-wrap:wrap;gap:6px}.project-stack span{padding:5px 7px;border:1px solid var(--line);border-radius:999px;color:#739384;font:600 9px "JetBrains Mono"}
+    .project-link{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;color:var(--green);font:600 11px "JetBrains Mono"}.project-link:hover{text-decoration:underline}
+    .project-status{display:inline-flex;align-items:center;gap:6px;color:#77a38b;font:600 9px "JetBrains Mono";text-transform:uppercase;letter-spacing:.08em}.project-status i{width:6px;height:6px;border-radius:50%;background:var(--green)}
+    .lab{padding:28px;border:1px solid rgba(82,255,154,.2);border-radius:20px;background:linear-gradient(135deg,rgba(82,255,154,.055),rgba(103,232,249,.02));box-shadow:var(--shadow)}.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.lab h2{margin:9px 0 11px}.lab p{color:var(--muted)}
+    .checklist{display:grid;gap:9px}.check{display:flex;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#9eb3a8;font-size:12px}.check b{color:var(--green);font-family:"JetBrains Mono"}
+    .background-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.education{display:flex;gap:16px}.education+.education{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}.education .year{min-width:90px;color:var(--green);font:600 10px "JetBrains Mono"}.education h3{margin:0 0 6px;font-size:18px}.education p{margin:0;color:var(--muted);font-size:13px}
+    .policy-box{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#07110c,#050c08)}.policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.policy-item{padding:16px;border:1px solid var(--line);border-radius:12px;background:#050d09}.policy-item b{display:block;margin-bottom:6px;color:var(--green);font:600 11px "JetBrains Mono";text-transform:uppercase;letter-spacing:.07em}.policy-item p{margin:0;color:var(--muted);font-size:13px}.policy-note{margin-top:14px;color:#9fb7aa;font-size:13px}.policy-note strong{color:#e8fff2}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#09140f,#050d09);box-shadow:var(--shadow)}.contact h2{margin:9px 0 12px;font-size:clamp(34px,5vw,48px)}.contact p{color:var(--muted)}
+    form{display:grid;gap:10px}input,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;outline:none;background:#030806;color:var(--text);font:500 12px "JetBrains Mono"}input:focus,textarea:focus{border-color:var(--line2);box-shadow:0 0 0 4px rgba(82,255,154,.05)}textarea{min-height:115px;resize:vertical}
+    footer{padding:26px 0 34px;color:#5f7b6c}.footer{display:flex;justify-content:space-between;gap:16px;padding-top:24px;border-top:1px solid var(--line);font:500 10px "JetBrains Mono"}.footer a{color:#99b7a7}
+    @media(max-width:940px){
+      nav,.nav-cta{display:none}.menu{display:block}.hero-grid,.identity-grid,.lab-grid,.contact,.background-grid{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}
+      .project-row{grid-template-columns:1fr auto}.project-desc,.project-stack{grid-column:1/-1}.experience-item{grid-template-columns:120px 1fr}.policy-grid{grid-template-columns:1fr}.terminal{margin-top:6px}
     }
-    .nav-actions{display:flex;align-items:center;gap:9px;margin-left:8px}
-    .round-icon{
-      width:39px;height:39px;border-radius:50%;border:1px solid var(--line);
-      background:var(--surface);color:var(--text);display:grid;place-items:center;
+    @media(max-width:620px){
+      .hero{padding:58px 0 48px}.section{padding:56px 0}.hero h1{font-size:46px}.hero-metrics,.grid-4{grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}
+      .terminal-body{min-height:auto;padding:18px;font-size:11px}.identity-list div{grid-template-columns:1fr;gap:2px}.experience-item{grid-template-columns:1fr;gap:7px;padding:18px}.project-row{grid-template-columns:1fr;padding:16px}.project-link{justify-self:start}
+      .contact{padding:22px}.footer{flex-direction:column}.education{display:block}.education .year{display:block;margin-bottom:5px}.brand-text small{display:none}
     }
-    .menu-btn{display:none}
-    .wa-icon{width:17px;height:17px;display:block;flex:0 0 auto}\n    .wa-btn,.primary-btn,.outline-btn{
-      min-height:42px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;
-      gap:8px;padding:0 17px;font-weight:800;font-size:12px;transition:.18s;
+  
+    /* Services retained from 29 Sep design, restyled for original cyber portfolio */
+    #services{position:relative}
+    #services:before{
+      content:"SERVICES // AVAILABLE_MODULES";position:absolute;right:max(17px,calc((100vw - var(--max))/2));top:34px;
+      color:rgba(82,255,154,.18);font:600 10px "JetBrains Mono",monospace;letter-spacing:.12em;pointer-events:none
     }
-    .wa-btn,.primary-btn{border:0;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 10px 22px rgba(17,108,255,.20)}
-    .outline-btn{border:1px solid var(--line);background:var(--surface);color:var(--text)}
-    .wa-btn:hover,.primary-btn:hover,.outline-btn:hover{transform:translateY(-2px)}
-    .mobile-menu{display:none;background:var(--surface);border-top:1px solid var(--line);padding:8px 20px 17px}
-    .mobile-menu.open{display:grid}
-    .mobile-menu a{padding:12px 2px;border-bottom:1px solid var(--line);font-size:14px;font-weight:700}
-    .mobile-menu .wa-btn{margin-top:12px;color:#fff;border-bottom:0}
-
-    /* Compact portfolio intro — no oversized banner */
-    .intro{
-      padding:28px 0 18px;
+    #services .section-head{max-width:none;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+    #services .section-title-row{max-width:760px}
+    #services .section-sub{margin:0;color:var(--muted);font-size:15px}
+    #services .carousel-actions{display:flex;gap:8px;flex:0 0 auto}
+    #services .round-btn{
+      width:42px;height:42px;border:1px solid var(--line2);border-radius:10px;background:#050d09;color:var(--green);
+      display:grid;place-items:center;font:700 20px "JetBrains Mono",monospace;transition:.18s
     }
-    .intro-card{
-      border:1px solid var(--line);border-radius:20px;background:linear-gradient(125deg,var(--surface),#f3f8ff);
-      box-shadow:var(--shadow);padding:24px 26px;display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center;
+    #services .round-btn:hover{border-color:var(--green);background:rgba(82,255,154,.08);transform:translateY(-1px)}
+    #services .viewport{overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;padding:2px 2px 10px}
+    #services .viewport::-webkit-scrollbar{display:none}
+    #services .track{display:flex;gap:13px;width:max-content}
+    #services .service-card{
+      flex:0 0 292px;scroll-snap-align:start;min-height:404px;padding:18px;border:1px solid var(--line);
+      border-radius:16px;background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));
+      box-shadow:0 18px 42px rgba(0,0,0,.22);display:flex;flex-direction:column;position:relative;overflow:hidden
     }
-    body.dark .intro-card{background:linear-gradient(125deg,var(--surface),#142239)}
-    .availability{
-      display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border-radius:999px;
-      background:#e8faf3;color:#07845c;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+    #services .service-card:before{
+      content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--green),transparent 74%)
     }
-    .availability:before{content:"";width:7px;height:7px;border-radius:50%;background:#10bf7c}
-    .intro h1{font:800 clamp(31px,4vw,48px)/1.03 Manrope,sans-serif;letter-spacing:-.045em;margin:11px 0 10px}
-    .intro h1 span{color:var(--blue)}
-    .intro-copy{color:var(--muted);font-size:14px;line-height:1.65;max-width:760px;margin-bottom:15px}
-    .stack-row{display:flex;flex-wrap:wrap;gap:7px}
-    .chip{padding:5px 9px;border-radius:999px;background:var(--surface2);color:var(--muted);font-size:9px;font-weight:700}
-    .intro-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
-    .stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .stat{
-      background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow-sm)
+    #services .service-card:after{
+      content:"// SERVICE_NODE";position:absolute;right:13px;top:10px;color:rgba(82,255,154,.16);
+      font:600 8px "JetBrains Mono",monospace;letter-spacing:.08em
     }
-    .stat strong{display:block;color:var(--blue);font:800 23px Manrope,sans-serif}
-    .stat span{display:block;color:var(--muted);font-size:10px;margin-top:2px}
-
-    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:16px}
-    .section-title-row{display:flex;align-items:flex-end;gap:26px;min-width:0}
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;
-      background:#e8f2ff;color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    #services .service-top{display:flex;align-items:center;gap:11px;padding-right:54px}
+    #services .service-icon{
+      width:43px;height:43px;border:1px solid var(--line2);border-radius:11px;display:grid;place-items:center;
+      color:var(--green);background:#041009;font:700 14px "JetBrains Mono",monospace;box-shadow:inset 0 0 20px rgba(82,255,154,.03)
     }
-    .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue)}
-    body.dark .eyebrow{background:#172d4b}
-    h2{font:800 clamp(28px,3vw,38px)/1.05 Manrope,sans-serif;letter-spacing:-.04em;margin:8px 0 0}
-    .section-sub{margin:0 0 4px;color:var(--muted);font-size:13px}
-    .carousel-actions{display:flex;gap:9px;flex:0 0 auto}
-    .round-btn{
-      width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);
-      background:var(--surface);color:var(--text);font-size:20px;display:grid;place-items:center;
+    #services .service-card h3{margin:0;font-size:18px;line-height:1.18}
+    #services .service-desc{min-height:42px;margin:13px 0 13px;color:var(--muted);font-size:12px;line-height:1.55}
+    #services .package-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px}
+    #services .package-tabs.single{grid-template-columns:1fr}
+    #services .pkg{
+      padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#7e998a;text-align:left;
+      font:600 9px "JetBrains Mono",monospace;cursor:pointer;transition:.18s
     }
-    .round-btn:hover{border-color:#91beff;color:var(--blue)}
-
-    /* Services */
-    .viewport{overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;padding:1px 1px 5px}
-    .viewport::-webkit-scrollbar{display:none}
-    .track{display:flex;gap:14px;width:max-content}
-    .service-card{
-      flex:0 0 286px;scroll-snap-align:start;border:1px solid var(--line);border-radius:16px;
-      background:var(--surface);box-shadow:var(--shadow-sm);padding:16px;display:flex;flex-direction:column;min-height:388px;
+    #services .pkg strong{display:block;margin-top:3px;color:#dfffea;font:700 20px/1.1 "JetBrains Mono",monospace}
+    #services .pkg.active{border-color:var(--green);background:rgba(82,255,154,.08);color:var(--green)}
+    #services .pkg.active strong{color:var(--green)}
+    #services .included{margin:0 0 8px;color:#d9eee2;font:600 11px "JetBrains Mono",monospace}
+    #services .features{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+    #services .features[hidden]{display:none}
+    #services .features li{position:relative;padding-left:18px;color:#8fa99b;font-size:11px;line-height:1.4}
+    #services .features li:before{content:">";position:absolute;left:0;top:0;color:var(--green);font:700 10px "JetBrains Mono",monospace}
+    #services .service-footer{display:flex;justify-content:flex-end;margin-top:auto;padding-top:13px}
+    #services .service-go{
+      width:34px;height:34px;border:1px solid var(--line2);border-radius:9px;background:#050d09;color:var(--green);
+      display:grid;place-items:center;font:700 16px "JetBrains Mono",monospace;transition:.18s
     }
-    .service-top{display:flex;align-items:center;gap:11px}
-    .service-icon{
-      width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:white;
-      font:800 15px Manrope,sans-serif;flex:0 0 auto;box-shadow:0 7px 18px rgba(18,42,76,.12);
-    }
-    .next{background:#080d13}.wp{background:#1a8cdf}.laravel{background:#ff614f}.portfolio{background:linear-gradient(135deg,#8f61ff,#6847e9)}
-    .business{background:#0eb986}.landing{background:#ee3aa4}.fix{background:#ff684b}.ai{background:#1789ff}.seo{background:#ffbd18;color:#192438}.stem{background:#7558ff}
-    .service-card h3{font:800 14px/1.2 Manrope,sans-serif;margin:0;letter-spacing:-.02em}
-    .service-desc{font-size:11px;color:var(--muted);line-height:1.45;margin:11px 0 12px;min-height:33px}
-    .package-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
-    .package-tabs.single{grid-template-columns:1fr}
-    .pkg{
-      border:1px solid var(--line);background:var(--surface2);border-radius:10px;text-align:left;padding:8px 9px;
-      color:var(--muted);font-size:9px;font-weight:700;
-    }
-    .pkg strong{display:block;color:var(--text);font:800 21px/1.1 Manrope,sans-serif;margin-top:3px}
-    .pkg.active{background:#edf5ff;border-color:#8bbcff;color:var(--blue)}
-    .pkg.active strong{color:var(--blue)}
-    body.dark .pkg.active{background:#163154}
-    .included{font-size:11px;font-weight:800;margin:0 0 7px}
-    .features{list-style:none;padding:0;margin:0;display:grid;gap:5px}
-    .features[hidden]{display:none}
-    .features li{position:relative;padding-left:19px;font-size:10px;line-height:1.35;color:#43526a}
-    body.dark .features li{color:#bfcbdd}
-    .features li:before{
-      content:"✓";position:absolute;left:0;top:0;width:14px;height:14px;border-radius:50%;display:grid;place-items:center;
-      background:#dbf8ec;color:var(--green);font-size:8px;font-weight:900;
-    }
-    body.dark .features li:before{background:#153b31}
-    .service-footer{display:flex;justify-content:flex-end;margin-top:auto;padding-top:10px}
-    .service-go{
-      width:32px;height:32px;border:1px solid #90bdff;border-radius:50%;color:var(--blue);background:var(--surface);
-      display:grid;place-items:center;font-size:17px;font-weight:900;
-    }
-    .service-go:hover{background:var(--blue);color:#fff}
-
-    /* About / portfolio info */
-    .profile-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:15px}
-    .info-card{
-      border:1px solid var(--line);border-radius:17px;background:var(--surface);box-shadow:var(--shadow-sm);padding:21px;
-    }
-    .info-card h3{font:800 22px/1.15 Manrope,sans-serif;margin:8px 0 10px}
-    .info-card p{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:13px}
-    .profile-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    .profile-item{border:1px solid var(--line);border-radius:11px;padding:10px;background:var(--surface2)}
-    .profile-item span{display:block;color:var(--muted);font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-    .profile-item strong{display:block;font-size:11px;margin-top:3px}
-    .skill-cloud{display:flex;flex-wrap:wrap;gap:7px}
-    .skill{padding:6px 9px;border-radius:999px;background:#eef5ff;color:#33506f;font-size:9px;font-weight:700;border:1px solid #dfeafb}
-    body.dark .skill{background:#17283f;color:#c4d0df;border-color:#263b56}
-    .timeline{display:grid;gap:8px;margin-top:13px}
-    .timeline-item{display:grid;grid-template-columns:90px 1fr;gap:10px;border:1px solid var(--line);border-radius:11px;padding:10px;background:var(--surface2)}
-    .timeline-item b{color:var(--blue);font-size:9px;text-transform:uppercase}
-    .timeline-item strong{display:block;font-size:11px}
-    .timeline-item span{display:block;color:var(--muted);font-size:9px;margin-top:2px}
-
-    /* Projects — compact list, no remote screenshots */
-    .project-list{
-      border:1px solid var(--line);border-radius:16px;background:var(--surface);
-      box-shadow:var(--shadow-sm);overflow:hidden;
-    }
-    .project-row{
-      display:grid;grid-template-columns:minmax(165px,.9fr) minmax(260px,1.65fr) minmax(180px,1fr) auto;
-      gap:16px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line);
-      transition:.18s;background:var(--surface);
-    }
-    .project-row:last-child{border-bottom:0}
-    .project-row:hover{background:var(--surface2)}
-    .project-title strong{display:block;font:800 14px Manrope,sans-serif}
-    .project-title small{display:block;color:var(--muted);font-size:9px;margin-top:3px}
-    .project-desc{font-size:10px;color:var(--muted);line-height:1.5}
-    .project-stack{display:flex;gap:6px;flex-wrap:wrap}
-    .project-stack span{padding:5px 8px;border-radius:999px;background:var(--surface2);color:var(--muted);font-size:8px;font-weight:700}
-    .project-buttons{display:flex;gap:7px;justify-content:flex-end;flex-wrap:wrap}
-    .project-link{
-      min-height:34px;display:inline-flex;align-items:center;justify-content:center;padding:0 12px;border-radius:9px;
-      font-size:9px;font-weight:800;border:1px solid var(--line);background:var(--surface);white-space:nowrap;
-    }
-    .project-link.primary{background:var(--blue);border-color:var(--blue);color:#fff}
-    .project-link:hover{transform:translateY(-1px)}
-    .age-warning{
-      display:inline-flex;align-items:center;gap:5px;margin-top:5px;padding:4px 7px;border-radius:999px;
-      background:#fff0f0;border:1px solid #ffd0d0;color:#b42318;font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
-    }
-    body.dark .age-warning{background:#3b2023;border-color:#5b2c32;color:#ffb5b5}
-    /* Experience */
-    .experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-    .experience-card{
-      border:1px solid var(--line);border-radius:15px;background:var(--surface);box-shadow:var(--shadow-sm);padding:17px
-    }
-    .experience-card .kicker{color:var(--blue);font-size:9px;font-weight:800;text-transform:uppercase}
-    .experience-card h3{font:800 15px Manrope,sans-serif;margin:6px 0 7px}
-    .experience-card p{font-size:10px;color:var(--muted);line-height:1.55;margin:0}
-
-    /* Process */
-    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-    .process-card{
-      min-height:105px;border:1px solid var(--line);border-radius:15px;background:var(--surface);box-shadow:var(--shadow-sm);
-      padding:15px;display:flex;gap:12px;position:relative;
-    }
-    .process-card:not(:last-child):after{content:"→";position:absolute;right:-14px;top:39%;z-index:2;color:#96a8be;font-size:19px}
-    .process-icon{
-      width:42px;height:42px;flex:0 0 auto;border-radius:50%;background:#eef5ff;color:var(--blue);
-      border:1px solid #d5e6ff;display:grid;place-items:center;font-size:18px;font-weight:700;
-    }
-    body.dark .process-icon{background:#173052;border-color:#27476d}
-    .step{font-size:10px;color:var(--blue);font-weight:800}
-    .process-card h3{font-size:11px;margin:1px 0 4px}
-    .process-card p{font-size:9px;color:var(--muted);margin:0}
-
-    /* Reviews */
-    .review-card{
-      flex:0 0 300px;scroll-snap-align:start;border:1px solid var(--line);border-radius:15px;background:var(--surface);
-      box-shadow:var(--shadow-sm);padding:14px;min-height:145px;
-    }
-    .review-head{display:flex;align-items:center;gap:10px;margin-bottom:7px}
-    .review-head img{width:45px;height:45px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 3px 11px rgba(20,52,92,.14)}
-    .review-head strong{display:block;font-size:11px}
-    .country{display:block;color:var(--muted);font-size:9px;margin-top:2px}
-    .stars{color:#ffb400;letter-spacing:1px;font-size:10px;margin-bottom:6px}
-    .review-card blockquote{margin:0;color:#3b4b62;font-size:10px;line-height:1.48}
-    body.dark .review-card blockquote{color:#c4cfde}
-    .review-note{font-size:9px;color:var(--muted);margin:8px 0 0}
-
-    /* CTA/footer */
-    .cta{
-      border-radius:18px;background:linear-gradient(110deg,#176aff,#1792ff);color:#fff;
-      padding:21px 25px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 16px 36px rgba(17,108,255,.20);
-    }
-    .cta h3{font:800 20px Manrope,sans-serif;margin:0 0 4px}
-    .cta p{font-size:11px;margin:0;opacity:.9}
-    .cta .wa-btn{background:#32dfa1;color:#073e2c;box-shadow:none}
-    footer{margin-top:20px;padding:24px 0 31px;border-top:1px solid var(--line)}
-    .footer{display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .footer-left{display:flex;align-items:center;gap:14px}
-    .footer-left img{width:32px;height:32px;border-radius:9px}
-    .footer-title{font:800 13px Manrope,sans-serif}
-    .footer-sub{font-size:9px;color:var(--muted);margin-top:2px}
-    .footer-links{display:flex;gap:13px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:9px;font-weight:700}
-    .floating-wa{
-      position:fixed;right:18px;bottom:18px;z-index:70;width:52px;height:52px;border-radius:50%;
-      display:grid;place-items:center;background:#25d366;color:white;font-weight:900;font-size:21px;
-      border:3px solid #fff;box-shadow:0 14px 28px rgba(37,211,102,.30);
-    }
-
-    @media(max-width:1050px){
-      .desktop-nav{display:none}.menu-btn{display:grid}.nav-actions{margin-left:auto}.nav-actions>.wa-btn{display:none}
-      .intro-card{grid-template-columns:1fr}.stats{grid-template-columns:repeat(4,1fr)}
-      .profile-grid{grid-template-columns:1fr}
-      .experience-grid{grid-template-columns:1fr 1fr}
-      .process-grid{grid-template-columns:1fr 1fr}.process-card:nth-child(2):after{display:none}
-    }
+    #services .service-go:hover{background:var(--green);border-color:var(--green);color:#031008;transform:translateX(2px)}
     @media(max-width:760px){
-      .container{width:min(var(--max),calc(100% - 24px))}
-      .nav{min-height:64px}.brand{font-size:16px}.brand img{width:36px;height:36px}
-      .round-icon{width:36px;height:36px}
-      .section{padding:25px 0}.intro{padding:18px 0 12px}
-      .intro-card{padding:18px;border-radius:16px;gap:15px}
-      .intro h1{font-size:31px;margin-top:9px}.intro-copy{font-size:12px;margin-bottom:12px}
-      .stats{grid-template-columns:1fr 1fr}.stat{padding:12px}.stat strong{font-size:20px}
-      .intro-actions .wa-btn,.intro-actions .outline-btn{flex:1;min-width:130px}
-      .section-head{align-items:flex-start;gap:10px;margin-bottom:13px}
-      .section-title-row{display:block}.section-sub{margin:6px 0 0;font-size:10px;line-height:1.45}
-      h2{font-size:27px}.round-btn{width:34px;height:34px}
-      .service-card{flex-basis:calc(100vw - 38px);min-height:360px;padding:15px}
-      .service-desc{min-height:auto}
-      .project-card{flex-basis:calc(100vw - 39px)}
-      .project-thumb{height:170px}
-      .profile-list{grid-template-columns:1fr 1fr}
-      .experience-grid{grid-template-columns:1fr}
-      .process-grid{grid-template-columns:repeat(4,1fr);gap:4px}
-      .process-card{display:block;text-align:center;border:0;box-shadow:none;background:transparent;padding:3px;min-height:auto}
-      .process-card:not(:last-child):after,.process-card:nth-child(2):after{display:block;right:-7px;top:23px;font-size:12px}
-      .process-icon{width:38px;height:38px;margin:0 auto 5px;font-size:15px}
-      .process-card .step{font-size:8px}.process-card h3{font-size:8px;margin-bottom:0}.process-card p{display:none}
-      .review-card{flex-basis:calc(100vw - 39px)}
-      .cta{display:block;padding:19px}.cta .wa-btn{width:100%;margin-top:14px}
-      .footer{display:block}.footer-left{align-items:flex-start}.footer-links{margin-top:12px;gap:10px;line-height:1.5}
-      .floating-wa{right:13px;bottom:13px;width:49px;height:49px}
+      #services:before{display:none}
+      #services .section-head{display:block}
+      #services .carousel-actions{margin-top:16px}
+      #services .service-card{flex-basis:min(292px,calc(100vw - 46px))}
     }
-    @media(max-width:420px){
-      .container{width:calc(100% - 20px)}
-      .brand-name{font-size:15px}
-      .service-card{flex-basis:calc(100vw - 28px)}
-      .review-card{flex-basis:calc(100vw - 28px)}
-      .profile-list{grid-template-columns:1fr}
-      .timeline-item{grid-template-columns:72px 1fr}
-    }
-    @media(prefers-reduced-motion:reduce){
-      *{scroll-behavior:auto!important;transition:none!important}
-    }
+
   </style>
 </head>
 <body>
-
-<header class="topbar">
+<header>
   <div class="container nav">
-    <a class="brand" href="#top" aria-label="Fahim Sikder home">
-      <img src="/favicon.svg?v=2" alt="Fahim Sikder logo">
-      <span class="brand-name">FAHIM.<b>SIKDER</b></span>
+    <a class="brand" href="#top">
+      <span class="brand-logo"><span>F/AI</span></span>
+      <span class="brand-text"><strong>Fahim Sikder</strong><small>AI Engineer // Secure Builder</small></span>
     </a>
-
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a class="active" href="#top">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="round-icon" id="themeToggle" aria-label="Toggle dark mode">◐</button>
-      <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
-      <button class="round-icon menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    </div>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#industries">Industries</a><a href="#contact">Contact</a></nav>
+    <a class="nav-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
   </div>
-
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-    <a href="#services">Services</a>
-    <a href="#about">About Me</a>
-    <a href="#work">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-    <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
-  </nav>
+  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
 </header>
 
 <main id="top">
-
-  <section class="intro">
+  <section class="hero">
     <div class="container">
-      <div class="intro-card">
+      <div class="hero-grid">
         <div>
-          <span class="availability">Available for remote work</span>
-          <h1>AI Engineer & <span>Full-Stack Web Developer</span></h1>
-          <p class="intro-copy">I’m Fahim Sikder. I build production websites, web applications, AI-powered workflows and practical digital products. My background includes 5+ years of WordPress, website speed optimization and SEO, 200+ completed web-development orders, and hands-on work with Next.js, Supabase, Cloudflare and AI chatbots.</p>
-          <div class="stack-row">
-            <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">WordPress</span><span class="chip">Laravel</span><span class="chip">Supabase</span><span class="chip">Cloudflare</span><span class="chip">Python</span><span class="chip">AI</span><span class="chip">SEO</span>
-          </div>
-          <div class="intro-actions">
-            <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp</span></a>
-            <a class="outline-btn" href="#work">View My Work</a>
+          <span class="status"><i></i> 200+ web development orders completed</span>
+          <h1><span>AI Engineer.</span><span>Builder mindset.</span><span class="accent">Hacker’s eye.</span></h1>
+          <p class="lead">I build intelligent products and production web systems across AI, backend, cloud and data. I have completed 200+ web development orders, with 5+ years of hands-on WordPress, speed optimization and SEO work, plus 1 year working with AI automation and chatbots.</p>
+          <div class="role-strip"><span>200+ CLIENT ORDERS</span><span>5+ YEARS WEB EXPERIENCE</span><span>AI ENGINEERING</span><span>FULL STACK</span><span>SEO & SPEED</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my systems →</a><a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a><a class="btn btn-secondary" href="#contact">Work with me</a></div>
+        </div>
+        <div class="terminal" aria-label="Developer terminal">
+          <div class="terminal-top"><i></i><i></i><i></i><span>fahim@ai-lab:~</span></div>
+          <div class="terminal-body">
+            <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+            <div class="dim">Fahim Sikder — AI Engineer</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">cat profile.yml</span></div>
+            <div><span class="ok">focus:</span> ai_engineering</div>
+            <div><span class="ok">build:</span> full_stack_systems</div>
+            <div><span class="ok">infra:</span> cloudflare_supabase</div>
+            <div><span class="ok">mindset:</span> security_first</div>
+            <div><span class="ok">mode:</span> ship_and_harden</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">principles --short</span></div>
+            <div class="dim">least privilege · validate · monitor · harden</div><br>
+            <div><span class="prompt">$</span> <span class="cmd">status</span></div>
+            <div><span class="ok">[ONLINE]</span> building useful systems<span class="cursor"></span></div>
           </div>
         </div>
-
-        <div class="stats">
-          <div class="stat"><strong>200+</strong><span>Web-development orders</span></div>
-          <div class="stat"><strong>5+ YRS</strong><span>WordPress, speed & SEO</span></div>
-          <div class="stat"><strong>1 YR</strong><span>AI automation & chatbots</span></div>
-          <div class="stat"><strong>Remote</strong><span>Open to international work</span></div>
-        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric"><b>200+</b><span>Web development orders completed</span></div>
+        <div class="metric"><b>5+ YRS</b><span>WordPress · speed · SEO</span></div>
+        <div class="metric"><b>1 YR</b><span>AI automation · AI chatbots</span></div>
+        <div class="metric"><b>AI</b><span>Current engineering direction</span></div>
       </div>
     </div>
   </section>
 
-  <section class="section compact" id="services">
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">identity</span><h2>AI engineer with a systems mindset.</h2><p>I like understanding the full path: interface, API, authentication, database, cloud, analytics and the places where a system can fail or be abused.</p></div>
+      <div class="identity-grid">
+        <article class="card identity-panel">
+          <span class="eyebrow">profile</span>
+          <h3>Fahim Sikder</h3>
+          <div class="handle">@Fahimxbd</div>
+          <div class="identity-list">
+            <div><b>Role</b><span>AI Engineer</span></div>
+            <div><b>Experience</b><span>5+ years WordPress · speed optimization · SEO</span></div><div><b>AI work</b><span>1 year AI automation · AI chatbot development</span></div><div><b>Secondary focus</b><span>Security-minded software engineering</span></div>
+            <div><b>Stack</b><span>Python · JavaScript · Next.js · Supabase · Cloudflare</span></div>
+            <div><b>Study</b><span>AI Engineering — LUT University, Finland</span></div>
+            <div><b>Availability</b><span>Remote · Internship · Junior technical roles</span></div>
+          </div>
+        </article>
+        <article class="card about-copy">
+          <span class="eyebrow">how i work</span>
+          <h3>Build fast. Understand deeply. Harden what matters.</h3>
+          <p>My foundation started with WordPress websites, website speed optimization and SEO, where I have 5+ years of hands-on work. I later expanded into custom web development, app development, authentication flows, databases, admin systems, APIs, analytics and production deployments.</p><p>For the last year, I have also been working with AI automation and AI chatbot systems — connecting AI APIs with real product workflows instead of treating AI as a standalone demo.</p>
+          <p>Security is part of that engineering process: access control, bot abuse, webhook verification, secret separation, traffic behavior, logging and database policy all matter when a product reaches real users.</p>
+          <div class="manifesto">BUILD → TEST → OBSERVE → FIND WEAK PATHS → REDUCE RISK → SHIP BETTER</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="focus">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">focus areas</span><h2>One engineering profile, multiple layers.</h2><p>AI is the primary direction. Security and cloud engineering shape how I design and deploy the systems around it.</p></div>
+      <div class="grid-4">
+        <div class="cap"><b>01 / AI</b><h3>AI Engineering</h3><p>AI APIs, intelligent product flows, data-driven features and practical application design.</p></div>
+        <div class="cap"><b>02 / WEB</b><h3>Full Stack Systems</h3><p>Next.js, React, backend logic, admin tools, databases and production application architecture.</p></div>
+        <div class="cap"><b>03 / CLOUD</b><h3>Cloud & Edge</h3><p>Cloudflare Pages/Workers, deployment configuration, environment separation and production operations.</p></div>
+        <div class="cap"><b>04 / SEC</b><h3>Security Mindset</h3><p>Auth, RLS, least privilege, secret handling, bot controls, logging and safer production defaults.</p></div>
+      </div>
+      <div class="skill-cloud"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Cloudflare</span><span class="tag">Git/GitHub</span><span class="tag">REST APIs</span><span class="tag">AI APIs</span><span class="tag">RLS</span><span class="tag">Auth</span><span class="tag">Webhooks</span><span class="tag">Analytics</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
     <div class="container">
       <div class="section-head">
         <div class="section-title-row">
@@ -582,317 +430,177 @@
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">Portfolio profile</span><h2>About Fahim</h2></div>
-          <p class="section-sub">The engineering background, tools and experience behind the services.</p>
-        </div>
-      </div>
-
-      <div class="profile-grid">
-        <article class="info-card">
-          <span class="eyebrow">Who I am</span>
-          <h3>Builder mindset, practical systems.</h3>
-          <p>I work across the full product path: interface, authentication, database, admin tools, APIs, cloud deployment, analytics and production debugging. AI is my long-term engineering direction, while web development, WordPress and SEO remain the strongest part of my practical client background.</p>
-
-          <div class="profile-list">
-            <div class="profile-item"><span>Role</span><strong>AI Engineer & Full-Stack Developer</strong></div>
-            <div class="profile-item"><span>GitHub</span><strong>@Fahimxbd</strong></div>
-            <div class="profile-item"><span>Experience</span><strong>5+ years web, WordPress & SEO</strong></div>
-            <div class="profile-item"><span>AI work</span><strong>1 year AI automation & chatbots</strong></div>
-            <div class="profile-item"><span>Education</span><strong>AI Engineering — LUT University, Finland</strong></div>
-            <div class="profile-item"><span>Availability</span><strong>Remote, freelance, internship & junior roles</strong></div>
-          </div>
-        </article>
-
-        <article class="info-card">
-          <span class="eyebrow">Core stack</span>
-          <h3>Technologies I work with.</h3>
-          <div class="skill-cloud">
-            <span class="skill">Python</span><span class="skill">JavaScript</span><span class="skill">TypeScript</span><span class="skill">React</span><span class="skill">Next.js</span><span class="skill">Laravel</span><span class="skill">WordPress</span><span class="skill">Supabase</span><span class="skill">PostgreSQL</span><span class="skill">Cloudflare</span><span class="skill">Git/GitHub</span><span class="skill">REST APIs</span><span class="skill">RLS</span><span class="skill">Auth</span><span class="skill">Webhooks</span><span class="skill">SEO</span><span class="skill">AI APIs</span><span class="skill">LLM Apps</span>
-          </div>
-
-          <div class="timeline">
-            <div class="timeline-item"><b>5+ years</b><div><strong>WordPress, websites, SEO & speed</strong><span>Client websites, performance, technical fixes and search optimization.</span></div></div>
-            <div class="timeline-item"><b>Development</b><div><strong>Custom web applications</strong><span>Next.js, React, Laravel, Supabase, admin systems and deployment.</span></div></div>
-            <div class="timeline-item"><b>1 year</b><div><strong>AI automation & chatbots</strong><span>Connecting AI models and APIs with practical user-facing workflows.</span></div></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="work">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">Featured work</span><h2>Recent Projects</h2></div>
-          <p class="section-sub">Selected products and client systems I have built and shipped — listed cleanly without external screenshot services.</p>
-        </div>
-      </div>
-
-      <div class="project-list">
-        <article class="project-row">
-          <div class="project-title"><strong>Exam Center BD</strong><small>examcenterbd.com</small></div>
-          <div class="project-desc">Online exam platform with authentication, question systems, admin workflows and student performance features.</div>
-          <div class="project-stack"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://examcenterbd.com/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>HeyProma</strong><small>heyproma.com</small></div>
-          <div class="project-desc">AI companion platform with authentication, analytics, bot controls and server-side integrations.</div>
-          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>AI</span><span>Auth</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://heyproma.com/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>NEFERIQ</strong><small>neferiq.com</small></div>
-          <div class="project-desc">Letter-first social platform with profiles, authentication, moderation and production infrastructure.</div>
-          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://neferiq.com/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>CinemaMaddy</strong><small>cinemamaddy.site</small></div>
-          <div class="project-desc">Responsive movie discovery experience focused on polished presentation and mobile usability.</div>
-          <div class="project-stack"><span>JavaScript</span><span>Responsive</span><span>Production</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://cinemamaddy.site/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>Oronno Nogor</strong><small>oronnonogor.com</small></div>
-          <div class="project-desc">Production client website with responsive browsing, clear information architecture and reliable deployment.</div>
-          <div class="project-stack"><span>Responsive</span><span>Performance</span><span>Deployment</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://oronnonogor.com/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>Nobin Mart</strong><small>Cloudflare Workers deployment</small></div>
-          <div class="project-desc">Modern e-commerce website with responsive product browsing and account-ready structure.</div>
-          <div class="project-stack"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span></div>
-          <div class="project-buttons"><a class="project-link primary" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener">View Live ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title"><strong>Taskora</strong><small>Micro-jobs · social · wallet</small></div>
-          <div class="project-desc">Micro-job and social system with wallet ledger, proofs, referrals and moderation workflows.</div>
-          <div class="project-stack"><span>React</span><span>TypeScript</span><span>Supabase</span><span>RLS</span></div>
-          <div class="project-buttons"><a class="project-link" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub ↗</a></div>
-        </article>
-
-        <article class="project-row">
-          <div class="project-title">
-            <strong>Shelust.com</strong>
-            <small>Age-restricted client project</small>
-            <span class="age-warning">⚠ 18+ adult-industry client project</span>
-          </div>
-          <div class="project-desc">Client project for an age-restricted adult-content website with responsive UI, video embedding workflows, admin tools, SEO pages and production deployment.</div>
-          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>Admin CMS</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="experience">
     <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">Experience & education</span><h2>Technical Foundation</h2></div>
-          <p class="section-sub">A practical web-development background with an AI-engineering direction.</p>
-        </div>
-      </div>
-
-      <div class="experience-grid">
-        <article class="experience-card"><span class="kicker">5+ years</span><h3>WordPress, SEO & Website Performance</h3><p>Hands-on client work building websites, improving responsive design, fixing technical issues, optimizing speed and working on on-page and technical SEO.</p></article>
-        <article class="experience-card"><span class="kicker">Full-stack development</span><h3>Web Apps, Databases & Cloud</h3><p>Custom development with Next.js, React, Laravel, Supabase, authentication, RLS, admin tools, APIs, Cloudflare and production deployments.</p></article>
-        <article class="experience-card"><span class="kicker">LUT University, Finland</span><h3>AI Engineering</h3><p>Studying Artificial Intelligence Engineering with emphasis on mathematics, programming, intelligent systems, data and software engineering.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="process">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">Simple process</span><h2>How It Works</h2></div>
-          <p class="section-sub">A clear process from your idea to launch.</p>
-        </div>
-      </div>
-
-      <div class="process-grid">
-        <article class="process-card"><div class="process-icon">💬</div><div><span class="step">01</span><h3>Discuss Your Idea</h3><p>Tell me what you need and share your goals.</p></div></article>
-        <article class="process-card"><div class="process-icon">▤</div><div><span class="step">02</span><h3>Get a Quote</h3><p>I suggest the most suitable solution and scope.</p></div></article>
-        <article class="process-card"><div class="process-icon">⚙</div><div><span class="step">03</span><h3>Development</h3><p>I build the project and keep you updated.</p></div></article>
-        <article class="process-card"><div class="process-icon">🚀</div><div><span class="step">04</span><h3>Launch & Support</h3><p>Your project goes live with delivery support.</p></div></article>
+      <div class="section-head"><span class="eyebrow">experience</span><h2>Built from years of practical client work.</h2><p>My experience started with websites and optimization, expanded into custom software, and now includes AI-powered automation and conversational systems.</p></div>
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="experience-time">5+ years</div>
+          <div class="experience-body"><h3>WordPress, Website Speed Optimization & SEO</h3><p>Hands-on work building and improving WordPress websites, increasing performance, fixing technical issues and working on search-engine optimization for better visibility and usability.</p><div class="experience-tags"><span>WordPress</span><span>Performance</span><span>Core Web Vitals</span><span>Technical SEO</span><span>On-Page SEO</span></div></div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-time">Development</div>
+          <div class="experience-body"><h3>Web Development & App Development</h3><p>Moved beyond CMS work into custom web products and application development, including responsive interfaces, authentication, databases, admin systems, APIs and production deployment.</p><div class="experience-tags"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Supabase</span><span>Cloudflare</span></div></div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-time">1 year</div>
+          <div class="experience-body"><h3>AI Automation & AI Chatbots</h3><p>Building AI-powered workflows and chatbot experiences by integrating AI APIs with websites, business logic, data and user-facing product features.</p><div class="experience-tags"><span>AI Automation</span><span>AI Chatbots</span><span>LLM APIs</span><span>Prompt Design</span><span>Workflow Integration</span></div></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="reviews">
+  <section class="section" id="projects">
     <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">Testimonials</span><h2>Client Review Layout</h2></div>
-          <p class="section-sub">Multi-language review cards ready for verified client feedback.</p>
+      <div class="section-head"><span class="eyebrow">selected systems</span><h2>Products I have built and shipped.</h2><p>Compact by design: project, technical scope and live destination — no oversized image cards.</p></div>
+      <div class="project-list">
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> newest</span><strong>HeyProma</strong><small>heyproma.com</small></div>
+          <div class="project-desc">AI companion platform with auth, analytics, bot-traffic controls, server-side integrations and payment/webhook flows.</div>
+          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>AI</span><span>Auth</span></div>
+          <a class="project-link" href="https://heyproma.com/" target="_blank" rel="noopener">LIVE ↗</a>
         </div>
-        <div class="carousel-actions">
-          <button class="round-btn" data-prev="reviewsViewport" aria-label="Previous reviews">‹</button>
-          <button class="round-btn" data-next="reviewsViewport" aria-label="Next reviews">›</button>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> live</span><strong>Exam Center BD</strong><small>examcenterbd.com</small></div>
+          <div class="project-desc">Online exam platform with authentication, question systems, admin workflows, performance data and user progress.</div>
+          <div class="project-stack"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
+          <a class="project-link" href="https://examcenterbd.com/" target="_blank" rel="noopener">LIVE ↗</a>
+        </div>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> product</span><strong>Taskora</strong><small>micro-jobs · social · wallet</small></div>
+          <div class="project-desc">Micro-job and social system with wallet ledger, proofs, withdrawals, referrals, moderation and role-aware admin controls.</div>
+          <div class="project-stack"><span>React</span><span>TypeScript</span><span>Supabase</span><span>RLS</span></div>
+          <span class="project-link">SYSTEM</span>
+        </div>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> live</span><strong>Neferiq</strong><small>neferiq.com</small></div>
+          <div class="project-desc">Letter-first social platform with profiles, authentication, moderation and Supabase/Cloudflare infrastructure.</div>
+          <div class="project-stack"><span>Supabase</span><span>PostgreSQL</span><span>Cloudflare</span></div>
+          <a class="project-link" href="https://neferiq.com/" target="_blank" rel="noopener">LIVE ↗</a>
+        </div>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> live</span><strong>CinemaMaddy</strong><small>cinemamaddy.site</small></div>
+          <div class="project-desc">Responsive movie discovery experience focused on polished presentation, performance and mobile usability.</div>
+          <div class="project-stack"><span>JavaScript</span><span>Responsive</span><span>Production</span></div>
+          <a class="project-link" href="https://cinemamaddy.site/" target="_blank" rel="noopener">LIVE ↗</a>
+        </div>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> client</span><strong>Oronno Nogor</strong><small>oronnonogor.com</small></div>
+          <div class="project-desc">Production-ready client website built for clear information architecture, responsive browsing and reliable deployment.</div>
+          <div class="project-stack"><span>Responsive</span><span>Performance</span><span>Deployment</span></div>
+          <a class="project-link" href="https://oronnonogor.com/" target="_blank" rel="noopener">LIVE ↗</a>
+        </div>
+        <div class="project-row">
+          <div class="project-main"><span class="project-status"><i></i> new</span><strong>Nobin Mart</strong><small>nobin-mart.fahimsikder59595.workers.dev</small></div>
+          <div class="project-desc">Modern Bangladesh-focused e-commerce website with responsive product browsing, account flows and admin-ready commerce structure.</div>
+          <div class="project-stack"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span><span>Responsive</span></div>
+          <a class="project-link" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener">LIVE ↗</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="viewport auto-carousel" id="reviewsViewport" data-interval="4800">
-        <div class="track">
-          <article class="review-card">
-            <div class="review-head"><img src="https://i.pravatar.cc/120?img=12" alt="Review layout portrait"><div><strong>USA Client</strong><span class="country">🇺🇸 English</span></div></div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“Responsive communication, clean implementation and a professional delivery experience.”</blockquote>
-          </article>
-          <article class="review-card">
-            <div class="review-head"><img src="https://i.pravatar.cc/120?img=47" alt="Review layout portrait"><div><strong>Spanish Client</strong><span class="country">🇪🇸 Español</span></div></div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“La comunicación fue clara y el sitio quedó limpio, rápido y fácil de usar.”</blockquote>
-          </article>
-          <article class="review-card">
-            <div class="review-head"><img src="https://i.pravatar.cc/120?img=11" alt="Review layout portrait"><div><strong>India Client</strong><span class="country">🇮🇳 हिन्दी</span></div></div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“काम साफ़ और पेशेवर था। वेबसाइट मोबाइल पर भी अच्छी तरह काम करती है।”</blockquote>
-          </article>
-          <article class="review-card">
-            <div class="review-head"><img src="https://i.pravatar.cc/120?img=53" alt="Review layout portrait"><div><strong>Bangladesh Client</strong><span class="country">🇧🇩 বাংলা</span></div></div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“কাজটা পরিষ্কারভাবে করা হয়েছে। যোগাযোগ ভালো ছিল এবং সাইটটি মোবাইলেও সুন্দর কাজ করে।”</blockquote>
-          </article>
-          <article class="review-card">
-            <div class="review-head"><img src="https://i.pravatar.cc/120?img=45" alt="Review layout portrait"><div><strong>Canada Client</strong><span class="country">🇨🇦 English</span></div></div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“A smooth process, clear updates and a polished final website.”</blockquote>
-          </article>
+  <section class="section" id="lab">
+    <div class="container">
+      <div class="lab">
+        <div class="lab-grid">
+          <div><span class="eyebrow">engineering lab</span><h2>What I’m sharpening next.</h2><p>I’m deepening the technical foundations that make AI products stronger: backend systems, Linux, networking, HTTP, web security, observability and secure deployment.</p><div class="skill-cloud"><span class="tag">OWASP Top 10</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">HTTP</span><span class="tag">Threat Modeling</span><span class="tag">Logging</span><span class="tag">LLM Apps</span><span class="tag">RAG</span></div></div>
+          <div class="checklist">
+            <div class="check"><b>[01]</b><span>Build stronger AI backends and data pipelines.</span></div>
+            <div class="check"><b>[02]</b><span>Practice legal web-security labs and document lessons.</span></div>
+            <div class="check"><b>[03]</b><span>Improve Linux, networking and protocol-level understanding.</span></div>
+            <div class="check"><b>[04]</b><span>Turn production debugging into reusable engineering knowledge.</span></div>
+          </div>
         </div>
       </div>
-      <p class="review-note">These cards are layout placeholders. Replace the text and portraits with verified client feedback before presenting them as real testimonials.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">background</span><h2>Technical foundation.</h2></div>
+      <div class="background-grid">
+        <article class="card">
+          <div class="education"><span class="year">UNIVERSITY</span><div><h3>AI Engineering — LUT University, Finland</h3><p>Studying Artificial Intelligence Engineering with a focus on mathematics, programming, intelligent systems, data and software engineering.</p></div></div>
+          <div class="education"><span class="year">HSC 2024</span><div><h3>Science — GPA 5.00 / 5.00</h3><p>Higher Mathematics, Physics, Chemistry and ICT formed the base for my engineering direction.</p></div></div>
+        </article>
+        <article class="card"><span class="eyebrow">engineering profile</span><h3 style="margin:10px 0 8px">AI + software + security awareness</h3><p class="muted" style="margin:0">My strongest work happens when I can connect product requirements to architecture, implementation, deployment, production behavior and security decisions instead of treating them as separate problems.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">industries</span><h2>Industries and niches I work with.</h2><p>I build websites, web apps and digital products across a wide range of industries, from mainstream business projects to high-competition niches.</p></div>
+      <div class="policy-box">
+        <div class="policy-grid">
+          <div class="policy-item"><b>Gambling & Betting</b><p>Betting, gaming and gambling-related websites, landing pages, dashboards and promotional web experiences.</p></div>
+          <div class="policy-item"><b>Casino</b><p>Online casino-focused websites, interfaces, content-driven platforms and supporting web systems.</p></div>
+          <div class="policy-item"><b>Adult</b><p>Adult-industry websites and content platforms with responsive design, performance optimization and technical implementation.</p></div>
+          <div class="policy-item"><b>General Business</b><p>AI tools, SaaS, e-commerce, education, business websites, automation, productivity tools and custom web applications.</p></div>
+        </div>
+        <p class="policy-note"><strong>Professional scope:</strong> I work across diverse niches and adapt the stack, design and performance strategy to the project requirements, subject to applicable laws and platform policies.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="contact">
     <div class="container">
-      <div class="cta">
-        <div><h3>Ready to Start Your Project?</h3><p>Tell me what you want to build and I’ll reply with the next steps.</p></div>
-        <a class="wa-btn" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg><span>Hire Me on WhatsApp →</span></a>
+      <div class="contact">
+        <div><span class="eyebrow">contact</span><h2>Need an engineer who can <span class="accent">build beyond the UI?</span></h2><p>I’m open to AI internships, junior engineering roles, remote software work and serious technical collaborations.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">Email me →</a><a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">Review GitHub</a></div></div>
+        <form id="contactForm"><input name="name" required placeholder="Your name"><input name="email" type="email" required placeholder="Your email"><input name="subject" required placeholder="Role / project"><textarea name="message" required placeholder="Tell me what you need..."></textarea><button class="btn btn-primary" type="submit">Send message</button></form>
       </div>
     </div>
   </section>
-
 </main>
 
-<footer>
-  <div class="container footer">
-    <div class="footer-left">
-      <img src="/favicon.svg?v=2" alt="Fahim Sikder logo">
-      <div><div class="footer-title">FAHIM.SIKDER</div><div class="footer-sub">AI Engineer · Full-Stack Developer · WordPress · SEO</div></div>
-    </div>
-    <div class="footer-links">
-      <a href="#services">Services</a><a href="#about">About</a><a href="#work">Work</a><a href="#reviews">Reviews</a>
-      <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a><span>© 2026 Fahim Sikder</span>
-    </div>
-  </div>
-</footer>
-
-<a class="floating-wa" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Fahim on WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.39 3 4 8.26 4 14.75c0 2.31.69 4.46 1.88 6.28L4 29l8.18-1.79a12.24 12.24 0 0 0 3.86.62C22.69 27.83 28 22.57 28 16.08 28 9.59 22.69 3 16.04 3Zm0 21.86c-1.2 0-2.38-.19-3.5-.58l-.62-.21-4.86 1.06 1.1-4.64-.24-.63a9.67 9.67 0 0 1-.96-4.21c0-5 4.1-9.07 9.14-9.07 5.03 0 9.13 4.07 9.13 9.07 0 5.01-4.1 9.21-9.19 9.21Zm5.03-6.8c-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.13-.61-1.46-.84-2-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.92 4.65 4.1.65.28 1.16.45 1.56.57.66.21 1.25.18 1.72.11.52-.08 1.61-.65 1.84-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"/></svg></a>
+<footer><div class="container footer"><span>© 2026 Fahim Sikder // AI systems · secure engineering.</span><span><a href="mailto:fahim.sikder.web@gmail.com">EMAIL</a> · <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GITHUB</a></span></div></footer>
 
 <script>
-(function(){
-  var menuBtn=document.getElementById('menuBtn');
-  var mobileMenu=document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click',function(){
-    mobileMenu.classList.toggle('open');
-    menuBtn.textContent=mobileMenu.classList.contains('open')?'×':'☰';
-  });
-  mobileMenu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){mobileMenu.classList.remove('open');menuBtn.textContent='☰';});
-  });
-
-  var theme=document.getElementById('themeToggle');
-  if(localStorage.getItem('fahim-theme')==='dark') document.body.classList.add('dark');
-  theme.addEventListener('click',function(){
-    document.body.classList.toggle('dark');
-    localStorage.setItem('fahim-theme',document.body.classList.contains('dark')?'dark':'light');
+  const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');
+  menuBtn.addEventListener('click',()=>mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+  document.getElementById('contactForm').addEventListener('submit',event=>{
+    event.preventDefault();
+    const data=new FormData(event.currentTarget);
+    const subject=encodeURIComponent(data.get('subject'));
+    const body=encodeURIComponent('Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\n\n'+data.get('message'));
+    window.location.href='mailto:fahim.sikder.web@gmail.com?subject='+subject+'&body='+body;
   });
 
-  document.addEventListener('click',function(e){
-    var pkg=e.target.closest('.pkg');
-    if(!pkg) return;
-    var card=pkg.closest('.service-card');
-    if(!card) return;
-    var type=pkg.getAttribute('data-package');
-    card.querySelectorAll('.pkg').forEach(function(x){x.classList.remove('active');});
-    pkg.classList.add('active');
-    card.querySelectorAll('.features').forEach(function(list){
-      list.hidden=list.getAttribute('data-features')!==type;
-    });
+  // Service package tabs
+  document.querySelectorAll('#services .service-card').forEach(card=>{
+    const tabs=[...card.querySelectorAll('.pkg')];
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      const selected=tab.dataset.package;
+      card.querySelectorAll('.features[data-features]').forEach(list=>{
+        list.hidden=list.dataset.features!==selected;
+      });
+    }));
   });
 
-  function scrollAmount(view){
-    var first=view.querySelector('.service-card,.project-card,.review-card');
-    if(!first) return Math.max(260,view.clientWidth*.8);
-    return first.getBoundingClientRect().width+14;
+  // Service carousel controls + subtle auto-slide
+  const servicesViewport=document.getElementById('servicesViewport');
+  if(servicesViewport){
+    const amount=()=>Math.min(305,servicesViewport.clientWidth*.88);
+    document.querySelectorAll('[data-prev="servicesViewport"]').forEach(btn=>btn.addEventListener('click',()=>servicesViewport.scrollBy({left:-amount(),behavior:'smooth'})));
+    document.querySelectorAll('[data-next="servicesViewport"]').forEach(btn=>btn.addEventListener('click',()=>servicesViewport.scrollBy({left:amount(),behavior:'smooth'})));
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      let paused=false;
+      servicesViewport.addEventListener('mouseenter',()=>paused=true);
+      servicesViewport.addEventListener('mouseleave',()=>paused=false);
+      servicesViewport.addEventListener('touchstart',()=>paused=true,{passive:true});
+      servicesViewport.addEventListener('touchend',()=>{setTimeout(()=>paused=false,2500)},{passive:true});
+      setInterval(()=>{
+        if(paused || document.hidden) return;
+        const nearEnd=servicesViewport.scrollLeft+servicesViewport.clientWidth>=servicesViewport.scrollWidth-20;
+        servicesViewport.scrollTo({left:nearEnd?0:servicesViewport.scrollLeft+amount(),behavior:'smooth'});
+      },3600);
+    }
   }
 
-  document.querySelectorAll('[data-prev]').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var view=document.getElementById(btn.getAttribute('data-prev'));
-      if(view) view.scrollBy({left:-scrollAmount(view),behavior:'smooth'});
-    });
-  });
-  document.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var view=document.getElementById(btn.getAttribute('data-next'));
-      if(view) view.scrollBy({left:scrollAmount(view),behavior:'smooth'});
-    });
-  });
-
-  function setupAutoCarousel(view){
-    var interval=parseInt(view.getAttribute('data-interval')||'3000',10);
-    var pauseUntil=0;
-    function pause(ms){pauseUntil=Date.now()+(ms||4500);}
-    ['pointerdown','touchstart','wheel','mouseenter'].forEach(function(eventName){
-      view.addEventListener(eventName,function(){pause(4500);},{passive:true});
-    });
-    view.addEventListener('mouseleave',function(){pauseUntil=Date.now()+1000;});
-
-    setInterval(function(){
-      if(Date.now()<pauseUntil) return;
-      if(document.hidden) return;
-      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-      var step=scrollAmount(view);
-      var atEnd=view.scrollLeft+view.clientWidth>=view.scrollWidth-step*.45;
-      if(atEnd){
-        view.scrollTo({left:0,behavior:'smooth'});
-      }else{
-        view.scrollBy({left:step,behavior:'smooth'});
-      }
-    },interval);
-  }
-  document.querySelectorAll('.auto-carousel').forEach(setupAutoCarousel);
-
-  var sections=Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
-  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.desktop-nav a'));
-  function syncNav(){
-    var y=window.scrollY+110;
-    var active='top';
-    sections.forEach(function(section){if(section.offsetTop<=y) active=section.id;});
-    navLinks.forEach(function(link){
-      var id=link.getAttribute('href').slice(1);
-      link.classList.toggle('active',id===active||(id==='top'&&window.scrollY<80));
-    });
-  }
-  syncNav();
-  window.addEventListener('scroll',syncNav,{passive:true});
-})();
 </script>
 </body>
 </html>
