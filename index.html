@@ -197,6 +197,33 @@
       #services .service-card{flex-basis:min(292px,calc(100vw - 46px))}
     }
 
+  
+    /* Business & client showcase */
+    .business-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .business-card{
+      position:relative;overflow:hidden;padding:23px;border:1px solid var(--line);border-radius:17px;
+      background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));box-shadow:0 16px 40px rgba(0,0,0,.2)
+    }
+    .business-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--green),transparent)}
+    .business-card:after{
+      content:"BUSINESS_NODE";position:absolute;right:16px;top:14px;color:rgba(82,255,154,.12);
+      font:600 8px "JetBrains Mono",monospace;letter-spacing:.1em
+    }
+    .business-meta{display:flex;align-items:center;gap:8px;margin-bottom:13px;font:600 9px "JetBrains Mono",monospace;letter-spacing:.08em}
+    .business-meta span{color:var(--green)}
+    .business-meta i{width:4px;height:4px;border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(82,255,154,.65)}
+    .business-meta small{color:#698273;font:inherit}
+    .business-card h3{margin:0 0 9px;font-size:23px}
+    .business-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65;max-width:620px}
+    .business-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .business-tech span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;background:#050d09;color:#87a394;font:600 9px "JetBrains Mono",monospace}
+    .business-link{
+      display:inline-flex;align-items:center;justify-content:center;margin-top:18px;min-height:37px;padding:0 12px;border:1px solid var(--line2);
+      border-radius:9px;background:#050d09;color:var(--green);font:700 9px "JetBrains Mono",monospace;letter-spacing:.05em;transition:.18s
+    }
+    .business-link:hover{background:var(--green);border-color:var(--green);color:#031008;transform:translateY(-1px)}
+    @media(max-width:760px){.business-grid{grid-template-columns:1fr}.business-card{padding:19px}}
+
   </style>
 </head>
 <body>
@@ -206,11 +233,11 @@
       <span class="brand-logo"><span>F/AI</span></span>
       <span class="brand-text"><strong>Fahim Sikder</strong><small>AI Engineer // Secure Builder</small></span>
     </a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#industries">Industries</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#contact">Contact</a></nav>
     <a class="nav-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
     <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
   </div>
-  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
+  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#contact">Contact</a></div>
 </header>
 
 <main id="top">
@@ -529,17 +556,46 @@
     </div>
   </section>
 
-  <section class="section" id="industries">
+  <section class="section" id="client-work">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">industries</span><h2>Industries and niches I work with.</h2><p>I build websites, web apps and digital products across a wide range of industries, from mainstream business projects to high-competition niches.</p></div>
-      <div class="policy-box">
-        <div class="policy-grid">
-          <div class="policy-item"><b>Gambling & Betting</b><p>Betting, gaming and gambling-related websites, landing pages, dashboards and promotional web experiences.</p></div>
-          <div class="policy-item"><b>Casino</b><p>Online casino-focused websites, interfaces, content-driven platforms and supporting web systems.</p></div>
-          <div class="policy-item"><b>Adult</b><p>Adult-industry websites and content platforms with responsive design, performance optimization and technical implementation.</p></div>
-          <div class="policy-item"><b>General Business</b><p>AI tools, SaaS, e-commerce, education, business websites, automation, productivity tools and custom web applications.</p></div>
-        </div>
-        <p class="policy-note"><strong>Professional scope:</strong> I work across diverse niches and adapt the stack, design and performance strategy to the project requirements, subject to applicable laws and platform policies.</p>
+      <div class="section-head">
+        <span class="eyebrow">business & client work</span>
+        <h2>Websites built for real businesses and digital services.</h2>
+        <p>A selection of commercial, e-commerce and service platforms I have designed, developed and deployed.</p>
+      </div>
+
+      <div class="business-grid">
+        <article class="business-card">
+          <div class="business-meta"><span>ECOMMERCE</span><i></i><small>CLIENT PROJECT</small></div>
+          <h3>Sheikh Seeds</h3>
+          <p>High-volume e-commerce platform with product catalog, order management, courier workflows, analytics, admin operations and optimized cloud delivery.</p>
+          <div class="business-tech"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>R2</span></div>
+          <a class="business-link" href="https://sheikhseeds.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
+        </article>
+
+        <article class="business-card">
+          <div class="business-meta"><span>BUSINESS</span><i></i><small>CLIENT WEBSITE</small></div>
+          <h3>Oronno Nogor</h3>
+          <p>Professional client website with clear information architecture, responsive presentation, fast page delivery and production-ready deployment.</p>
+          <div class="business-tech"><span>Responsive</span><span>SEO</span><span>Performance</span><span>Deployment</span></div>
+          <a class="business-link" href="https://oronnonogor.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
+        </article>
+
+        <article class="business-card">
+          <div class="business-meta"><span>ECOMMERCE</span><i></i><small>STORE SYSTEM</small></div>
+          <h3>Nobin Mart</h3>
+          <p>Bangladesh-focused online store with product browsing, account flows, responsive storefront UI and an admin-ready commerce architecture.</p>
+          <div class="business-tech"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span><span>Admin</span></div>
+          <a class="business-link" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
+        </article>
+
+        <article class="business-card">
+          <div class="business-meta"><span>EDTECH</span><i></i><small>SERVICE PLATFORM</small></div>
+          <h3>Exam Center BD</h3>
+          <p>Online education service with authentication, exam workflows, question management, student performance tracking and admin operations.</p>
+          <div class="business-tech"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
+          <a class="business-link" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
+        </article>
       </div>
     </div>
   </section>
