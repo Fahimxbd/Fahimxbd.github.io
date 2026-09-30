@@ -224,6 +224,55 @@
     .business-link:hover{background:var(--green);border-color:var(--green);color:#031008;transform:translateY(-1px)}
     @media(max-width:760px){.business-grid{grid-template-columns:1fr}.business-card{padding:19px}}
 
+  
+    /* Quote marquee — left to right */
+    .quote-section{overflow:hidden;position:relative}
+    .quote-section:before{
+      content:"QUOTE_STREAM // VERIFIED_SOURCES";position:absolute;right:max(17px,calc((100vw - var(--max))/2));top:38px;
+      color:rgba(82,255,154,.15);font:600 9px "JetBrains Mono",monospace;letter-spacing:.1em;pointer-events:none
+    }
+    .quote-marquee{
+      position:relative;width:100%;overflow:hidden;padding:4px 0 22px;
+      mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)
+    }
+    .quote-track{
+      display:flex;width:max-content;gap:14px;will-change:transform;
+      animation:quoteScrollRight 58s linear infinite;transform:translateX(-50%)
+    }
+    .quote-marquee:hover .quote-track{animation-play-state:paused}
+    @keyframes quoteScrollRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+    .quote-card{
+      width:min(390px,82vw);min-height:220px;flex:0 0 auto;padding:22px 22px 20px;border:1px solid var(--line);
+      border-radius:17px;background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));
+      box-shadow:0 16px 38px rgba(0,0,0,.22);position:relative;overflow:hidden;display:flex;flex-direction:column
+    }
+    .quote-card:before{content:"";position:absolute;left:0;top:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),transparent 72%)}
+    .quote-card:after{
+      content:"VOICE_NODE";position:absolute;right:14px;top:13px;color:rgba(82,255,154,.13);
+      font:600 8px "JetBrains Mono",monospace;letter-spacing:.09em
+    }
+    .quote-mark{
+      color:var(--green);font:700 46px/1 Georgia,serif;height:38px;text-shadow:0 0 24px rgba(82,255,154,.25)
+    }
+    .quote-card blockquote{
+      margin:8px 0 22px;color:#e8fff1;font-size:18px;line-height:1.55;font-weight:500;letter-spacing:-.015em
+    }
+    .quote-person{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+    .quote-person strong{display:block;color:var(--green);font:700 11px "JetBrains Mono",monospace;letter-spacing:.04em}
+    .quote-person span{display:block;margin-top:4px;color:#688172;font:500 9px "JetBrains Mono",monospace}
+    @media(max-width:760px){
+      .quote-section:before{display:none}
+      .quote-track{gap:11px;animation-duration:48s}
+      .quote-card{width:82vw;min-height:205px;padding:19px}
+      .quote-card blockquote{font-size:16px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .quote-track{animation:none;transform:none}
+      .quote-marquee{overflow-x:auto;scrollbar-width:none}
+      .quote-marquee::-webkit-scrollbar{display:none}
+    }
+
   </style>
 </head>
 <body>
@@ -233,11 +282,11 @@
       <span class="brand-logo"><span>F/AI</span></span>
       <span class="brand-text"><strong>Fahim Sikder</strong><small>AI Engineer // Secure Builder</small></span>
     </a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></nav>
     <a class="nav-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
     <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
   </div>
-  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#contact">Contact</a></div>
+  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></div>
 </header>
 
 <main id="top">
@@ -596,6 +645,123 @@
           <div class="business-tech"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
           <a class="business-link" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section quote-section" id="quotes">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">words that endure</span>
+        <h2>Ideas from influential voices across history.</h2>
+        <p>Short, source-labeled quotations on character, courage, learning, reason and human dignity.</p>
+      </div>
+    </div>
+
+    <div class="quote-marquee" aria-label="Inspirational quotations">
+      <div class="quote-fade quote-fade-left"></div>
+      <div class="quote-fade quote-fade-right"></div>
+      <div class="quote-track">
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The best among you are those who have the best manners and character.</blockquote>
+            <div class="quote-person"><strong>Prophet Muhammad ﷺ</strong><span>Sahih al-Bukhari 6029</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Love your enemies, bless them that curse you.</blockquote>
+            <div class="quote-person"><strong>Jesus Christ</strong><span>Matthew 5:44</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The weak can never forgive. Forgiveness is the attribute of the strong.</blockquote>
+            <div class="quote-person"><strong>Mahatma Gandhi</strong><span>Young India, 2 Apr 1931</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Hatred is never appeased by hatred. By non-hatred alone is hatred appeased.</blockquote>
+            <div class="quote-person"><strong>Gautama Buddha</strong><span>Dhammapada 5</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Is it not pleasant to learn with constant perseverance and application?</blockquote>
+            <div class="quote-person"><strong>Confucius</strong><span>Analects 1.1</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The unexamined life is not worth living.</blockquote>
+            <div class="quote-person"><strong>Socrates</strong><span>Plato, Apology 38a</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Life is like riding a bicycle. To keep your balance you must keep moving.</blockquote>
+            <div class="quote-person"><strong>Albert Einstein</strong><span>Letter to Eduard Einstein, 1930</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>If I have seen further, it is by standing on the shoulders of giants.</blockquote>
+            <div class="quote-person"><strong>Isaac Newton</strong><span>Letter to Robert Hooke, 1676</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Where the mind is without fear and the head is held high.</blockquote>
+            <div class="quote-person"><strong>Rabindranath Tagore</strong><span>Gitanjali 35</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The happiness of your life depends upon the quality of your thoughts.</blockquote>
+            <div class="quote-person"><strong>Marcus Aurelius</strong><span>Meditations 3.9 · Collier translation</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The best among you are those who have the best manners and character.</blockquote>
+            <div class="quote-person"><strong>Prophet Muhammad ﷺ</strong><span>Sahih al-Bukhari 6029</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Love your enemies, bless them that curse you.</blockquote>
+            <div class="quote-person"><strong>Jesus Christ</strong><span>Matthew 5:44</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The weak can never forgive. Forgiveness is the attribute of the strong.</blockquote>
+            <div class="quote-person"><strong>Mahatma Gandhi</strong><span>Young India, 2 Apr 1931</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Hatred is never appeased by hatred. By non-hatred alone is hatred appeased.</blockquote>
+            <div class="quote-person"><strong>Gautama Buddha</strong><span>Dhammapada 5</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Is it not pleasant to learn with constant perseverance and application?</blockquote>
+            <div class="quote-person"><strong>Confucius</strong><span>Analects 1.1</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The unexamined life is not worth living.</blockquote>
+            <div class="quote-person"><strong>Socrates</strong><span>Plato, Apology 38a</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Life is like riding a bicycle. To keep your balance you must keep moving.</blockquote>
+            <div class="quote-person"><strong>Albert Einstein</strong><span>Letter to Eduard Einstein, 1930</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>If I have seen further, it is by standing on the shoulders of giants.</blockquote>
+            <div class="quote-person"><strong>Isaac Newton</strong><span>Letter to Robert Hooke, 1676</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>Where the mind is without fear and the head is held high.</blockquote>
+            <div class="quote-person"><strong>Rabindranath Tagore</strong><span>Gitanjali 35</span></div>
+          </article>
+          <article class="quote-card">
+            <div class="quote-mark">“</div>
+            <blockquote>The happiness of your life depends upon the quality of your thoughts.</blockquote>
+            <div class="quote-person"><strong>Marcus Aurelius</strong><span>Meditations 3.9 · Collier translation</span></div>
+          </article>
       </div>
     </div>
   </section>
