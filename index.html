@@ -133,12 +133,17 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 .project-index{font-size:10px}
 .project-arrow{height:39px;width:39px;font-size:21px}
 }
+.greeting-inner{display:flex;flex-direction:column;align-items:center;gap:12px;width:min(92vw,1150px);text-align:center}
+#greetingWord{display:block;font-size:clamp(31px,7.4vw,112px);line-height:1.18;overflow-wrap:anywhere;max-width:100%;font-family:"Manrope",sans-serif}
+#greetingCountry{display:block;font-size:clamp(13px,2vw,19px);font-weight:400;letter-spacing:.03em;color:#c8c8d0;min-height:1.5em}
+.hero-overline{font-size:clamp(14px,1.55vw,21px);font-weight:500}
+@media(max-width:650px){.hero-overline{top:15%;font-size:clamp(14px,4vw,17px);max-width:calc(100% - 50px)}}
 @media(prefers-reduced-motion:reduce){.greeting{transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<div class="greeting" role="status" aria-live="polite"><span id="greetingWord">Hello</span></div>
+<div class="greeting" aria-hidden="true"><div class="greeting-inner"><span id="greetingWord">Hello</span><span id="greetingCountry"></span></div></div>
 <header class="site-header" id="siteHeader">
   <a href="#top" class="brand" aria-label="Fahim Sikder, home">Fahim Sikder</a>
   
@@ -161,7 +166,7 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
   <img class="hero-image" src="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3.1-flash-image/images/df192ed6-d2d2-4e1b-ac5b-6105deecd5c9/64451e37-6d63-4cfe-bd76-2d8f434a8a8f/Edit_the_person_in_the_original_uploaded_photograph_into_a_s.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMDgyN2MyYjI1OThiYjkyZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTY0MjY3NH0.AYdUiPOrpGeSj78OqhXsvZYIh7kwvEAoC_zvorvUIsM" alt="Professional portrait of Fahim Sikder wearing a charcoal blazer" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/222631662?v=4'">
   <div class="hero-shade"></div>
   <div class="hero-inner">
-    <div class="hero-overline"><span>Independent developer</span><span>Websites, AI solutions and digital systems</span></div>
+    <div class="hero-overline"><span>Aspiring AI/ML Engineer 🇫🇮😊</span></div>
     <h1 class="hero-name" id="heroTitle">Fahim <span>Sikder</span></h1>
     <a class="hero-scroll" href="#intro" aria-label="Scroll to introduction">↘</a>
     <div class="hero-role">Freelance<br>Developer &amp; AI Solutions Builder</div>
@@ -212,11 +217,48 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 </main>
 <script>
 (function(){
- var greetings=['Hello','Ciao','Namaste','শুভ সকাল'], greetingWord=document.getElementById('greetingWord');
- if(greetingWord && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ // Use the visitor's own local clock, not the server's time zone.
+ var localHour=new Date().getHours();
+ var timeGreeting=localHour>=5 && localHour<12?'Good Morning':
+   localHour>=12 && localHour<17?'Good Afternoon':
+   localHour>=17 && localHour<21?'Good Evening':'Good Night';
+ var greetings=[
+   ['India','नमस्ते','Namaste / Hello'],
+   ['China','你好','Ni Hao'],
+   ['USA','Hi / Hello','Hi / Hello'],
+   ['Indonesia','Halo','Halo'],
+   ['Pakistan','ہیلو / السلام علیکم','Hello / Assalamu Alaikum'],
+   ['Nigeria','Hi / Hello','Hi / Hello'],
+   ['Russia','Привет','Privet'],
+   ['Mexico','Hola','Hola'],
+   ['Japan','こんにちは','Konnichiwa'],
+   ['Ethiopia','ሰላም','Selam'],
+   ['Philippines','Kamusta / Hello','Kamusta / Hello'],
+   ['Egypt','مرحبا','Marhaba'],
+   ['Vietnam','Xin chào','Xin Chao'],
+   ['DR Congo','Salut / Bonjour','Salut / Bonjour'],
+   ['Turkey','Merhaba','Merhaba'],
+   ['Iran','سلام','Salam'],
+   ['Germany','Hallo','Hallo'],
+   ['Thailand','สวัสดี','Sawasdee'],
+   ['UK','Hi / Hello','Hi / Hello'],
+   ['Finland','Hei / Moi','Hei / Moi'],
+   ['France','Bonjour','Bonjour'],
+   ['Brazil','Oi','Oi']
+ ];
+ var greetingWord=document.getElementById('greetingWord'),greetingCountry=document.getElementById('greetingCountry');
+ if(greetingWord && greetingCountry && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+   greetingWord.textContent=timeGreeting;
+   greetingCountry.textContent='Welcome';
    document.documentElement.classList.add('greeting-active');
-   greetings.forEach(function(word,i){setTimeout(function(){greetingWord.textContent=word},i*330)});
-   setTimeout(function(){document.documentElement.classList.remove('greeting-active')},1480);
+   var firstDelay=550,stepDelay=125;
+   greetings.forEach(function(entry,i){
+     setTimeout(function(){
+       greetingWord.textContent=entry[1];
+       greetingCountry.textContent=entry[0]+' · '+entry[2];
+     },firstDelay+i*stepDelay);
+   });
+   setTimeout(function(){document.documentElement.classList.remove('greeting-active')},firstDelay+greetings.length*stepDelay+140);
  }
 
  var b=document.getElementById('menuButton'),p=document.getElementById('menuPanel'),o=document.getElementById('menuBackdrop'),h=document.getElementById('siteHeader'),prior=null;
