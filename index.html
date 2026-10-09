@@ -179,6 +179,23 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 @media(max-width:650px){.pricing-dialog{border-radius:17px;max-height:92dvh;width:calc(100vw - 18px)}.pricing-head{padding:13px 19px}.pricing-body{padding:25px 19px 30px}.pricing-grid{grid-template-columns:1fr;gap:9px}.pricing-item{padding:17px}.pricing-title{font-size:42px}.pricing-intro{font-size:14px}.pricing-contact{display:block}.pricing-actions{margin-top:16px}.pricing-cta{font-size:12px;padding:13px 15px}.premium-business{padding:21px}.pricing-item .price{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.pricing-dialog::backdrop{backdrop-filter:none}}
 
+
+/* Bring the name directly below the compact navigation after removing the hero label. */
+.hero-name{top:clamp(110px,16svh,185px)}
+/* Inline social marks are local SVGs, with no external logo requests. */
+.social-label{display:inline-flex!important;align-items:center;gap:9px}
+.social-icon{width:20px;height:20px;flex:none;display:inline-block}
+.contact-links .social-label{gap:10px}
+.menu-bottom .social-icon,.footer-bottom .social-icon,.about-links .social-icon{width:16px;height:16px}
+.menu-bottom .social-label{white-space:nowrap}
+.footer-bottom .social-label{vertical-align:middle}
+.pricing-cta .social-icon{width:18px;height:18px}
+@media(max-width:650px){
+  .hero-name{top:clamp(84px,10.5svh,112px)}
+  .contact-links a{max-width:100%;overflow-wrap:anywhere}
+  .menu-bottom .social-label{gap:6px}
+  .pricing-cta .social-icon{width:17px;height:17px}
+}
 </style>
 </head>
 <body>
@@ -199,7 +216,7 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
     <a class="menu-link" href="#about">About</a>
     <a class="menu-link" href="#contact">Contact</a>
   </div>
-  <div class="menu-bottom"><button type="button" class="service-bottom-link" data-open-pricing>Web services</button><a href="/web-development-training/">Training</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+  <div class="menu-bottom"><button type="button" class="service-bottom-link" data-open-pricing>Web services</button><a href="/web-development-training/">Training</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="social-label" href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433a2.06 2.06 0 1 1 0-4.119 2.06 2.06 0 0 1 0 4.119zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg> LinkedIn ↗</a><a class="social-label" href="mailto:fahim.sikder.web@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.1"/><path d="m3.7 7.1 8.3 6 8.3-6"/></svg> Email ↗</a><a class="social-label" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6a9.1 9.1 0 0 0-14 11l-1.3 4.3 4.4-1.3A9.1 9.1 0 1 0 19.4 4.6Z"/><path d="M8.5 8.1c-.3-.3-.9-.1-1.1.4-.6 1.2.2 2.9 2 4.6 1.9 1.9 3.5 2.7 4.7 2.1.5-.3.7-.8.4-1.2l-1-1.2c-.2-.2-.5-.3-.8-.1l-.8.5c-1.1-.5-1.8-1.2-2.3-2.3l.5-.8c.2-.3.1-.6-.1-.8Z"/></svg> WhatsApp ↗</a></div>
 </nav>
 <main id="content">
 <section class="hero" id="top" aria-labelledby="heroTitle">
@@ -246,13 +263,17 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 </section>
 <section class="section about" id="about" aria-labelledby="aboutTitle">
   <p class="section-kicker">A little about me</p>
-  <div class="about-grid"><h2 id="aboutTitle" class="fade">Curiosity.<br>Craft.<br>Delivery.</h2><div class="fade"><p>I'm Fahim, a developer based in Bangladesh, working on websites, AI tools and production systems. I enjoy combining thoughtful interfaces with the engineering that makes them useful, fast and maintainable.</p><p>My work spans client websites, e-commerce, learning platforms and AI-powered products. I collaborate remotely and care about clear communication, honest expectations and getting the details right.</p><div class="tag-row"><span>Next.js &amp; React</span><span>Python &amp; AI</span><span>Cloudflare</span><span>Supabase</span><span>WordPress</span><span>SEO</span></div><div class="about-links"><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="/web-development-training/">Training &amp; learning ↗</a></div></div></div>
+  <div class="about-grid"><h2 id="aboutTitle" class="fade">Curiosity.<br>Craft.<br>Delivery.</h2><div class="fade"><p>I'm Fahim, a developer based in Bangladesh, working on websites, AI tools and production systems. I enjoy combining thoughtful interfaces with the engineering that makes them useful, fast and maintainable.</p><p>My work spans client websites, e-commerce, learning platforms and AI-powered products. I collaborate remotely and care about clear communication, honest expectations and getting the details right.</p><div class="tag-row"><span>Next.js &amp; React</span><span>Python &amp; AI</span><span>Cloudflare</span><span>Supabase</span><span>WordPress</span><span>SEO</span></div><div class="about-links"><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a class="social-label" href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433a2.06 2.06 0 1 1 0-4.119 2.06 2.06 0 0 1 0 4.119zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg> LinkedIn ↗</a><a href="/web-development-training/">Training &amp; learning ↗</a></div></div></div>
 </section>
 <section class="contact" id="contact" aria-labelledby="contactTitle">
   <p class="section-kicker">Have something in mind?</p>
   <div class="contact-row"><h2 class="contact-title" id="contactTitle">Let's work<span>together.</span></h2><a class="circle-link contact-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Project%20inquiry%20for%20Fahim" aria-label="Email Fahim about a project">Get in touch ↗</a></div>
-  <div class="contact-links"><a href="mailto:fahim.sikder.web@gmail.com">fahim.sikder.web@gmail.com</a><a href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
-  <div class="footer-bottom"><span>© 2026 Fahim Sikder. Independently built with care.</span><span><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> &nbsp; · &nbsp; <a href="#top">Back to top ↑</a></span></div>
+  <div class="contact-links">
+<a class="social-label" href="mailto:fahim.sikder.web@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.1"/><path d="m3.7 7.1 8.3 6 8.3-6"/></svg> <span>fahim.sikder.web@gmail.com</span></a>
+<a class="social-label" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6a9.1 9.1 0 0 0-14 11l-1.3 4.3 4.4-1.3A9.1 9.1 0 1 0 19.4 4.6Z"/><path d="M8.5 8.1c-.3-.3-.9-.1-1.1.4-.6 1.2.2 2.9 2 4.6 1.9 1.9 3.5 2.7 4.7 2.1.5-.3.7-.8.4-1.2l-1-1.2c-.2-.2-.5-.3-.8-.1l-.8.5c-1.1-.5-1.8-1.2-2.3-2.3l.5-.8c.2-.3.1-.6-.1-.8Z"/></svg> <span>WhatsApp ↗</span></a>
+<a class="social-label" href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433a2.06 2.06 0 1 1 0-4.119 2.06 2.06 0 0 1 0 4.119zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg> <span>LinkedIn ↗</span></a>
+</div>
+  <div class="footer-bottom"><span>© 2026 Fahim Sikder. Independently built with care.</span><span><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp; · &nbsp; <a class="social-label" href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433a2.06 2.06 0 1 1 0-4.119 2.06 2.06 0 0 1 0 4.119zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg> LinkedIn ↗</a> &nbsp; · &nbsp; <a href="#top">Back to top ↑</a></span></div>
 </section>
 </main>
 
@@ -274,8 +295,8 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
     <div class="pricing-contact">
       <p>Have a project in mind? Share your requirements and I will help define the best approach.</p>
       <div class="pricing-actions">
-        <a class="pricing-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Website%20or%20AI%20Project%20Inquiry">Email me ↗</a>
-        <a class="pricing-cta" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20to%20discuss%20a%20website%20or%20AI%20project." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        <a class="pricing-cta social-label" href="mailto:fahim.sikder.web@gmail.com?subject=Website%20or%20AI%20Project%20Inquiry"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.1"/><path d="m3.7 7.1 8.3 6 8.3-6"/></svg> Email me ↗</a>
+        <a class="pricing-cta social-label" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20want%20to%20discuss%20a%20website%20or%20AI%20project." target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6a9.1 9.1 0 0 0-14 11l-1.3 4.3 4.4-1.3A9.1 9.1 0 1 0 19.4 4.6Z"/><path d="M8.5 8.1c-.3-.3-.9-.1-1.1.4-.6 1.2.2 2.9 2 4.6 1.9 1.9 3.5 2.7 4.7 2.1.5-.3.7-.8.4-1.2l-1-1.2c-.2-.2-.5-.3-.8-.1l-.8.5c-1.1-.5-1.8-1.2-2.3-2.3l.5-.8c.2-.3.1-.6-.1-.8Z"/></svg> WhatsApp ↗</a>
       </div>
     </div>
     <div class="premium-business">
@@ -283,8 +304,8 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
       <h3>Premium Business Projects</h3>
       <p>For a more comprehensive website, ecommerce platform or custom business system, let's discuss your goals, features and timeline directly.</p>
       <div class="pricing-actions">
-        <a class="pricing-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Premium%20Business%20Project%20Consultation">Premium inquiry by email ↗</a>
-        <a class="pricing-cta secondary" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20a%20premium%20business%20website%20consultation." target="_blank" rel="noopener noreferrer">Premium WhatsApp ↗</a>
+        <a class="pricing-cta social-label" href="mailto:fahim.sikder.web@gmail.com?subject=Premium%20Business%20Project%20Consultation"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.1"/><path d="m3.7 7.1 8.3 6 8.3-6"/></svg> Premium inquiry by email ↗</a>
+        <a class="pricing-cta secondary social-label" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27d%20like%20a%20premium%20business%20website%20consultation." target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6a9.1 9.1 0 0 0-14 11l-1.3 4.3 4.4-1.3A9.1 9.1 0 1 0 19.4 4.6Z"/><path d="M8.5 8.1c-.3-.3-.9-.1-1.1.4-.6 1.2.2 2.9 2 4.6 1.9 1.9 3.5 2.7 4.7 2.1.5-.3.7-.8.4-1.2l-1-1.2c-.2-.2-.5-.3-.8-.1l-.8.5c-1.1-.5-1.8-1.2-2.3-2.3l.5-.8c.2-.3.1-.6-.1-.8Z"/></svg> Premium WhatsApp ↗</a>
       </div>
     </div>
   </div>
