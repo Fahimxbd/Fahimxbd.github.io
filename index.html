@@ -237,6 +237,25 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 .skill-grid .tech-icon{width:23px;height:23px}
 }
 @media(max-width:360px){.skill-grid .tech-pill{font-size:11px;padding:8px 7px;gap:6px}.skill-grid .tech-icon{width:21px;height:21px}}
+
+/* Soft optional background music: lightweight, opt-in and accessible. */
+.music-toast{position:fixed;left:clamp(15px,3vw,42px);bottom:20px;z-index:55;width:min(380px,calc(100vw - 92px));background:rgba(255,255,255,.97);color:#202024;backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.17);border:1px solid rgba(0,0,0,.09);border-radius:19px;padding:16px 17px;display:none}
+.music-toast.is-visible{display:block;animation:music-enter .3s ease-out}
+@keyframes music-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.music-toast .music-label{font-size:12px;letter-spacing:.11em;color:#73767c;text-transform:uppercase;display:block;margin-bottom:6px}
+.music-toast p{font-size:14px;line-height:1.45;margin:0 0 13px;letter-spacing:-.01em}
+.music-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.music-actions button{border:0;border-radius:999px;padding:10px 15px;font-size:13px;cursor:pointer}
+.music-play{color:white;background:#202024}.music-play:hover{background:#455ce9}
+.music-skip{background:#f1f1f3;color:#505056}
+.music-toggle{display:none;position:fixed;right:clamp(15px,3vw,42px);bottom:20px;z-index:55;align-items:center;gap:8px;background:#242428;color:#fff;border:1px solid #ffffff28;border-radius:999px;box-shadow:0 7px 30px #0003;padding:12px 16px;font-size:12px;font-weight:600;cursor:pointer}
+.music-toggle.is-visible{display:inline-flex}
+.music-toggle[aria-pressed="true"]{background:#455ce9}
+.music-toggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.music-toggle:hover{filter:brightness(1.13)}
+.music-toggle:focus-visible,.music-actions button:focus-visible{outline:3px solid #455ce9;outline-offset:3px}
+@media(max-width:650px){.music-toast{bottom:16px;width:min(326px,calc(100vw - 86px));padding:14px}.music-toggle{right:14px;bottom:16px;padding:11px 13px}}
+@media(prefers-reduced-motion:reduce){.music-toast.is-visible{animation:none}}
 </style>
 </head>
 <body>
@@ -368,6 +387,22 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
   </div>
 </dialog>
 
+
+<!-- The exact Pixabay track is referenced locally. Controls only appear once that file is uploaded. -->
+<audio id="portfolioMusic" preload="none" loop playsinline aria-label="Optional soft background music by VelarioMusic"></audio>
+<div class="music-toast" id="musicToast" role="group" aria-label="Background music preference">
+  <span class="music-label">Optional background music</span>
+  <p>Would you like some soft music while exploring?</p>
+  <div class="music-actions">
+    <button class="music-play" id="musicStart" type="button">♪ Play softly</button>
+    <button class="music-skip" id="musicSkip" type="button">Not now</button>
+  </div>
+</div>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music" aria-pressed="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  <span id="musicToggleText">Music off</span>
+</button>
+
 <script>
 (function(){
  // Use the visitor's own local clock, not the server's time zone.
@@ -413,6 +448,63 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
    });
    setTimeout(function(){document.documentElement.classList.remove('greeting-active')},firstDelay+greetings.length*stepDelay+140);
  }
+
+
+ // Do not offer a broken player before the exact uploaded MP3 is present on GitHub Pages.
+ // Browsers restrict audible autoplay: sound starts only after a real user click.
+ (function(){
+   var audio=document.getElementById('portfolioMusic');
+   var toast=document.getElementById('musicToast');
+   var play=document.getElementById('musicStart');
+   var skip=document.getElementById('musicSkip');
+   var toggle=document.getElementById('musicToggle');
+   var label=document.getElementById('musicToggleText');
+   var file='/assets/music/peaceful.mp3';
+   var ready=false;
+   if(!audio||!toast||!play||!skip||!toggle||!label)return;
+   audio.volume=0.12;
+   audio.loop=true;
+   function update(){
+     var playing=!audio.paused && !audio.ended;
+     label.textContent=playing?'Music on':'Music off';
+     toggle.setAttribute('aria-pressed',playing?'true':'false');
+     toggle.setAttribute('aria-label',playing?'Pause background music':'Play background music');
+   }
+   function hideToast(){
+     toast.classList.remove('is-visible');
+     try{sessionStorage.setItem('fahim-music-prompt-seen','1')}catch(e){}
+   }
+   function playMusic(){
+     if(!ready)return;
+     audio.src=audio.src||file;
+     var promise=audio.play();
+     if(promise && typeof promise.then==='function'){
+       promise.then(function(){hideToast();update()}).catch(function(){label.textContent='Tap to retry';update()});
+     }else{hideToast();update()}
+   }
+   play.addEventListener('click',playMusic);
+   skip.addEventListener('click',hideToast);
+   toggle.addEventListener('click',function(){
+     if(audio.paused)playMusic();else{audio.pause();update()}
+   });
+   audio.addEventListener('playing',update);
+   audio.addEventListener('pause',update);
+   audio.addEventListener('error',function(){label.textContent='Music unavailable';audio.pause()});
+   // 404 means the user-uploaded binary MP3 has not yet been committed.
+   fetch(file,{method:'HEAD',cache:'no-store'})
+     .then(function(response){
+       if(!response.ok)return;
+       ready=true;
+       toggle.classList.add('is-visible');
+       var alreadySeen=false;
+       try{alreadySeen=sessionStorage.getItem('fahim-music-prompt-seen')==='1'}catch(e){}
+       if(!alreadySeen){
+         // Wait for the short multilingual greeting animation so they never overlap.
+         setTimeout(function(){toast.classList.add('is-visible')},4000);
+       }
+     })
+     .catch(function(){/* Keep music hidden when the asset cannot be reached. */});
+ })();
 
  var b=document.getElementById('menuButton'),p=document.getElementById('menuPanel'),o=document.getElementById('menuBackdrop'),h=document.getElementById('siteHeader'),prior=null;
  function close(){p.classList.remove('open');o.classList.remove('show');p.inert=true;b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');document.body.style.overflow='';h.style.position='absolute';h.style.color='white';prior=null}
