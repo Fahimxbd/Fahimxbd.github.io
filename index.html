@@ -1,828 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#040806">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.svg">
-  <title>Fahim Sikder | AI Engineer, Web Developer & AI Automation</title>
-  <meta name="description" content="Fahim Sikder is an AI Engineering student at LUT University with 5+ years in WordPress, web development, SEO and speed optimization, 200+ completed orders, plus AI automation and chatbot development.">
-  <meta name="author" content="Fahim Sikder">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow">
-  <link rel="canonical" href="https://fahimsikderai.com/">
-  <link rel="alternate" hreflang="en" href="https://fahimsikderai.com/">
-  <link rel="alternate" hreflang="x-default" href="https://fahimsikderai.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Fahim Sikder Portfolio">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://fahimsikderai.com/">
-  <meta property="og:title" content="Fahim Sikder | AI Engineer & Web Developer">
-  <meta property="og:description" content="AI Engineer, web developer and automation builder with 5+ years of web experience and 200+ completed client orders.">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fahim Sikder | AI Engineer & Web Developer">
-  <meta name="twitter:description" content="AI engineering, web development, WordPress, SEO, speed optimization, AI automation and chatbots.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Person",
-        "@id":"https://fahimsikderai.com/#person",
-        "name":"Fahim Sikder",
-        "url":"https://fahimsikderai.com/",
-        "email":"mailto:fahim.sikder.web@gmail.com",
-        "sameAs":["https://github.com/Fahimxbd"],
-        "jobTitle":"AI Engineer",
-        "description":"AI Engineering student at LUT University with 5+ years of WordPress, web development, SEO and website speed optimization experience, 200+ completed web development orders, and 1 year of AI automation and chatbot work.",
-        "knowsAbout":["Artificial Intelligence","AI Automation","AI Chatbots","Web Development","App Development","WordPress","Website Speed Optimization","Technical SEO","Software Engineering","Application Security","Cloudflare","Supabase","Next.js","Python"]
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://fahimsikderai.com/#website",
-        "url":"https://fahimsikderai.com/",
-        "name":"Fahim Sikder Portfolio",
-        "description":"Portfolio of Fahim Sikder — AI Engineer, web developer and AI automation builder.",
-        "inLanguage":"en",
-        "publisher":{"@id":"https://fahimsikderai.com/#person"}
-      }
-    ]
-  }
-  </script>
-  <style>
-    :root{
-      --bg:#040806;--panel:#08110d;--panel2:#0b1711;--line:#173426;--line2:#23503a;
-      --text:#eafff2;--muted:#87a394;--green:#52ff9a;--green2:#1ed978;--cyan:#67e8f9;
-      --danger:#ff6b81;--amber:#ffc857;--shadow:0 24px 70px rgba(0,0,0,.42);--max:1180px
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:78px}
-    body{
-      margin:0;color:var(--text);background:
-      radial-gradient(circle at 18% -10%,rgba(82,255,154,.09),transparent 30%),
-      radial-gradient(circle at 92% 10%,rgba(103,232,249,.05),transparent 23%),
-      var(--bg);font-family:"Space Grotesk",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased
-    }
-    body:before{
-      content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;
-      background-image:linear-gradient(rgba(82,255,154,.028) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(82,255,154,.028) 1px,transparent 1px);
-      background-size:32px 32px;mask-image:linear-gradient(to bottom,#000,transparent 82%)
-    }
-    a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 34px));margin:auto}
-    .mono{font-family:"JetBrains Mono",monospace}.accent{color:var(--green)}.muted{color:var(--muted)}
-    header{position:sticky;top:0;z-index:90;border-bottom:1px solid rgba(82,255,154,.12);background:rgba(4,8,6,.84);backdrop-filter:blur(18px)}
-    .nav{height:70px;display:flex;align-items:center;gap:18px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand-logo{position:relative;width:44px;height:44px;border:1px solid var(--line2);border-radius:10px;background:#06100b;box-shadow:inset 0 0 24px rgba(82,255,154,.04),0 0 24px rgba(82,255,154,.05);overflow:hidden}
-    .brand-logo:before,.brand-logo:after{content:"";position:absolute;background:var(--green);opacity:.8}
-    .brand-logo:before{width:14px;height:1px;left:7px;top:7px;box-shadow:16px 29px 0 var(--green)}
-    .brand-logo:after{width:1px;height:14px;left:7px;top:7px;box-shadow:29px 16px 0 var(--green)}
-    .brand-logo span{position:absolute;inset:0;display:grid;place-items:center;color:var(--green);font:700 13px "JetBrains Mono";letter-spacing:-.03em}
-    .brand-text{display:flex;flex-direction:column;line-height:1.05}.brand-text strong{font-size:17px}.brand-text small{margin-top:5px;color:#628071;font:600 10px "JetBrains Mono";letter-spacing:.09em;text-transform:uppercase}
-    nav{margin-left:auto;display:flex;gap:2px}nav a{padding:9px 10px;border-radius:9px;color:var(--muted);font-size:13px;font-weight:600}nav a:hover{color:var(--green);background:rgba(82,255,154,.05)}
-    .nav-cta{padding:8px 12px;border:1px solid var(--line2);border-radius:9px;color:var(--green);background:rgba(82,255,154,.05);font:600 11px "JetBrains Mono"}
-    .menu{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--green);font-size:20px}
-    .mobile-nav{display:none}.mobile-nav.open{display:grid;padding:10px 17px 16px;background:var(--panel);border-bottom:1px solid var(--line)}.mobile-nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted)}
-    .hero{padding:84px 0 58px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:45px;align-items:center}
-    .status{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(82,255,154,.23);border-radius:999px;background:rgba(82,255,154,.05);color:#bdffd7;font:600 11px "JetBrains Mono";letter-spacing:.05em;text-transform:uppercase}
-    .status i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(82,255,154,.08),0 0 17px rgba(82,255,154,.55)}
-    h1,h2,h3{line-height:1.08}.hero h1{max-width:760px;margin:23px 0 19px;font-size:clamp(47px,7vw,78px);letter-spacing:-.055em}
-    .hero h1 span{display:block}.lead{max-width:740px;margin:0;color:#a6bbb0;font-size:clamp(18px,2vw,21px)}
-    .role-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}.role-strip span{padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#06100b;color:#91ae9e;font:600 11px "JetBrains Mono"}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}.btn{min-height:47px;display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;border-radius:11px;border:1px solid transparent;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--green);color:#031008;box-shadow:0 12px 30px rgba(82,255,154,.15)}.btn-secondary{border-color:var(--line);background:var(--panel);color:#d9eee2}
-    .terminal{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#06100b,#0a1510);box-shadow:var(--shadow)}
-    .terminal-top{height:42px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line);background:#050c08}.terminal-top i{width:9px;height:9px;border-radius:50%;background:#345346}.terminal-top i:nth-child(1){background:var(--danger)}.terminal-top i:nth-child(2){background:var(--amber)}.terminal-top i:nth-child(3){background:var(--green)}.terminal-top span{margin-left:auto;color:#587365;font:500 10px "JetBrains Mono"}
-    .terminal-body{min-height:365px;padding:24px;color:#9db7a9;font:500 12px/1.85 "JetBrains Mono"}.prompt{color:var(--green)}.cmd{color:#effff6}.ok{color:var(--cyan)}.dim{color:#607b6d}.cursor{display:inline-block;width:7px;height:15px;margin-left:5px;background:var(--green);vertical-align:-3px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
-    .hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px}.metric{padding:15px;border:1px solid var(--line);border-radius:13px;background:rgba(8,17,13,.74)}.metric b{display:block;color:var(--green);font:700 15px "JetBrains Mono"}.metric span{color:var(--muted);font-size:11px}
-    .section{padding:72px 0}.section-head{max-width:820px;margin-bottom:34px}.eyebrow{color:var(--green);font:600 11px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase}.eyebrow:before{content:"// ";color:#35664d}.section-head h2{margin:10px 0 12px;font-size:clamp(34px,5vw,50px);letter-spacing:-.045em}.section-head p{margin:0;color:var(--muted);font-size:17px}
-    .identity-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(10,22,16,.94),rgba(6,13,9,.97));box-shadow:0 16px 40px rgba(0,0,0,.2)}
-    .identity-panel{position:relative;overflow:hidden}.identity-panel:before{content:"AI";position:absolute;right:18px;top:4px;color:rgba(82,255,154,.035);font:700 110px "JetBrains Mono"}
-    .identity-panel h3{position:relative;margin:7px 0 4px;font-size:31px}.handle{position:relative;color:var(--green);font:600 12px "JetBrains Mono"}
-    .identity-list{position:relative;display:grid;gap:9px;margin-top:20px}.identity-list div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#96aa9f;font-size:13px}.identity-list b{color:#dffff0}
-    .about-copy h3{margin:9px 0 10px;font-size:25px}.about-copy p{margin:0 0 13px;color:var(--muted);font-size:16px}.manifesto{margin-top:18px;padding:15px 16px;border-left:3px solid var(--green);border-radius:0 10px 10px 0;background:rgba(82,255,154,.04);color:#c7ded2;font:500 13px/1.7 "JetBrains Mono"}
-    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cap{padding:21px;border:1px solid var(--line);border-radius:15px;background:#07100c}.cap b{display:block;margin-bottom:8px;color:var(--green);font:600 11px "JetBrains Mono"}.cap h3{margin:0 0 8px;font-size:19px}.cap p{margin:0;color:var(--muted);font-size:13px}
-    .skill-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#050d09;color:#92ab9e;font:600 10px "JetBrains Mono"}
-    .experience-list{display:grid;gap:12px}.experience-item{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#07110c,#050c08);position:relative;overflow:hidden}.experience-item:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--green),transparent)}.experience-time{color:var(--green);font:700 11px "JetBrains Mono";letter-spacing:.06em;text-transform:uppercase}.experience-body h3{margin:0 0 7px;font-size:21px}.experience-body p{margin:0;color:var(--muted);font-size:14px}.experience-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.experience-tags span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:#82a18f;background:#050d09;font:600 9px "JetBrains Mono"}
-    .project-list{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#06100b}
-    .project-row{display:grid;grid-template-columns:1.05fr 1.7fr 1.2fr auto;gap:16px;align-items:center;padding:18px 19px;border-bottom:1px solid var(--line);transition:.2s}
-    .project-row:last-child{border-bottom:0}.project-row:hover{background:rgba(82,255,154,.035)}
-    .project-main strong{display:block;font-size:17px}.project-main small{color:#5f7d6d;font:500 10px "JetBrains Mono"}
-    .project-desc{color:#91a79b;font-size:13px}.project-stack{display:flex;flex-wrap:wrap;gap:6px}.project-stack span{padding:5px 7px;border:1px solid var(--line);border-radius:999px;color:#739384;font:600 9px "JetBrains Mono"}
-    .project-link{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;color:var(--green);font:600 11px "JetBrains Mono"}.project-link:hover{text-decoration:underline}
-    .project-status{display:inline-flex;align-items:center;gap:6px;color:#77a38b;font:600 9px "JetBrains Mono";text-transform:uppercase;letter-spacing:.08em}.project-status i{width:6px;height:6px;border-radius:50%;background:var(--green)}
-    .lab{padding:28px;border:1px solid rgba(82,255,154,.2);border-radius:20px;background:linear-gradient(135deg,rgba(82,255,154,.055),rgba(103,232,249,.02));box-shadow:var(--shadow)}.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.lab h2{margin:9px 0 11px}.lab p{color:var(--muted)}
-    .checklist{display:grid;gap:9px}.check{display:flex;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#9eb3a8;font-size:12px}.check b{color:var(--green);font-family:"JetBrains Mono"}
-    .background-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.education{display:flex;gap:16px}.education+.education{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}.education .year{min-width:90px;color:var(--green);font:600 10px "JetBrains Mono"}.education h3{margin:0 0 6px;font-size:18px}.education p{margin:0;color:var(--muted);font-size:13px}
-    .policy-box{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#07110c,#050c08)}.policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.policy-item{padding:16px;border:1px solid var(--line);border-radius:12px;background:#050d09}.policy-item b{display:block;margin-bottom:6px;color:var(--green);font:600 11px "JetBrains Mono";text-transform:uppercase;letter-spacing:.07em}.policy-item p{margin:0;color:var(--muted);font-size:13px}.policy-note{margin-top:14px;color:#9fb7aa;font-size:13px}.policy-note strong{color:#e8fff2}
-    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#09140f,#050d09);box-shadow:var(--shadow)}.contact h2{margin:9px 0 12px;font-size:clamp(34px,5vw,48px)}.contact p{color:var(--muted)}
-    form{display:grid;gap:10px}input,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;outline:none;background:#030806;color:var(--text);font:500 12px "JetBrains Mono"}input:focus,textarea:focus{border-color:var(--line2);box-shadow:0 0 0 4px rgba(82,255,154,.05)}textarea{min-height:115px;resize:vertical}
-    footer{padding:26px 0 34px;color:#5f7b6c}.footer{display:flex;justify-content:space-between;gap:16px;padding-top:24px;border-top:1px solid var(--line);font:500 10px "JetBrains Mono"}.footer a{color:#99b7a7}
-    @media(max-width:940px){
-      nav,.nav-cta{display:none}.menu{display:block}.hero-grid,.identity-grid,.lab-grid,.contact,.background-grid{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}
-      .project-row{grid-template-columns:1fr auto}.project-desc,.project-stack{grid-column:1/-1}.experience-item{grid-template-columns:120px 1fr}.policy-grid{grid-template-columns:1fr}.terminal{margin-top:6px}
-    }
-    @media(max-width:620px){
-      .hero{padding:58px 0 48px}.section{padding:56px 0}.hero h1{font-size:46px}.hero-metrics,.grid-4{grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}
-      .terminal-body{min-height:auto;padding:18px;font-size:11px}.identity-list div{grid-template-columns:1fr;gap:2px}.experience-item{grid-template-columns:1fr;gap:7px;padding:18px}.project-row{grid-template-columns:1fr;padding:16px}.project-link{justify-self:start}
-      .contact{padding:22px}.footer{flex-direction:column}.education{display:block}.education .year{display:block;margin-bottom:5px}.brand-text small{display:none}
-    }
-  
-    /* Services retained from 29 Sep design, restyled for original cyber portfolio */
-    #services{position:relative}
-    #services:before{
-      content:"SERVICES // AVAILABLE_MODULES";position:absolute;right:max(17px,calc((100vw - var(--max))/2));top:34px;
-      color:rgba(82,255,154,.18);font:600 10px "JetBrains Mono",monospace;letter-spacing:.12em;pointer-events:none
-    }
-    #services .section-head{max-width:none;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
-    #services .section-title-row{max-width:760px}
-    #services .section-sub{margin:0;color:var(--muted);font-size:15px}
-    #services .carousel-actions{display:flex;gap:8px;flex:0 0 auto}
-    #services .round-btn{
-      width:42px;height:42px;border:1px solid var(--line2);border-radius:10px;background:#050d09;color:var(--green);
-      display:grid;place-items:center;font:700 20px "JetBrains Mono",monospace;transition:.18s
-    }
-    #services .round-btn:hover{border-color:var(--green);background:rgba(82,255,154,.08);transform:translateY(-1px)}
-    #services .viewport{overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;padding:2px 2px 10px}
-    #services .viewport::-webkit-scrollbar{display:none}
-    #services .track{display:flex;gap:13px;width:max-content}
-    #services .service-card{
-      flex:0 0 292px;scroll-snap-align:start;min-height:404px;padding:18px;border:1px solid var(--line);
-      border-radius:16px;background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));
-      box-shadow:0 18px 42px rgba(0,0,0,.22);display:flex;flex-direction:column;position:relative;overflow:hidden
-    }
-    #services .service-card:before{
-      content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--green),transparent 74%)
-    }
-    #services .service-card:after{
-      content:"// SERVICE_NODE";position:absolute;right:13px;top:10px;color:rgba(82,255,154,.16);
-      font:600 8px "JetBrains Mono",monospace;letter-spacing:.08em
-    }
-    #services .service-top{display:flex;align-items:center;gap:11px;padding-right:54px}
-    #services .service-icon{
-      width:43px;height:43px;border:1px solid var(--line2);border-radius:11px;display:grid;place-items:center;
-      color:var(--green);background:#041009;font:700 14px "JetBrains Mono",monospace;box-shadow:inset 0 0 20px rgba(82,255,154,.03)
-    }
-    #services .service-card h3{margin:0;font-size:18px;line-height:1.18}
-    #services .service-desc{min-height:42px;margin:13px 0 13px;color:var(--muted);font-size:12px;line-height:1.55}
-    #services .package-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px}
-    #services .package-tabs.single{grid-template-columns:1fr}
-    #services .pkg{
-      padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#050d09;color:#7e998a;text-align:left;
-      font:600 9px "JetBrains Mono",monospace;cursor:pointer;transition:.18s
-    }
-    #services .pkg strong{display:block;margin-top:3px;color:#dfffea;font:700 20px/1.1 "JetBrains Mono",monospace}
-    #services .pkg.active{border-color:var(--green);background:rgba(82,255,154,.08);color:var(--green)}
-    #services .pkg.active strong{color:var(--green)}
-    #services .included{margin:0 0 8px;color:#d9eee2;font:600 11px "JetBrains Mono",monospace}
-    #services .features{list-style:none;padding:0;margin:0;display:grid;gap:6px}
-    #services .features[hidden]{display:none}
-    #services .features li{position:relative;padding-left:18px;color:#8fa99b;font-size:11px;line-height:1.4}
-    #services .features li:before{content:">";position:absolute;left:0;top:0;color:var(--green);font:700 10px "JetBrains Mono",monospace}
-    #services .service-footer{display:flex;justify-content:flex-end;margin-top:auto;padding-top:13px}
-    #services .service-go{
-      width:34px;height:34px;border:1px solid var(--line2);border-radius:9px;background:#050d09;color:var(--green);
-      display:grid;place-items:center;font:700 16px "JetBrains Mono",monospace;transition:.18s
-    }
-    #services .service-go:hover{background:var(--green);border-color:var(--green);color:#031008;transform:translateX(2px)}
-    @media(max-width:760px){
-      #services:before{display:none}
-      #services .section-head{display:block}
-      #services .carousel-actions{margin-top:16px}
-      #services .service-card{flex-basis:min(292px,calc(100vw - 46px))}
-    }
-
-  
-    /* Business & client showcase */
-    .business-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .business-card{
-      position:relative;overflow:hidden;padding:23px;border:1px solid var(--line);border-radius:17px;
-      background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));box-shadow:0 16px 40px rgba(0,0,0,.2)
-    }
-    .business-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--green),transparent)}
-    .business-card:after{
-      content:"BUSINESS_NODE";position:absolute;right:16px;top:14px;color:rgba(82,255,154,.12);
-      font:600 8px "JetBrains Mono",monospace;letter-spacing:.1em
-    }
-    .business-meta{display:flex;align-items:center;gap:8px;margin-bottom:13px;font:600 9px "JetBrains Mono",monospace;letter-spacing:.08em}
-    .business-meta span{color:var(--green)}
-    .business-meta i{width:4px;height:4px;border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(82,255,154,.65)}
-    .business-meta small{color:#698273;font:inherit}
-    .business-card h3{margin:0 0 9px;font-size:23px}
-    .business-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65;max-width:620px}
-    .business-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
-    .business-tech span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;background:#050d09;color:#87a394;font:600 9px "JetBrains Mono",monospace}
-    .business-link{
-      display:inline-flex;align-items:center;justify-content:center;margin-top:18px;min-height:37px;padding:0 12px;border:1px solid var(--line2);
-      border-radius:9px;background:#050d09;color:var(--green);font:700 9px "JetBrains Mono",monospace;letter-spacing:.05em;transition:.18s
-    }
-    .business-link:hover{background:var(--green);border-color:var(--green);color:#031008;transform:translateY(-1px)}
-    @media(max-width:760px){.business-grid{grid-template-columns:1fr}.business-card{padding:19px}}
-
-  
-    /* Quote marquee — left to right */
-    .quote-section{overflow:hidden;position:relative}
-    .quote-section:before{
-      content:"QUOTE_STREAM // VERIFIED_SOURCES";position:absolute;right:max(17px,calc((100vw - var(--max))/2));top:38px;
-      color:rgba(82,255,154,.15);font:600 9px "JetBrains Mono",monospace;letter-spacing:.1em;pointer-events:none
-    }
-    .quote-marquee{
-      position:relative;width:100%;overflow:hidden;padding:4px 0 22px;
-      mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
-      -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)
-    }
-    .quote-track{
-      display:flex;width:max-content;gap:14px;will-change:transform;
-      animation:quoteScrollRight 58s linear infinite;transform:translateX(-50%)
-    }
-    .quote-marquee:hover .quote-track{animation-play-state:paused}
-    @keyframes quoteScrollRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-    .quote-card{
-      width:min(390px,82vw);min-height:220px;flex:0 0 auto;padding:22px 22px 20px;border:1px solid var(--line);
-      border-radius:17px;background:linear-gradient(145deg,rgba(9,21,15,.98),rgba(5,13,9,.98));
-      box-shadow:0 16px 38px rgba(0,0,0,.22);position:relative;overflow:hidden;display:flex;flex-direction:column
-    }
-    .quote-card:before{content:"";position:absolute;left:0;top:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),transparent 72%)}
-    .quote-card:after{
-      content:"VOICE_NODE";position:absolute;right:14px;top:13px;color:rgba(82,255,154,.13);
-      font:600 8px "JetBrains Mono",monospace;letter-spacing:.09em
-    }
-    .quote-mark{
-      color:var(--green);font:700 46px/1 Georgia,serif;height:38px;text-shadow:0 0 24px rgba(82,255,154,.25)
-    }
-    .quote-card blockquote{
-      margin:8px 0 22px;color:#e8fff1;font-size:18px;line-height:1.55;font-weight:500;letter-spacing:-.015em
-    }
-    .quote-person{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
-    .quote-person strong{display:block;color:var(--green);font:700 11px "JetBrains Mono",monospace;letter-spacing:.04em}
-    .quote-person span{display:block;margin-top:4px;color:#688172;font:500 9px "JetBrains Mono",monospace}
-    @media(max-width:760px){
-      .quote-section:before{display:none}
-      .quote-track{gap:11px;animation-duration:48s}
-      .quote-card{width:82vw;min-height:205px;padding:19px}
-      .quote-card blockquote{font-size:16px}
-    }
-    @media(prefers-reduced-motion:reduce){
-      .quote-track{animation:none;transform:none}
-      .quote-marquee{overflow-x:auto;scrollbar-width:none}
-      .quote-marquee::-webkit-scrollbar{display:none}
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#999b9d">
+<title>Fahim Sikder — Independent Web Developer & AI Solutions Builder</title>
+<meta name="description" content="Fahim Sikder builds thoughtful custom websites, AI-powered products and fast digital experiences for businesses worldwide. Explore selected work and start a project.">
+<meta name="author" content="Fahim Sikder">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://fahimsikderai.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fahim Sikder — Digital Experiences, Built with Purpose">
+<meta property="og:description" content="Independent developer building custom websites, AI solutions and practical digital products.">
+<meta property="og:url" content="https://fahimsikderai.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Fahim Sikder","url":"https://fahimsikderai.com/","sameAs":["https://github.com/Fahimxbd"],"knowsAbout":["AI Solutions","Full Stack Development","Web Design","Next.js","Cloudflare","Supabase","SEO"]}</script>
+<style>
+:root{--ink:#1b1b1e;--paper:#fafafa;--muted:#74767a;--line:#dadadd;--blue:#455ce9;--gray:#9b9d9e;--gutter:clamp(22px,5.3vw,100px);--radius:25px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}::selection{background:var(--blue);color:#fff}
+.skip{position:absolute;top:-90px;left:12px;padding:14px;background:#fff;z-index:200}.skip:focus{top:12px}
+.site-header{position:absolute;z-index:30;top:0;left:0;right:0;height:112px;padding:0 var(--gutter);display:flex;justify-content:space-between;align-items:center;color:white}
+.brand{display:inline-flex;align-items:center;font-size:18px;font-weight:600;letter-spacing:-.045em;gap:9px}.brand-dot{font-size:13px}
+.site-nav{display:flex;align-items:center;gap:35px;font-size:14px}.site-nav a{transition:opacity .2s}.site-nav a:hover{opacity:.6}
+.menu-button{width:62px;height:62px;background:var(--ink);border:0;border-radius:50%;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;cursor:pointer;transition:background .2s,transform .25s}.menu-button:hover{background:var(--blue);transform:scale(1.05)}.menu-button span{width:21px;height:1px;background:currentColor;transition:transform .2s}.menu-button[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}.menu-button[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.nav-trigger{display:flex;align-items:center;gap:22px;font-size:15px}.nav-trigger:before{content:"";width:8px;height:8px;background:#fff;border-radius:50%}
+.menu-panel{position:fixed;z-index:25;top:0;right:0;bottom:0;width:min(550px,100vw);background:#222225;color:#fff;display:flex;flex-direction:column;padding:145px var(--gutter) 52px;transform:translateX(102%);transition:transform .55s cubic-bezier(.2,.8,.2,1);box-shadow:-20px 0 80px #0002;visibility:hidden}
+.menu-panel.open{visibility:visible;transform:translateX(0)}.menu-panel small{text-transform:uppercase;letter-spacing:.15em;color:#aaa}.menu-panel a.menu-link{font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.35;letter-spacing:-.065em;display:block;width:max-content;max-width:100%}.menu-panel a.menu-link:hover{color:#aab5ff}.menu-panel .menu-bottom{margin-top:auto;border-top:1px solid #555;padding-top:25px;display:flex;gap:25px;flex-wrap:wrap;font-size:13px}
+.menu-backdrop{position:fixed;inset:0;background:#0008;z-index:23;opacity:0;pointer-events:none;transition:opacity .3s}.menu-backdrop.show{opacity:1;pointer-events:auto}
+.hero{min-height:760px;height:100svh;max-height:1100px;position:relative;overflow:hidden;color:#fff;background:linear-gradient(115deg,#989b9c 5%,#939596 60%,#aaaeb0 100%);isolation:isolate}
+.hero-image{position:absolute;right:4%;bottom:0;height:94%;width:55%;object-fit:cover;object-position:center 20%;z-index:-1;mix-blend-mode:normal;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 19%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 19%,#000 92%,transparent 100%)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,45,48,.28),transparent 68%),linear-gradient(0deg,rgba(17,19,21,.34),transparent 32%);z-index:-1;pointer-events:none}
+.hero-inner{height:100%;position:relative;padding:125px var(--gutter) 55px}
+.hero-overline{position:absolute;top:24%;left:var(--gutter);font-size:14px;letter-spacing:.05em;line-height:1.6}.hero-overline span{display:block}
+.name-track{position:absolute;left:0;right:0;top:42%;transform:translateY(-50%);white-space:nowrap;overflow:hidden;z-index:2;pointer-events:none}
+.name-track span{display:inline-block;font-family:"Manrope",sans-serif;font-size:clamp(145px,19vw,370px);line-height:1.15;letter-spacing:-.09em;font-weight:500;animation:nameDrift 17s ease-in-out infinite alternate;transform:translateX(-5%);padding-right:8vw}
+@keyframes nameDrift{to{transform:translateX(-27%)}}
+.hero-role{position:absolute;left:var(--gutter);bottom:7%;font-size:clamp(20px,2.4vw,37px);line-height:1.4;letter-spacing:-.045em;z-index:3}
+.hero-scroll{position:absolute;left:var(--gutter);bottom:31%;font-size:36px;font-weight:300;z-index:3}
+.hero-location{position:absolute;right:var(--gutter);bottom:8%;display:flex;align-items:center;gap:15px;text-align:right;font-size:13px;line-height:1.4;z-index:3}
+.globe{display:grid;place-items:center;width:72px;height:72px;border:1px solid #fffc;border-radius:50%;font-size:36px;line-height:1}
+.section{padding:clamp(100px,13vw,190px) var(--gutter)}.section-kicker{color:#999b9f;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 26px;display:flex;align-items:center;gap:13px}.section-kicker:before{content:"";width:12px;height:12px;border:1px solid #babcc0;border-radius:50%}
+.intro .intro-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(250px,.7fr);gap:clamp(40px,8vw,135px);align-items:end}
+.statement{font-size:clamp(36px,4.5vw,74px);line-height:1.21;letter-spacing:-.065em;font-weight:400;margin:0;max-width:1050px}.intro-side{font-size:clamp(17px,1.5vw,22px);line-height:1.65;color:#5b5d62;max-width:360px}
+.circle-link{display:flex;align-items:center;justify-content:center;width:170px;height:170px;background:var(--ink);border-radius:50%;color:#fff;transition:transform .3s,background .3s;font-size:17px;flex-shrink:0}.circle-link:hover{background:var(--blue);transform:scale(1.06)}
+.about-row{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:50px}
+.trust{margin-top:100px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);padding-top:27px;gap:35px}.trust div{display:flex;flex-direction:column;gap:8px}.trust strong{font-size:clamp(36px,4vw,60px);line-height:1;letter-spacing:-.065em;font-weight:500}.trust span{font-size:14px;color:#777}
+.work{padding-top:100px;background:#f2f2f3}.section-heading{font-size:clamp(55px,8vw,125px);line-height:1.03;letter-spacing:-.085em;font-weight:500;margin:0 0 60px}
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(35px,5vw,90px) 30px}.project{display:block;min-width:0}
+.project-visual{height:clamp(270px,33vw,510px);border-radius:2px;overflow:hidden;position:relative;background:#ddd;display:flex;align-items:center;justify-content:center;transition:filter .3s}.project:hover .project-visual{filter:brightness(.93)}.project-visual:after{content:"↗";position:absolute;right:18px;top:18px;width:62px;height:62px;background:#ffffffd9;display:grid;place-items:center;border-radius:50%;font-size:25px;transform:scale(.6);opacity:0;transition:.3s}.project:hover .project-visual:after{opacity:1;transform:scale(1)}
+.project-window{width:75%;height:70%;background:#fff;border-radius:8px;box-shadow:0 20px 45px #0005;transform:perspective(900px) rotateY(-8deg) rotateX(3deg);overflow:hidden;transition:transform .6s;position:relative}
+.project:hover .project-window{transform:perspective(900px) rotateY(0) rotateX(0) scale(1.03)}
+.window-top{height:28px;display:flex;align-items:center;padding:0 12px;background:#ffffffed;gap:6px;border-bottom:1px solid #ddd}.window-top i{width:6px;height:6px;border-radius:50%;background:#aaa}
+.window-body{padding:clamp(15px,2.8vw,45px);height:calc(100% - 28px);display:flex;flex-direction:column;justify-content:space-between}
+.window-body strong{font-size:clamp(24px,3vw,48px);letter-spacing:-.065em;font-weight:700;line-height:1.1}.window-body small{font-size:clamp(10px,1vw,14px);letter-spacing:.06em;text-transform:uppercase}
+.window-ui{height:37%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.window-ui b{border-radius:5px;display:block;background:currentColor;opacity:.1}
+.project-purple{background:linear-gradient(135deg,#3b164e,#150e20)}.project-purple .project-window{background:#180f21;color:#fff}.project-purple .window-top{background:#25162e;border-color:#3d294a}.project-purple .window-ui b{background:#c879d3;opacity:.35}
+.project-green{background:linear-gradient(135deg,#ceddc5,#78a37b)}.project-green .project-window{color:#27512a;background:#f6fff2}
+.project-blue{background:linear-gradient(135deg,#a3cce3,#1d547c)}.project-blue .project-window{color:#164980}
+.project-sand{background:linear-gradient(135deg,#d3c1a9,#98826d)}.project-sand .project-window{color:#3e3429}
+.project-coral{background:linear-gradient(135deg,#f2bab2,#b65a4e)}.project-coral .project-window{color:#a23d33}
+.project-ink{background:linear-gradient(135deg,#787d8e,#242632)}.project-ink .project-window{color:#1b264b}
+.project-details{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #cbcdcf;padding:26px 0 24px;gap:16px}.project-details h3{font-size:clamp(25px,2.6vw,39px);font-weight:500;letter-spacing:-.055em;margin:0}.project-details span{color:#666b70;font-size:13px;text-align:right}
+.project-meta{color:#797d82;font-size:13px;margin-top:12px;line-height:1.5}.more-work{display:flex;justify-content:center;padding-top:85px}.outline-pill{border:1px solid #b9bbbe;border-radius:99px;padding:28px 55px;font-size:18px;transition:.25s;background:transparent;cursor:pointer}.outline-pill:hover{background:var(--ink);color:#fff}
+.services{background:var(--paper)}.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:80px}.services-intro p{align-self:end;max-width:420px;font-size:18px;line-height:1.7;color:#6b6e73}
+.service-list{border-top:1px solid #c6c6c8}.service-line{border-bottom:1px solid #c6c6c8;padding:35px 0;display:grid;grid-template-columns:80px 1fr 1fr 35px;align-items:center;gap:25px}.service-line small{font-size:13px;color:#888}.service-line h3{font-size:clamp(25px,3.3vw,48px);line-height:1.1;letter-spacing:-.055em;font-weight:500;margin:0}.service-line p{font-size:15px;line-height:1.5;color:#777;margin:0;max-width:420px}.service-line .arrow{font-size:26px}
+.about{background:#e9eaeb}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:11vw;align-items:start}.about h2{font-size:clamp(55px,7vw,112px);letter-spacing:-.075em;line-height:1.04;font-weight:500;margin:0}.about p{font-size:20px;line-height:1.8;color:#555b61}.tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.tag-row span{border:1px solid #b6b9bc;padding:12px 16px;border-radius:45px;font-size:13px}.about-links{margin-top:25px;display:flex;gap:20px;flex-wrap:wrap;font-size:14px}.about-links a{border-bottom:1px solid}
+.contact{background:#1c1c1f;color:white;padding:clamp(95px,11vw,160px) var(--gutter) 35px;border-radius:50% 50% 0 0/6% 6% 0 0;position:relative;overflow:hidden}
+.contact .section-kicker{color:#949498}.contact-title{font-size:clamp(75px,11vw,170px);font-weight:500;letter-spacing:-.09em;line-height:1;max-width:1050px;margin:0 0 35px}.contact-title span{display:block}.contact-row{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #525256;gap:20px;padding-bottom:45px}
+.contact-cta{background:var(--blue);width:185px;height:185px}.contact-links{display:flex;gap:16px;flex-wrap:wrap;padding:55px 0 80px}.contact-links a{padding:18px 28px;border:1px solid #69696b;border-radius:99px;font-size:15px}.contact-links a:hover{background:#fff;color:#222}.footer-bottom{display:flex;justify-content:space-between;gap:25px;border-top:1px solid #49494c;padding-top:26px;font-size:13px;color:#b0b0b4;flex-wrap:wrap}.footer-bottom a:hover{text-decoration:underline}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.fade.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){.site-nav{display:none}.hero{height:93svh;min-height:660px;max-height:850px}.hero-inner{padding-top:110px}.hero-image{width:96%;right:-18%;height:80%;object-position:center center;bottom:0}.name-track{top:53%}.name-track span{font-size:clamp(115px,23vw,210px)}.hero-overline{top:22%}.hero-role{bottom:6%;font-size:24px}.hero-location{bottom:5%;font-size:11px}.globe{width:55px;height:55px;font-size:24px}.intro .intro-layout,.about-grid{grid-template-columns:1fr}.intro-side{max-width:600px}.work-grid{gap:40px 20px}.service-line{grid-template-columns:36px 1fr 1fr 25px}.service-line h3{font-size:28px}}
+@media(max-width:650px){:root{--gutter:25px}.site-header{height:100px}.site-header .brand{font-size:17px}.menu-button{width:58px;height:58px}.nav-trigger>span{display:none}.nav-trigger:before{display:none}.hero{min-height:650px;height:93svh;max-height:850px}.hero-image{height:78%;width:142%;right:-35%;object-fit:cover;object-position:center 26%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 23%,#000 95%);mask-image:linear-gradient(90deg,transparent 0%,#000 23%,#000 95%)}.hero-overline{top:17%;font-size:12px}.name-track{top:55%}.name-track span{font-size:clamp(120px,32vw,230px);animation-duration:15s}.hero-role{font-size:22px;bottom:8%}.hero-location{right:25px;bottom:3%}.hero-location span{display:none}.hero-scroll{bottom:33%;font-size:27px}.section{padding:100px var(--gutter)}.statement{font-size:clamp(36px,9vw,51px)}.intro .intro-layout{gap:25px}.about-row{margin-top:25px}.circle-link{width:140px;height:140px;font-size:15px}.trust{margin-top:60px;grid-template-columns:1fr 1fr;gap:30px}.work{padding-top:80px}.section-heading{font-size:clamp(53px,13vw,80px);margin-bottom:35px}.work-grid{grid-template-columns:1fr;gap:40px}.project-visual{height:320px}.project-window{width:82%;height:75%}.window-body strong{font-size:36px}.project-details{padding:18px 0}.project-details h3{font-size:29px}.project-details span{font-size:12px}.services-intro{grid-template-columns:1fr;gap:0;margin-bottom:40px}.services-intro p{margin:0}.service-line{grid-template-columns:25px 1fr 28px;gap:12px;padding:27px 0}.service-line h3{font-size:25px}.service-line p{grid-column:2/3;grid-row:2;font-size:14px}.service-line .arrow{grid-column:3;grid-row:1}.about p{font-size:18px}.contact{border-radius:50% 50% 0 0/4% 4% 0 0;padding-top:105px}.contact-title{font-size:clamp(73px,15vw,104px)}.contact-cta{width:136px;height:136px}.contact-row{align-items:flex-end}.contact-links{padding:45px 0 70px}.menu-panel{padding-left:32px;padding-right:32px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#top">
-      <span class="brand-logo"><span>F/AI</span></span>
-      <span class="brand-text"><strong>Fahim Sikder</strong><small>AI Engineer // Secure Builder</small></span>
-    </a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></nav>
-    <a class="nav-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">OPEN_TO_WORK</a>
-    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
-  </div>
-  <div class="mobile-nav" id="mobileNav"><a href="#about">About</a><a href="#focus">Focus</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="#client-work">Client Work</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></div>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="brand" aria-label="Fahim Sikder, home">© Code by Fahim <span class="brand-dot">↗</span></a>
+  <nav class="site-nav" aria-label="Primary"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <div class="nav-trigger"><span>• &nbsp; Menu</span><button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span></button></div>
 </header>
-
-<main id="top">
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <span class="status"><i></i> 200+ web development orders completed</span>
-          <h1><span>AI Engineer.</span><span>Builder mindset.</span><span class="accent">Hacker’s eye.</span></h1>
-          <p class="lead">I build intelligent products and production web systems across AI, backend, cloud and data. I have completed 200+ web development orders, with 5+ years of hands-on WordPress, speed optimization and SEO work, plus 1 year working with AI automation and chatbots.</p>
-          <div class="role-strip"><span>200+ CLIENT ORDERS</span><span>5+ YEARS WEB EXPERIENCE</span><span>AI ENGINEERING</span><span>FULL STACK</span><span>SEO & SPEED</span></div>
-          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my systems →</a><a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GitHub</a><a class="btn btn-secondary" href="#contact">Work with me</a></div>
-        </div>
-        <div class="terminal" aria-label="Developer terminal">
-          <div class="terminal-top"><i></i><i></i><i></i><span>fahim@ai-lab:~</span></div>
-          <div class="terminal-body">
-            <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
-            <div class="dim">Fahim Sikder — AI Engineer</div><br>
-            <div><span class="prompt">$</span> <span class="cmd">cat profile.yml</span></div>
-            <div><span class="ok">focus:</span> ai_engineering</div>
-            <div><span class="ok">build:</span> full_stack_systems</div>
-            <div><span class="ok">infra:</span> cloudflare_supabase</div>
-            <div><span class="ok">mindset:</span> security_first</div>
-            <div><span class="ok">mode:</span> ship_and_harden</div><br>
-            <div><span class="prompt">$</span> <span class="cmd">principles --short</span></div>
-            <div class="dim">least privilege · validate · monitor · harden</div><br>
-            <div><span class="prompt">$</span> <span class="cmd">status</span></div>
-            <div><span class="ok">[ONLINE]</span> building useful systems<span class="cursor"></span></div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric"><b>200+</b><span>Web development orders completed</span></div>
-        <div class="metric"><b>5+ YRS</b><span>WordPress · speed · SEO</span></div>
-        <div class="metric"><b>1 YR</b><span>AI automation · AI chatbots</span></div>
-        <div class="metric"><b>AI</b><span>Current engineering direction</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">identity</span><h2>AI engineer with a systems mindset.</h2><p>I like understanding the full path: interface, API, authentication, database, cloud, analytics and the places where a system can fail or be abused.</p></div>
-      <div class="identity-grid">
-        <article class="card identity-panel">
-          <span class="eyebrow">profile</span>
-          <h3>Fahim Sikder</h3>
-          <div class="handle">@Fahimxbd</div>
-          <div class="identity-list">
-            <div><b>Role</b><span>AI Engineer</span></div>
-            <div><b>Experience</b><span>5+ years WordPress · speed optimization · SEO</span></div><div><b>AI work</b><span>1 year AI automation · AI chatbot development</span></div><div><b>Secondary focus</b><span>Security-minded software engineering</span></div>
-            <div><b>Stack</b><span>Python · JavaScript · Next.js · Supabase · Cloudflare</span></div>
-            <div><b>Study</b><span>AI Engineering — LUT University, Finland</span></div>
-            <div><b>Availability</b><span>Remote · Internship · Junior technical roles</span></div>
-          </div>
-        </article>
-        <article class="card about-copy">
-          <span class="eyebrow">how i work</span>
-          <h3>Build fast. Understand deeply. Harden what matters.</h3>
-          <p>My foundation started with WordPress websites, website speed optimization and SEO, where I have 5+ years of hands-on work. I later expanded into custom web development, app development, authentication flows, databases, admin systems, APIs, analytics and production deployments.</p><p>For the last year, I have also been working with AI automation and AI chatbot systems — connecting AI APIs with real product workflows instead of treating AI as a standalone demo.</p>
-          <p>Security is part of that engineering process: access control, bot abuse, webhook verification, secret separation, traffic behavior, logging and database policy all matter when a product reaches real users.</p>
-          <div class="manifesto">BUILD → TEST → OBSERVE → FIND WEAK PATHS → REDUCE RISK → SHIP BETTER</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="focus">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">focus areas</span><h2>One engineering profile, multiple layers.</h2><p>AI is the primary direction. Security and cloud engineering shape how I design and deploy the systems around it.</p></div>
-      <div class="grid-4">
-        <div class="cap"><b>01 / AI</b><h3>AI Engineering</h3><p>AI APIs, intelligent product flows, data-driven features and practical application design.</p></div>
-        <div class="cap"><b>02 / WEB</b><h3>Full Stack Systems</h3><p>Next.js, React, backend logic, admin tools, databases and production application architecture.</p></div>
-        <div class="cap"><b>03 / CLOUD</b><h3>Cloud & Edge</h3><p>Cloudflare Pages/Workers, deployment configuration, environment separation and production operations.</p></div>
-        <div class="cap"><b>04 / SEC</b><h3>Security Mindset</h3><p>Auth, RLS, least privilege, secret handling, bot controls, logging and safer production defaults.</p></div>
-      </div>
-      <div class="skill-cloud"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Cloudflare</span><span class="tag">Git/GitHub</span><span class="tag">REST APIs</span><span class="tag">AI APIs</span><span class="tag">RLS</span><span class="tag">Auth</span><span class="tag">Webhooks</span><span class="tag">Analytics</span></div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-row">
-          <div><span class="eyebrow">What I can do</span><h2>My Services</h2></div>
-          <p class="section-sub">From affordable starter work to advanced custom builds — choose what fits your project.</p>
-        </div>
-        <div class="carousel-actions">
-          <button class="round-btn" data-prev="servicesViewport" aria-label="Previous services">‹</button>
-          <button class="round-btn" data-next="servicesViewport" aria-label="Next services">›</button>
-        </div>
-      </div>
-
-      <div class="viewport auto-carousel" id="servicesViewport" data-interval="2200">
-        <div class="track">
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon next">N</div><h3>Next.js 14<br>Custom Website</h3></div>
-            <p class="service-desc">Modern, scalable and high-performance custom websites.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$39</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$199</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Responsive custom UI</li><li>Up to 3 core pages</li><li>Basic SEO setup</li><li>Source code included</li><li>Vercel / Cloudflare deployment</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Everything in Basic</li><li>Supabase auth & database</li><li>Admin/dashboard features</li><li>API integrations</li><li>Advanced SEO & optimization</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20Next.js%20website." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon wp">W</div><h3>WordPress<br>Website</h3></div>
-            <p class="service-desc">Responsive and SEO-friendly WordPress websites.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$35</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$100</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Responsive theme setup</li><li>Up to 4 pages</li><li>Contact form</li><li>Basic SEO</li><li>Basic speed optimization</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Everything in Basic</li><li>Custom premium-style design</li><li>Up to 8 pages</li><li>Advanced optimization</li><li>Security & analytics setup</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20WordPress%20website." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon laravel">L</div><h3>Laravel<br>Website</h3></div>
-            <p class="service-desc">Custom Laravel applications with database and admin workflows.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$99</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$299</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Laravel project setup</li><li>Responsive frontend</li><li>Database integration</li><li>Basic CRUD</li><li>Deployment assistance</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Everything in Basic</li><li>Authentication & roles</li><li>Admin dashboard</li><li>API integrations</li><li>Advanced workflows</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20Laravel%20website." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon portfolio">P</div><h3>Portfolio<br>Website</h3></div>
-            <p class="service-desc">A clean professional portfolio that presents your work properly.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$30</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$69</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Responsive one-page portfolio</li><li>Projects & skills section</li><li>Contact links</li><li>Basic SEO</li><li>Deployment support</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Premium custom UI</li><li>More portfolio sections</li><li>Project gallery</li><li>Custom animations</li><li>SEO & analytics setup</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20portfolio%20website." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon business">B</div><h3>Business<br>Website</h3></div>
-            <p class="service-desc">A professional website for your company, agency or local business.</p>
-            <div class="package-tabs single"><button class="pkg active" data-package="basic">Starting from<strong>$99</strong></button></div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Custom business design</li><li>Multiple core pages</li><li>Contact & inquiry section</li><li>Basic SEO</li><li>Analytics integration</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20business%20website." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon landing">LP</div><h3>Landing<br>Page</h3></div>
-            <p class="service-desc">Conversion-focused landing pages for products and campaigns.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$19</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$49</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Responsive single page</li><li>Hero + CTA sections</li><li>Contact buttons</li><li>Mobile optimization</li><li>Basic SEO</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Everything in Basic</li><li>Premium conversion layout</li><li>Custom sections</li><li>Analytics/pixel integration</li><li>Speed optimization</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20a%20landing%20page." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon fix">↗</div><h3>Website<br>Bug Fix</h3></div>
-            <p class="service-desc">Fix layout, deployment, performance and functionality issues.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$19</strong></button>
-              <button class="pkg" data-package="premium">Advanced<strong>$99</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>One focused issue</li><li>Responsive/UI fix</li><li>Basic diagnosis</li><li>Small code correction</li><li>Fix summary</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Multiple complex issues</li><li>Deployment debugging</li><li>Database/auth troubleshooting</li><li>Performance investigation</li><li>Post-fix verification</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20need%20help%20fixing%20a%20website%20bug." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon ai">AI</div><h3>AI Chatbot<br>Open Source AI</h3></div>
-            <p class="service-desc">AI chatbot integration using a suitable open-source AI model.</p>
-            <div class="package-tabs single"><button class="pkg active" data-package="basic">Starting from<strong>$99</strong></button></div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Chat interface</li><li>Open-source model connection</li><li>Prompt/system setup</li><li>Website integration</li><li>Deployment guidance</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20an%20AI%20chatbot." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon seo">SEO</div><h3>SEO<br>Optimization</h3></div>
-            <p class="service-desc">On-page and technical SEO improvements for stronger visibility.</p>
-            <div class="package-tabs single"><button class="pkg active" data-package="basic">Starting from<strong>$39</strong></button></div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>SEO audit</li><li>Title/meta improvements</li><li>Technical SEO checks</li><li>Indexing essentials</li><li>Performance recommendations</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20SEO%20services." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-top"><div class="service-icon stem">STEM</div><h3>Math, Physics &<br>Chemistry Help</h3></div>
-            <p class="service-desc">Concept explanations, worked problems and structured study support.</p>
-            <div class="package-tabs">
-              <button class="pkg active" data-package="basic">Basic<strong>$49</strong></button>
-              <button class="pkg" data-package="premium">Premium<strong>$199</strong></button>
-            </div>
-            <p class="included">What's included?</p>
-            <ul class="features" data-features="basic"><li>Focused topic support</li><li>Concept explanations</li><li>Worked practice problems</li><li>Study guidance</li><li>Online support session</li></ul>
-            <ul class="features" data-features="premium" hidden><li>Extended multi-topic support</li><li>Structured study plan</li><li>Additional practice sets</li><li>Follow-up explanations</li><li>Ongoing support period</li></ul>
-            <div class="service-footer"><a class="service-go" href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%27m%20interested%20in%20math%2C%20physics%20or%20chemistry%20help." target="_blank" rel="noopener">→</a></div>
-          </article>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">experience</span><h2>Built from years of practical client work.</h2><p>My experience started with websites and optimization, expanded into custom software, and now includes AI-powered automation and conversational systems.</p></div>
-      <div class="experience-list">
-        <article class="experience-item">
-          <div class="experience-time">5+ years</div>
-          <div class="experience-body"><h3>WordPress, Website Speed Optimization & SEO</h3><p>Hands-on work building and improving WordPress websites, increasing performance, fixing technical issues and working on search-engine optimization for better visibility and usability.</p><div class="experience-tags"><span>WordPress</span><span>Performance</span><span>Core Web Vitals</span><span>Technical SEO</span><span>On-Page SEO</span></div></div>
-        </article>
-        <article class="experience-item">
-          <div class="experience-time">Development</div>
-          <div class="experience-body"><h3>Web Development & App Development</h3><p>Moved beyond CMS work into custom web products and application development, including responsive interfaces, authentication, databases, admin systems, APIs and production deployment.</p><div class="experience-tags"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Supabase</span><span>Cloudflare</span></div></div>
-        </article>
-        <article class="experience-item">
-          <div class="experience-time">1 year</div>
-          <div class="experience-body"><h3>AI Automation & AI Chatbots</h3><p>Building AI-powered workflows and chatbot experiences by integrating AI APIs with websites, business logic, data and user-facing product features.</p><div class="experience-tags"><span>AI Automation</span><span>AI Chatbots</span><span>LLM APIs</span><span>Prompt Design</span><span>Workflow Integration</span></div></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">selected systems</span><h2>Products I have built and shipped.</h2><p>Compact by design: project, technical scope and live destination — no oversized image cards.</p></div>
-      <div class="project-list">
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> newest</span><strong>HeyProma</strong><small>heyproma.com</small></div>
-          <div class="project-desc">AI companion platform with auth, analytics, bot-traffic controls, server-side integrations and payment/webhook flows.</div>
-          <div class="project-stack"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>AI</span><span>Auth</span></div>
-          <a class="project-link" href="https://heyproma.com/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> live</span><strong>Exam Center BD</strong><small>examcenterbd.com</small></div>
-          <div class="project-desc">Online exam platform with authentication, question systems, admin workflows, performance data and user progress.</div>
-          <div class="project-stack"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
-          <a class="project-link" href="https://examcenterbd.com/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> product</span><strong>Taskora</strong><small>micro-jobs · social · wallet</small></div>
-          <div class="project-desc">Micro-job and social system with wallet ledger, proofs, withdrawals, referrals, moderation and role-aware admin controls.</div>
-          <div class="project-stack"><span>React</span><span>TypeScript</span><span>Supabase</span><span>RLS</span></div>
-          <span class="project-link">SYSTEM</span>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> live</span><strong>Neferiq</strong><small>neferiq.com</small></div>
-          <div class="project-desc">Letter-first social platform with profiles, authentication, moderation and Supabase/Cloudflare infrastructure.</div>
-          <div class="project-stack"><span>Supabase</span><span>PostgreSQL</span><span>Cloudflare</span></div>
-          <a class="project-link" href="https://neferiq.com/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> live</span><strong>CinemaMaddy</strong><small>cinemamaddy.site</small></div>
-          <div class="project-desc">Responsive movie discovery experience focused on polished presentation, performance and mobile usability.</div>
-          <div class="project-stack"><span>JavaScript</span><span>Responsive</span><span>Production</span></div>
-          <a class="project-link" href="https://cinemamaddy.site/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> client</span><strong>Oronno Nogor</strong><small>oronnonogor.com</small></div>
-          <div class="project-desc">Production-ready client website built for clear information architecture, responsive browsing and reliable deployment.</div>
-          <div class="project-stack"><span>Responsive</span><span>Performance</span><span>Deployment</span></div>
-          <a class="project-link" href="https://oronnonogor.com/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-        <div class="project-row">
-          <div class="project-main"><span class="project-status"><i></i> new</span><strong>Nobin Mart</strong><small>nobin-mart.fahimsikder59595.workers.dev</small></div>
-          <div class="project-desc">Modern Bangladesh-focused e-commerce website with responsive product browsing, account flows and admin-ready commerce structure.</div>
-          <div class="project-stack"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span><span>Responsive</span></div>
-          <a class="project-link" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener">LIVE ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="lab">
-    <div class="container">
-      <div class="lab">
-        <div class="lab-grid">
-          <div><span class="eyebrow">engineering lab</span><h2>What I’m sharpening next.</h2><p>I’m deepening the technical foundations that make AI products stronger: backend systems, Linux, networking, HTTP, web security, observability and secure deployment.</p><div class="skill-cloud"><span class="tag">OWASP Top 10</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">HTTP</span><span class="tag">Threat Modeling</span><span class="tag">Logging</span><span class="tag">LLM Apps</span><span class="tag">RAG</span></div></div>
-          <div class="checklist">
-            <div class="check"><b>[01]</b><span>Build stronger AI backends and data pipelines.</span></div>
-            <div class="check"><b>[02]</b><span>Practice legal web-security labs and document lessons.</span></div>
-            <div class="check"><b>[03]</b><span>Improve Linux, networking and protocol-level understanding.</span></div>
-            <div class="check"><b>[04]</b><span>Turn production debugging into reusable engineering knowledge.</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">background</span><h2>Technical foundation.</h2></div>
-      <div class="background-grid">
-        <article class="card">
-          <div class="education"><span class="year">UNIVERSITY</span><div><h3>AI Engineering — LUT University, Finland</h3><p>Studying Artificial Intelligence Engineering with a focus on mathematics, programming, intelligent systems, data and software engineering.</p></div></div>
-          <div class="education"><span class="year">HSC 2024</span><div><h3>Science — GPA 5.00 / 5.00</h3><p>Higher Mathematics, Physics, Chemistry and ICT formed the base for my engineering direction.</p></div></div>
-        </article>
-        <article class="card"><span class="eyebrow">engineering profile</span><h3 style="margin:10px 0 8px">AI + software + security awareness</h3><p class="muted" style="margin:0">My strongest work happens when I can connect product requirements to architecture, implementation, deployment, production behavior and security decisions instead of treating them as separate problems.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="client-work">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">business & client work</span>
-        <h2>Websites built for real businesses and digital services.</h2>
-        <p>A selection of commercial, e-commerce and service platforms I have designed, developed and deployed.</p>
-      </div>
-
-      <div class="business-grid">
-        <article class="business-card">
-          <div class="business-meta"><span>ECOMMERCE</span><i></i><small>CLIENT PROJECT</small></div>
-          <h3>Sheikh Seeds</h3>
-          <p>High-volume e-commerce platform with product catalog, order management, courier workflows, analytics, admin operations and optimized cloud delivery.</p>
-          <div class="business-tech"><span>Next.js</span><span>Supabase</span><span>Cloudflare</span><span>R2</span></div>
-          <a class="business-link" href="https://sheikhseeds.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
-        </article>
-
-        <article class="business-card">
-          <div class="business-meta"><span>BUSINESS</span><i></i><small>CLIENT WEBSITE</small></div>
-          <h3>Oronno Nogor</h3>
-          <p>Professional client website with clear information architecture, responsive presentation, fast page delivery and production-ready deployment.</p>
-          <div class="business-tech"><span>Responsive</span><span>SEO</span><span>Performance</span><span>Deployment</span></div>
-          <a class="business-link" href="https://oronnonogor.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
-        </article>
-
-        <article class="business-card">
-          <div class="business-meta"><span>ECOMMERCE</span><i></i><small>STORE SYSTEM</small></div>
-          <h3>Nobin Mart</h3>
-          <p>Bangladesh-focused online store with product browsing, account flows, responsive storefront UI and an admin-ready commerce architecture.</p>
-          <div class="business-tech"><span>E-commerce</span><span>Supabase</span><span>Cloudflare</span><span>Admin</span></div>
-          <a class="business-link" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
-        </article>
-
-        <article class="business-card">
-          <div class="business-meta"><span>EDTECH</span><i></i><small>SERVICE PLATFORM</small></div>
-          <h3>Exam Center BD</h3>
-          <p>Online education service with authentication, exam workflows, question management, student performance tracking and admin operations.</p>
-          <div class="business-tech"><span>Supabase</span><span>RLS</span><span>Cloudflare</span><span>Admin</span></div>
-          <a class="business-link" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer">VIEW WEBSITE ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section quote-section" id="quotes">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">words that endure</span>
-        <h2>Ideas from influential voices across history.</h2>
-        <p>Short, source-labeled quotations on character, courage, learning, reason and human dignity.</p>
-      </div>
-    </div>
-
-    <div class="quote-marquee" aria-label="Inspirational quotations">
-      <div class="quote-fade quote-fade-left"></div>
-      <div class="quote-fade quote-fade-right"></div>
-      <div class="quote-track">
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The best among you are those who have the best manners and character.</blockquote>
-            <div class="quote-person"><strong>Prophet Muhammad ﷺ</strong><span>Sahih al-Bukhari 6029</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Love your enemies, bless them that curse you.</blockquote>
-            <div class="quote-person"><strong>Jesus Christ</strong><span>Matthew 5:44</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The weak can never forgive. Forgiveness is the attribute of the strong.</blockquote>
-            <div class="quote-person"><strong>Mahatma Gandhi</strong><span>Young India, 2 Apr 1931</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Hatred is never appeased by hatred. By non-hatred alone is hatred appeased.</blockquote>
-            <div class="quote-person"><strong>Gautama Buddha</strong><span>Dhammapada 5</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Is it not pleasant to learn with constant perseverance and application?</blockquote>
-            <div class="quote-person"><strong>Confucius</strong><span>Analects 1.1</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The unexamined life is not worth living.</blockquote>
-            <div class="quote-person"><strong>Socrates</strong><span>Plato, Apology 38a</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Life is like riding a bicycle. To keep your balance you must keep moving.</blockquote>
-            <div class="quote-person"><strong>Albert Einstein</strong><span>Letter to Eduard Einstein, 1930</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>If I have seen further, it is by standing on the shoulders of giants.</blockquote>
-            <div class="quote-person"><strong>Isaac Newton</strong><span>Letter to Robert Hooke, 1676</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Where the mind is without fear and the head is held high.</blockquote>
-            <div class="quote-person"><strong>Rabindranath Tagore</strong><span>Gitanjali 35</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The happiness of your life depends upon the quality of your thoughts.</blockquote>
-            <div class="quote-person"><strong>Marcus Aurelius</strong><span>Meditations 3.9 · Collier translation</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The best among you are those who have the best manners and character.</blockquote>
-            <div class="quote-person"><strong>Prophet Muhammad ﷺ</strong><span>Sahih al-Bukhari 6029</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Love your enemies, bless them that curse you.</blockquote>
-            <div class="quote-person"><strong>Jesus Christ</strong><span>Matthew 5:44</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The weak can never forgive. Forgiveness is the attribute of the strong.</blockquote>
-            <div class="quote-person"><strong>Mahatma Gandhi</strong><span>Young India, 2 Apr 1931</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Hatred is never appeased by hatred. By non-hatred alone is hatred appeased.</blockquote>
-            <div class="quote-person"><strong>Gautama Buddha</strong><span>Dhammapada 5</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Is it not pleasant to learn with constant perseverance and application?</blockquote>
-            <div class="quote-person"><strong>Confucius</strong><span>Analects 1.1</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The unexamined life is not worth living.</blockquote>
-            <div class="quote-person"><strong>Socrates</strong><span>Plato, Apology 38a</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Life is like riding a bicycle. To keep your balance you must keep moving.</blockquote>
-            <div class="quote-person"><strong>Albert Einstein</strong><span>Letter to Eduard Einstein, 1930</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>If I have seen further, it is by standing on the shoulders of giants.</blockquote>
-            <div class="quote-person"><strong>Isaac Newton</strong><span>Letter to Robert Hooke, 1676</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>Where the mind is without fear and the head is held high.</blockquote>
-            <div class="quote-person"><strong>Rabindranath Tagore</strong><span>Gitanjali 35</span></div>
-          </article>
-          <article class="quote-card">
-            <div class="quote-mark">“</div>
-            <blockquote>The happiness of your life depends upon the quality of your thoughts.</blockquote>
-            <div class="quote-person"><strong>Marcus Aurelius</strong><span>Meditations 3.9 · Collier translation</span></div>
-          </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact">
-        <div><span class="eyebrow">contact</span><h2>Need an engineer who can <span class="accent">build beyond the UI?</span></h2><p>I’m open to AI internships, junior engineering roles, remote software work and serious technical collaborations.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:fahim.sikder.web@gmail.com?subject=Opportunity%20for%20Fahim%20Sikder">Email me →</a><a class="btn btn-secondary" href="https://github.com/Fahimxbd" target="_blank" rel="noopener">Review GitHub</a></div></div>
-        <form id="contactForm"><input name="name" required placeholder="Your name"><input name="email" type="email" required placeholder="Your email"><input name="subject" required placeholder="Role / project"><textarea name="message" required placeholder="Tell me what you need..."></textarea><button class="btn btn-primary" type="submit">Send message</button></form>
-      </div>
-    </div>
-  </section>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<nav class="menu-panel" id="menuPanel" aria-label="Expanded navigation" inert>
+  <small>Navigation</small>
+  <div style="margin-top:30px">
+    <a class="menu-link" href="#top">Home</a>
+    <a class="menu-link" href="#work">Work</a>
+    <a class="menu-link" href="#services">Services</a>
+    <a class="menu-link" href="#about">About</a>
+    <a class="menu-link" href="#contact">Contact</a>
+  </div>
+  <div class="menu-bottom"><a href="/web-design/">Web development</a><a href="/web-development-training/">Training</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</nav>
+<main id="content">
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <img class="hero-image" src="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3.1-flash-image/images/df192ed6-d2d2-4e1b-ac5b-6105deecd5c9/64451e37-6d63-4cfe-bd76-2d8f434a8a8f/Edit_the_person_in_the_original_uploaded_photograph_into_a_s.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMDgyN2MyYjI1OThiYjkyZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTY0MjY3NH0.AYdUiPOrpGeSj78OqhXsvZYIh7kwvEAoC_zvorvUIsM" alt="Professional portrait of Fahim Sikder wearing a charcoal blazer" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/222631662?v=4'">
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <div class="hero-overline"><span>Independent digital developer</span><span>AI solutions &amp; thoughtful web experiences</span></div>
+    <div class="name-track" aria-hidden="true"><span>Fahim Sikder — Fahim Sikder —</span></div>
+    <h1 class="sr-only" id="heroTitle" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Fahim Sikder — Independent Full Stack Developer &amp; AI Solutions Builder</h1>
+    <a class="hero-scroll" href="#intro" aria-label="Scroll to introduction">↘</a>
+    <div class="hero-role">Freelance<br>Developer &amp; AI Solutions Builder</div>
+    <div class="hero-location"><span>Working remotely<br>Worldwide · Based in Bangladesh</span><div class="globe" aria-hidden="true">◎</div></div>
+  </div>
+</section>
+<section class="section intro" id="intro" aria-labelledby="introTitle">
+  <div class="intro-layout">
+    <h2 class="statement fade" id="introTitle">Good digital work is more than a pretty website. It's an experience that feels effortless—and works for your business.</h2>
+    <div class="intro-side fade">I combine design, AI and full-stack development to build modern digital products that look considered, run fast and solve real problems.</div>
+  </div>
+  <div class="about-row"><span class="section-kicker">Independent, hands-on, from idea to launch</span><a class="circle-link" href="#about">About me ↗</a></div>
+  <div class="trust fade"><div><strong>200+</strong><span>Web development orders in my portfolio record</span></div><div><strong>5+ years</strong><span>WordPress, web performance &amp; SEO experience</span></div><div><strong>AI + Web</strong><span>Building practical solutions from concept to launch</span></div></div>
+</section>
+<section class="section work" id="work" aria-labelledby="workTitle">
+  <p class="section-kicker">Selected work / 2026</p><h2 class="section-heading" id="workTitle">Work that<br>speaks for itself<span style="color:#96999d">.</span></h2>
+  <div class="work-grid">
+    <a class="project fade" href="https://heyproma.com/" target="_blank" rel="noopener noreferrer" aria-label="Open HeyProma live project"><div class="project-visual project-purple"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Your AI companion</small><strong>HeyProma<span style="color:#dca9e9">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>HeyProma</h3><span>AI platform / Development</span></div><p class="project-meta">Conversational AI experience · Authentication · Cloud deployment</p></a>
+    <a class="project fade" href="https://sheikhseeds.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Sheikh Seeds live project"><div class="project-visual project-green"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Made for growers</small><strong>Sheikh<br>Seeds<span style="color:#89ba5a">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Sheikh Seeds</h3><span>E-commerce / Web systems</span></div><p class="project-meta">Online store · Order workflows · Cloudflare &amp; Supabase</p></a>
+    <a class="project fade" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Exam Center BD live project"><div class="project-visual project-blue"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Learn · Test · Improve</small><strong>Exam<br>Center BD<span style="color:#4c9ada">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Exam Center BD</h3><span>EdTech / Platform</span></div><p class="project-meta">Online exams · Student progress · Admin workflows</p></a>
+    <a class="project fade" href="https://oronnonogor.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Oronno Nogor live project"><div class="project-visual project-sand"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>A modern property experience</small><strong>Oronno<br>Nogor<span style="color:#c3985e">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Oronno Nogor</h3><span>Business / Web design</span></div><p class="project-meta">Responsive design · Business content · Deployment</p></a>
+    <a class="project fade" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Nobin Mart live project"><div class="project-visual project-coral"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Shopping made simpler</small><strong>Nobin<br>Mart<span style="color:#e65d67">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Nobin Mart</h3><span>Storefront / Commerce</span></div><p class="project-meta">Product catalog · Accounts · Admin-ready flows</p></a>
+    <a class="project fade" href="https://neferiq.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Neferiq live project"><div class="project-visual project-ink"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Thoughtful connections</small><strong>Neferiq<span style="color:#708ff5">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Neferiq</h3><span>Social platform / Development</span></div><p class="project-meta">Letter-first social experience · User authentication</p></a>
+  </div>
+  <div class="more-work"><a class="outline-pill" href="/web-design/">More work &amp; services ↗</a></div>
+</section>
+<section class="section services" id="services" aria-labelledby="servicesTitle">
+  <p class="section-kicker">What I do</p>
+  <div class="services-intro"><h2 class="section-heading" id="servicesTitle">Built to stand<br>out &amp; perform.</h2><p>One person, a joined-up process. From the first sketch to the deployed product, I focus on the details that turn a website into a useful business asset.</p></div>
+  <div class="service-list">
+    <div class="service-line fade"><small>01</small><h3>Web design &amp; development</h3><p>Custom websites, landing pages and responsive business experiences.</p><span class="arrow">↗</span></div>
+    <div class="service-line fade"><small>02</small><h3>E-commerce &amp; web apps</h3><p>Fast storefronts, admin panels and practical product workflows.</p><span class="arrow">↗</span></div>
+    <div class="service-line fade"><small>03</small><h3>AI solutions &amp; automation</h3><p>Chatbots, AI integrations and workflow-focused applications.</p><span class="arrow">↗</span></div>
+    <div class="service-line fade"><small>04</small><h3>SEO, speed &amp; support</h3><p>Optimization, launch help and dependable ongoing improvements.</p><span class="arrow">↗</span></div>
+  </div>
+  <div class="more-work"><a class="outline-pill" href="/web-design/">Explore services ↗</a></div>
+</section>
+<section class="section about" id="about" aria-labelledby="aboutTitle">
+  <p class="section-kicker">A little about me</p>
+  <div class="about-grid"><h2 id="aboutTitle" class="fade">Curiosity.<br>Craft.<br>Delivery.</h2><div class="fade"><p>I'm Fahim, a Bangladesh-based developer working across websites, AI tools and production systems. I enjoy combining thoughtful interfaces with the engineering that makes them useful, fast and maintainable.</p><p>My work spans client websites, e-commerce, learning platforms and AI-powered products. I collaborate remotely and care about clear communication, honest scope and getting the details right.</p><div class="tag-row"><span>Next.js &amp; React</span><span>Python &amp; AI</span><span>Cloudflare</span><span>Supabase</span><span>WordPress</span><span>SEO</span></div><div class="about-links"><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a href="/web-development-training/">Training &amp; learning ↗</a></div></div></div>
+</section>
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <p class="section-kicker">Have something in mind?</p>
+  <div class="contact-row"><h2 class="contact-title" id="contactTitle">Let's work<span>together.</span></h2><a class="circle-link contact-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Project%20inquiry%20for%20Fahim" aria-label="Email Fahim about a project">Get in touch ↗</a></div>
+  <div class="contact-links"><a href="mailto:fahim.sikder.web@gmail.com">fahim.sikder.web@gmail.com</a><a href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
+  <div class="footer-bottom"><span>© 2026 Fahim Sikder. Independently built with care.</span><span><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp; · &nbsp; <a href="#top">Back to top ↑</a></span></div>
+</section>
 </main>
-
-<footer><div class="container footer"><span>© 2026 Fahim Sikder // AI systems · secure engineering.</span><span><a href="mailto:fahim.sikder.web@gmail.com">EMAIL</a> · <a href="https://github.com/Fahimxbd" target="_blank" rel="noopener">GITHUB</a></span></div></footer>
-
 <script>
-  const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');
-  menuBtn.addEventListener('click',()=>mobileNav.classList.toggle('open'));
-  mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
-  document.getElementById('contactForm').addEventListener('submit',event=>{
-    event.preventDefault();
-    const data=new FormData(event.currentTarget);
-    const subject=encodeURIComponent(data.get('subject'));
-    const body=encodeURIComponent('Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\n\n'+data.get('message'));
-    window.location.href='mailto:fahim.sikder.web@gmail.com?subject='+subject+'&body='+body;
-  });
-
-  // Service package tabs
-  document.querySelectorAll('#services .service-card').forEach(card=>{
-    const tabs=[...card.querySelectorAll('.pkg')];
-    tabs.forEach(tab=>tab.addEventListener('click',()=>{
-      tabs.forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
-      const selected=tab.dataset.package;
-      card.querySelectorAll('.features[data-features]').forEach(list=>{
-        list.hidden=list.dataset.features!==selected;
-      });
-    }));
-  });
-
-  // Service carousel controls + subtle auto-slide
-  const servicesViewport=document.getElementById('servicesViewport');
-  if(servicesViewport){
-    const amount=()=>Math.min(305,servicesViewport.clientWidth*.88);
-    document.querySelectorAll('[data-prev="servicesViewport"]').forEach(btn=>btn.addEventListener('click',()=>servicesViewport.scrollBy({left:-amount(),behavior:'smooth'})));
-    document.querySelectorAll('[data-next="servicesViewport"]').forEach(btn=>btn.addEventListener('click',()=>servicesViewport.scrollBy({left:amount(),behavior:'smooth'})));
-    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      let paused=false;
-      servicesViewport.addEventListener('mouseenter',()=>paused=true);
-      servicesViewport.addEventListener('mouseleave',()=>paused=false);
-      servicesViewport.addEventListener('touchstart',()=>paused=true,{passive:true});
-      servicesViewport.addEventListener('touchend',()=>{setTimeout(()=>paused=false,2500)},{passive:true});
-      setInterval(()=>{
-        if(paused || document.hidden) return;
-        const nearEnd=servicesViewport.scrollLeft+servicesViewport.clientWidth>=servicesViewport.scrollWidth-20;
-        servicesViewport.scrollTo({left:nearEnd?0:servicesViewport.scrollLeft+amount(),behavior:'smooth'});
-      },3600);
-    }
-  }
-
+(function(){
+ var b=document.getElementById('menuButton'),p=document.getElementById('menuPanel'),o=document.getElementById('menuBackdrop'),h=document.getElementById('siteHeader'),prior=null;
+ function close(){p.classList.remove('open');o.classList.remove('show');p.inert=true;b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');document.body.style.overflow='';h.style.position='absolute';h.style.color='white';prior=null}
+ function open(){prior=document.activeElement;p.inert=false;p.classList.add('open');o.classList.add('show');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Close menu');document.body.style.overflow='hidden';h.style.position='fixed';h.style.color='white';p.querySelector('.menu-link').focus()}
+ b.addEventListener('click',function(){p.classList.contains('open')?close():open()});o.addEventListener('click',close);
+ p.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&p.classList.contains('open')){close();b.focus()}});
+ var els=document.querySelectorAll('.fade');if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});els.forEach(function(el){observer.observe(el)})}else{els.forEach(function(el){el.classList.add('visible')})}
+})();
 </script>
 </body>
 </html>
