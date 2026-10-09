@@ -78,14 +78,71 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 @media(max-width:900px){.site-nav{display:none}.hero{height:93svh;min-height:660px;max-height:850px}.hero-inner{padding-top:110px}.hero-image{width:96%;right:-18%;height:80%;object-position:center center;bottom:0}.name-track{top:53%}.name-track span{font-size:clamp(115px,23vw,210px)}.hero-overline{top:22%}.hero-role{bottom:6%;font-size:24px}.hero-location{bottom:5%;font-size:11px}.globe{width:55px;height:55px;font-size:24px}.intro .intro-layout,.about-grid{grid-template-columns:1fr}.intro-side{max-width:600px}.work-grid{gap:40px 20px}.service-line{grid-template-columns:36px 1fr 1fr 25px}.service-line h3{font-size:28px}}
 @media(max-width:650px){:root{--gutter:25px}.site-header{height:100px}.site-header .brand{font-size:17px}.menu-button{width:58px;height:58px}.nav-trigger>span{display:none}.nav-trigger:before{display:none}.hero{min-height:650px;height:93svh;max-height:850px}.hero-image{height:78%;width:142%;right:-35%;object-fit:cover;object-position:center 26%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 23%,#000 95%);mask-image:linear-gradient(90deg,transparent 0%,#000 23%,#000 95%)}.hero-overline{top:17%;font-size:12px}.name-track{top:55%}.name-track span{font-size:clamp(120px,32vw,230px);animation-duration:15s}.hero-role{font-size:22px;bottom:8%}.hero-location{right:25px;bottom:3%}.hero-location span{display:none}.hero-scroll{bottom:33%;font-size:27px}.section{padding:100px var(--gutter)}.statement{font-size:clamp(36px,9vw,51px)}.intro .intro-layout{gap:25px}.about-row{margin-top:25px}.circle-link{width:140px;height:140px;font-size:15px}.trust{margin-top:60px;grid-template-columns:1fr 1fr;gap:30px}.work{padding-top:80px}.section-heading{font-size:clamp(53px,13vw,80px);margin-bottom:35px}.work-grid{grid-template-columns:1fr;gap:40px}.project-visual{height:320px}.project-window{width:82%;height:75%}.window-body strong{font-size:36px}.project-details{padding:18px 0}.project-details h3{font-size:29px}.project-details span{font-size:12px}.services-intro{grid-template-columns:1fr;gap:0;margin-bottom:40px}.services-intro p{margin:0}.service-line{grid-template-columns:25px 1fr 28px;gap:12px;padding:27px 0}.service-line h3{font-size:25px}.service-line p{grid-column:2/3;grid-row:2;font-size:14px}.service-line .arrow{grid-column:3;grid-row:1}.about p{font-size:18px}.contact{border-radius:50% 50% 0 0/4% 4% 0 0;padding-top:105px}.contact-title{font-size:clamp(73px,15vw,104px)}.contact-cta{width:136px;height:136px}.contact-row{align-items:flex-end}.contact-links{padding:45px 0 70px}.menu-panel{padding-left:32px;padding-right:32px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+
+/* Mobile refinements keep the existing editorial design and portrait */
+.site-header{height:74px}
+.site-nav{display:none}
+.brand{font-size:19px;letter-spacing:-.04em}
+.nav-trigger:before{display:none}
+.hero{height:90svh;min-height:670px;max-height:960px}
+.hero-inner{padding-top:80px}
+.hero-overline{top:16%;font-size:13px}
+.hero-name{position:absolute;z-index:3;top:30%;left:var(--gutter);right:var(--gutter);margin:0;font-family:Manrope,sans-serif;font-size:clamp(70px,11vw,170px);font-weight:500;letter-spacing:-.085em;line-height:1;white-space:nowrap;pointer-events:none}
+.hero-name span{display:inline}
+.intro.section{padding-top:clamp(70px,8vw,120px);padding-bottom:clamp(65px,8vw,110px)}
+.statement{font-size:clamp(34px,4.1vw,67px)}
+.trust{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:70px}
+.trust strong{font-size:clamp(22px,2.8vw,45px);line-height:1.13;letter-spacing:-.06em}
+.trust span{line-height:1.55}
+.work{padding-top:90px}
+.plain-projects{display:block;border-top:1px solid #c9cacb}
+.simple-project{display:grid;grid-template-columns:minmax(0,1fr) 65px;align-items:center;gap:20px;border-bottom:1px solid #c9cacb;padding:35px 0;transition:padding .25s}
+.simple-project:hover{padding-left:10px}
+.project-index{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#888;display:block;margin-bottom:12px}
+.simple-project h3{font-weight:500;letter-spacing:-.065em;font-size:clamp(33px,4.5vw,64px);margin:0 0 14px}
+.simple-project p{color:#666;font-size:clamp(15px,1.3vw,18px);line-height:1.65;max-width:700px;margin:0 0 14px}
+.project-url{font-size:14px;padding-bottom:4px;border-bottom:1px solid #777}
+.project-arrow{height:56px;width:56px;border-radius:50%;border:1px solid #b9b9bd;display:grid;place-items:center;font-size:25px;transition:background .2s,color .2s}
+.simple-project:hover .project-arrow{background:#455ce9;color:white;border-color:#455ce9}
+.greeting{position:fixed;inset:0;z-index:999;background:#202023;color:#fff;display:grid;place-items:center;font-size:clamp(48px,9vw,115px);font-weight:500;letter-spacing:-.06em;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s}
+.greeting-active .greeting{opacity:1;visibility:visible}
+@media(max-width:900px){.trust{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){
+.site-header{height:68px}
+.brand{font-size:18px}
+.menu-button{width:50px;height:50px;background:#1c1c1f}
+.hero{height:86svh;min-height:600px;max-height:770px}
+.hero-overline{top:14%;font-size:12px;line-height:1.6}
+.hero-name{top:23%;font-size:clamp(60px,15vw,86px);line-height:1;white-space:normal;right:10px}
+.hero-name span{display:block}
+.hero-role{font-size:20px;bottom:8%}
+.hero-location{bottom:5%}
+.intro.section{padding-top:70px;padding-bottom:72px}
+.statement{font-size:clamp(32px,8.4vw,45px)}
+.intro .intro-layout{gap:18px}
+.about-row .section-kicker{font-size:10px;line-height:1.55;max-width:53%}
+.about-row .circle-link{height:125px;width:125px}
+.trust{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px;margin-top:50px}
+.trust strong{font-size:clamp(22px,6vw,31px)}
+.trust span{font-size:12px}
+.work{padding-top:70px}
+.simple-project{grid-template-columns:minmax(0,1fr) 40px;gap:8px;padding:27px 0}
+.simple-project h3{font-size:clamp(32px,9vw,44px)}
+.simple-project p{font-size:14px;line-height:1.5}
+.simple-project p br{display:none}
+.project-index{font-size:10px}
+.project-arrow{height:39px;width:39px;font-size:21px}
+}
+@media(prefers-reduced-motion:reduce){.greeting{transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
+<div class="greeting" role="status" aria-live="polite"><span id="greetingWord">Hello</span></div>
 <header class="site-header" id="siteHeader">
-  <a href="#top" class="brand" aria-label="Fahim Sikder, home">© Code by Fahim <span class="brand-dot">↗</span></a>
-  <nav class="site-nav" aria-label="Primary"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-  <div class="nav-trigger"><span>• &nbsp; Menu</span><button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span></button></div>
+  <a href="#top" class="brand" aria-label="Fahim Sikder, home">Fahim Sikder</a>
+  
+  <div class="nav-trigger"><button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span><span></span></button></div>
 </header>
 <div class="menu-backdrop" id="menuBackdrop"></div>
 <nav class="menu-panel" id="menuPanel" aria-label="Expanded navigation" inert>
@@ -97,16 +154,15 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
     <a class="menu-link" href="#about">About</a>
     <a class="menu-link" href="#contact">Contact</a>
   </div>
-  <div class="menu-bottom"><a href="/web-design/">Web development</a><a href="/web-development-training/">Training</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  <div class="menu-bottom"><a href="/web-design/">Web development</a><a href="/web-development-training/">Training</a><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
 </nav>
 <main id="content">
 <section class="hero" id="top" aria-labelledby="heroTitle">
   <img class="hero-image" src="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3.1-flash-image/images/df192ed6-d2d2-4e1b-ac5b-6105deecd5c9/64451e37-6d63-4cfe-bd76-2d8f434a8a8f/Edit_the_person_in_the_original_uploaded_photograph_into_a_s.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMDgyN2MyYjI1OThiYjkyZCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTY0MjY3NH0.AYdUiPOrpGeSj78OqhXsvZYIh7kwvEAoC_zvorvUIsM" alt="Professional portrait of Fahim Sikder wearing a charcoal blazer" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/222631662?v=4'">
   <div class="hero-shade"></div>
   <div class="hero-inner">
-    <div class="hero-overline"><span>Independent digital developer</span><span>AI solutions &amp; thoughtful web experiences</span></div>
-    <div class="name-track" aria-hidden="true"><span>Fahim Sikder — Fahim Sikder —</span></div>
-    <h1 class="sr-only" id="heroTitle" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Fahim Sikder — Independent Full Stack Developer &amp; AI Solutions Builder</h1>
+    <div class="hero-overline"><span>Independent developer</span><span>Websites, AI solutions and digital systems</span></div>
+    <h1 class="hero-name" id="heroTitle">Fahim <span>Sikder</span></h1>
     <a class="hero-scroll" href="#intro" aria-label="Scroll to introduction">↘</a>
     <div class="hero-role">Freelance<br>Developer &amp; AI Solutions Builder</div>
     <div class="hero-location"><span>Working remotely<br>Worldwide · Based in Bangladesh</span><div class="globe" aria-hidden="true">◎</div></div>
@@ -114,27 +170,27 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 </section>
 <section class="section intro" id="intro" aria-labelledby="introTitle">
   <div class="intro-layout">
-    <h2 class="statement fade" id="introTitle">Good digital work is more than a pretty website. It's an experience that feels effortless—and works for your business.</h2>
-    <div class="intro-side fade">I combine design, AI and full-stack development to build modern digital products that look considered, run fast and solve real problems.</div>
+    <h2 class="statement fade" id="introTitle">Good design is only the beginning. I build websites and digital products that feel effortless and deliver value.</h2>
+    <div class="intro-side fade">I combine thoughtful design, AI and full stack development to create modern experiences that work for real businesses.</div>
   </div>
-  <div class="about-row"><span class="section-kicker">Independent, hands-on, from idea to launch</span><a class="circle-link" href="#about">About me ↗</a></div>
-  <div class="trust fade"><div><strong>200+</strong><span>Web development orders in my portfolio record</span></div><div><strong>5+ years</strong><span>WordPress, web performance &amp; SEO experience</span></div><div><strong>AI + Web</strong><span>Building practical solutions from concept to launch</span></div></div>
+  <div class="about-row"><span class="section-kicker">Independent developer, from idea to launch</span><a class="circle-link" href="#about">About me ↗</a></div>
+  <div class="trust fade"><div><strong>200+</strong><span>Completed web orders</span></div><div><strong>5+ years</strong><span>Website and SEO experience</span></div><div><strong>AI + Web</strong><span>Development and automation</span></div><div><strong>LUT University</strong><span>Computational Science and AI, 2027 intake</span></div></div>
 </section>
 <section class="section work" id="work" aria-labelledby="workTitle">
-  <p class="section-kicker">Selected work / 2026</p><h2 class="section-heading" id="workTitle">Work that<br>speaks for itself<span style="color:#96999d">.</span></h2>
-  <div class="work-grid">
-    <a class="project fade" href="https://heyproma.com/" target="_blank" rel="noopener noreferrer" aria-label="Open HeyProma live project"><div class="project-visual project-purple"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Your AI companion</small><strong>HeyProma<span style="color:#dca9e9">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>HeyProma</h3><span>AI platform / Development</span></div><p class="project-meta">Conversational AI experience · Authentication · Cloud deployment</p></a>
-    <a class="project fade" href="https://sheikhseeds.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Sheikh Seeds live project"><div class="project-visual project-green"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Made for growers</small><strong>Sheikh<br>Seeds<span style="color:#89ba5a">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Sheikh Seeds</h3><span>E-commerce / Web systems</span></div><p class="project-meta">Online store · Order workflows · Cloudflare &amp; Supabase</p></a>
-    <a class="project fade" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Exam Center BD live project"><div class="project-visual project-blue"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Learn · Test · Improve</small><strong>Exam<br>Center BD<span style="color:#4c9ada">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Exam Center BD</h3><span>EdTech / Platform</span></div><p class="project-meta">Online exams · Student progress · Admin workflows</p></a>
-    <a class="project fade" href="https://oronnonogor.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Oronno Nogor live project"><div class="project-visual project-sand"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>A modern property experience</small><strong>Oronno<br>Nogor<span style="color:#c3985e">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Oronno Nogor</h3><span>Business / Web design</span></div><p class="project-meta">Responsive design · Business content · Deployment</p></a>
-    <a class="project fade" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Nobin Mart live project"><div class="project-visual project-coral"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Shopping made simpler</small><strong>Nobin<br>Mart<span style="color:#e65d67">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Nobin Mart</h3><span>Storefront / Commerce</span></div><p class="project-meta">Product catalog · Accounts · Admin-ready flows</p></a>
-    <a class="project fade" href="https://neferiq.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Neferiq live project"><div class="project-visual project-ink"><div class="project-window"><div class="window-top"><i></i><i></i><i></i></div><div class="window-body"><small>Thoughtful connections</small><strong>Neferiq<span style="color:#708ff5">.</span></strong><div class="window-ui"><b></b><b></b><b></b></div></div></div></div><div class="project-details"><h3>Neferiq</h3><span>Social platform / Development</span></div><p class="project-meta">Letter-first social experience · User authentication</p></a>
+  <p class="section-kicker">Selected work / 2026</p><h2 class="section-heading" id="workTitle">Selected projects<br>and collaborations<span style="color:#96999d">.</span></h2>
+  <div class="work-grid plain-projects">
+    <a class="project simple-project fade" href="https://heyproma.com/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">01 &nbsp; Selected work</span><h3>HeyProma</h3><p>A modern AI companion platform designed around natural conversation.<br>Built with AI integrations, accounts and a responsive chat experience.</p><span class="project-url">heyproma.com ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+    <a class="project simple-project fade" href="https://sheikhseeds.com/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">02 &nbsp; Selected work</span><h3>Sheikh Seeds</h3><p>An ecommerce platform that makes browsing and ordering simpler.<br>Designed with intuitive shopping flows and practical order management.</p><span class="project-url">sheikhseeds.com ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+    <a class="project simple-project fade" href="https://examcenterbd.com/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">03 &nbsp; Selected work</span><h3>Exam Center BD</h3><p>An online examination platform for students and educators.<br>Brings together test experiences, progress tracking and admin tools.</p><span class="project-url">examcenterbd.com ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+    <a class="project simple-project fade" href="https://oronnonogor.com/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">04 &nbsp; Selected work</span><h3>Oronno Nogor</h3><p>A clean business website focused on presenting information clearly.<br>Designed for straightforward navigation on every screen.</p><span class="project-url">oronnonogor.com ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+    <a class="project simple-project fade" href="https://nobin-mart.fahimsikder59595.workers.dev/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">05 &nbsp; Selected work</span><h3>Nobin Mart</h3><p>A responsive online store built around an easy shopping experience.<br>Includes product discovery, account flows and store management features.</p><span class="project-url">nobin-mart.fahimsikder59595.workers.dev ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+    <a class="project simple-project fade" href="https://neferiq.com/" target="_blank" rel="noopener noreferrer"><div><span class="project-index">06 &nbsp; Selected work</span><h3>Neferiq</h3><p>A digital community that encourages meaningful written conversations.<br>Includes user profiles, account management and social features.</p><span class="project-url">neferiq.com ↗</span></div><span class="project-arrow" aria-hidden="true">↗</span></a>
   </div>
   <div class="more-work"><a class="outline-pill" href="/web-design/">More work &amp; services ↗</a></div>
 </section>
 <section class="section services" id="services" aria-labelledby="servicesTitle">
   <p class="section-kicker">What I do</p>
-  <div class="services-intro"><h2 class="section-heading" id="servicesTitle">Built to stand<br>out &amp; perform.</h2><p>One person, a joined-up process. From the first sketch to the deployed product, I focus on the details that turn a website into a useful business asset.</p></div>
+  <div class="services-intro"><h2 class="section-heading" id="servicesTitle">Built to stand<br>out &amp; perform.</h2><p>One person, one clear process. From the first idea to launch, I focus on the details that make a website valuable to your business.</p></div>
   <div class="service-list">
     <div class="service-line fade"><small>01</small><h3>Web design &amp; development</h3><p>Custom websites, landing pages and responsive business experiences.</p><span class="arrow">↗</span></div>
     <div class="service-line fade"><small>02</small><h3>E-commerce &amp; web apps</h3><p>Fast storefronts, admin panels and practical product workflows.</p><span class="arrow">↗</span></div>
@@ -145,17 +201,24 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 </section>
 <section class="section about" id="about" aria-labelledby="aboutTitle">
   <p class="section-kicker">A little about me</p>
-  <div class="about-grid"><h2 id="aboutTitle" class="fade">Curiosity.<br>Craft.<br>Delivery.</h2><div class="fade"><p>I'm Fahim, a Bangladesh-based developer working across websites, AI tools and production systems. I enjoy combining thoughtful interfaces with the engineering that makes them useful, fast and maintainable.</p><p>My work spans client websites, e-commerce, learning platforms and AI-powered products. I collaborate remotely and care about clear communication, honest scope and getting the details right.</p><div class="tag-row"><span>Next.js &amp; React</span><span>Python &amp; AI</span><span>Cloudflare</span><span>Supabase</span><span>WordPress</span><span>SEO</span></div><div class="about-links"><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a href="/web-development-training/">Training &amp; learning ↗</a></div></div></div>
+  <div class="about-grid"><h2 id="aboutTitle" class="fade">Curiosity.<br>Craft.<br>Delivery.</h2><div class="fade"><p>I'm Fahim, a developer based in Bangladesh, working on websites, AI tools and production systems. I enjoy combining thoughtful interfaces with the engineering that makes them useful, fast and maintainable.</p><p>My work spans client websites, e-commerce, learning platforms and AI-powered products. I collaborate remotely and care about clear communication, honest expectations and getting the details right.</p><div class="tag-row"><span>Next.js &amp; React</span><span>Python &amp; AI</span><span>Cloudflare</span><span>Supabase</span><span>WordPress</span><span>SEO</span></div><div class="about-links"><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="/web-development-training/">Training &amp; learning ↗</a></div></div></div>
 </section>
 <section class="contact" id="contact" aria-labelledby="contactTitle">
   <p class="section-kicker">Have something in mind?</p>
   <div class="contact-row"><h2 class="contact-title" id="contactTitle">Let's work<span>together.</span></h2><a class="circle-link contact-cta" href="mailto:fahim.sikder.web@gmail.com?subject=Project%20inquiry%20for%20Fahim" aria-label="Email Fahim about a project">Get in touch ↗</a></div>
   <div class="contact-links"><a href="mailto:fahim.sikder.web@gmail.com">fahim.sikder.web@gmail.com</a><a href="https://wa.me/8801614946557?text=Hi%20Fahim%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
-  <div class="footer-bottom"><span>© 2026 Fahim Sikder. Independently built with care.</span><span><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp; · &nbsp; <a href="#top">Back to top ↑</a></span></div>
+  <div class="footer-bottom"><span>© 2026 Fahim Sikder. Independently built with care.</span><span><a href="https://github.com/Fahimxbd" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/callmefahim59/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> &nbsp; · &nbsp; <a href="#top">Back to top ↑</a></span></div>
 </section>
 </main>
 <script>
 (function(){
+ var greetings=['Hello','Ciao','Namaste','শুভ সকাল'], greetingWord=document.getElementById('greetingWord');
+ if(greetingWord && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+   document.documentElement.classList.add('greeting-active');
+   greetings.forEach(function(word,i){setTimeout(function(){greetingWord.textContent=word},i*330)});
+   setTimeout(function(){document.documentElement.classList.remove('greeting-active')},1480);
+ }
+
  var b=document.getElementById('menuButton'),p=document.getElementById('menuPanel'),o=document.getElementById('menuBackdrop'),h=document.getElementById('siteHeader'),prior=null;
  function close(){p.classList.remove('open');o.classList.remove('show');p.inert=true;b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');document.body.style.overflow='';h.style.position='absolute';h.style.color='white';prior=null}
  function open(){prior=document.activeElement;p.inert=false;p.classList.add('open');o.classList.add('show');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Close menu');document.body.style.overflow='hidden';h.style.position='fixed';h.style.color='white';p.querySelector('.menu-link').focus()}
