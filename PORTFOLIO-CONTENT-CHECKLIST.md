@@ -36,7 +36,7 @@ Configure, deploy and verify each destination before replacing its existing link
 
 ## Every placeholder
 
-- [ ] [FILL: verified start date and years of professional experience]
+- [x] Experience: 2021–Present, confirmed by Fahim on 10 October 2026.
 - [ ] [FILL: confirm total projects and client tasks, date range and supporting records]
 - [ ] [FILL: definition of an order, including how tasks, revisions and repeat work are counted]
 - [ ] [FILL: platforms, referrals or direct clients and evidence links]
