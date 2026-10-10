@@ -1,7 +1,7 @@
 # Portfolio content checklist
 
 The existing design, portrait, tabs, navigation, contact methods and CV links are retained.
-Approximately 200 projects/client tasks is explicitly pending confirmation; it is not represented as 200 complete websites. The unsupported 5+ years claim was removed. Reviews are unfilled slots, not evidence yet.
+The user reports approximately 200 projects/client tasks and confirms experience from 2021 to present. The combined task count is not presented as 200 complete websites. All public placeholders, empty screenshot slots, unfilled testimonials and the unbuilt LLM card have now been removed at the user’s request.
 
 ## Headline options
 
@@ -21,7 +21,7 @@ Choose a set and confirm scope before changing live rates. Existing rates remain
 
 ## Skills to confirm
 
-Which are Daily use, and which are Familiar? JavaScript, Python, PHP, C, C++, C#, SQL/MySQL, HTML, CSS, React, Next.js, Laravel, WordPress, Tailwind, Cloudflare, Supabase, Firebase, PostgreSQL, SEO. No proficiency classification was guessed.
+Which are Daily use, and which are Familiar? JavaScript, Python, PHP, C, C++, C#, SQL/MySQL, HTML, CSS, React, Next.js, Laravel, WordPress, Tailwind, Cloudflare, Supabase, Firebase, PostgreSQL, SEO. The live site uses Core toolkit and Additional experience instead of claiming a daily-use frequency.
 
 ## Domain TODOs
 
@@ -34,7 +34,7 @@ Configure, deploy and verify each destination before replacing its existing link
 - [ ] https://grade-calculator-in-c.fahimprivateuser-d8a.workers.dev/ → https://grades.fahimsikderai.com/
 - [ ] https://income-credit-loan.fahimprivateuser-d8a.workers.dev/ → https://credit.fahimsikderai.com/
 
-## Every placeholder
+## Editorial backlog (not displayed on the website)
 
 - [x] Experience: 2021–Present, confirmed by Fahim on 10 October 2026.
 - [ ] [FILL: confirm total projects and client tasks, date range and supporting records]
@@ -92,6 +92,6 @@ Configure, deploy and verify each destination before replacing its existing link
 
 - DNS and demo URLs: no replacement URLs supplied.
 - CV PDF, social preview image, standalone web-design/training pages and project READMEs: outside this portfolio content edit.
-- New LLM project: planned slot only, no invented implementation.
-- Client results and testimonials: evidence must be provided.
+- New LLM project: unbuilt slot removed; no invented implementation.
+- Client results and testimonials: omitted from the public site until evidence is available.
 - Music asset remains in the repository; its UI, playback script and requests are removed.
